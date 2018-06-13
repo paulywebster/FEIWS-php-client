@@ -8,7 +8,7 @@ class Service
     private const COMMON = 'common';
 
     private const AUTHENTICATION_SERVICE_URI = '/Authentication.asmx?WSDL';
-    private const COMMON_SERVICE_URI = '/FEI/HorseWS.asmx?WSDL';
+    private const COMMON_SERVICE_URI = '/FEI/CommonWS.asmx?WSDL';
 
     private $service;
 
