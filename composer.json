@@ -1,7 +1,10 @@
 {
     "name": "paul/test_php_client_generator",
     "require-dev": {
-        "zendframework/zend-code": "^3.3"
+        "zendframework/zend-code": "^3.3",
+        "phpro/grumphp": "^0.14.1",
+        "friendsofphp/php-cs-fixer": "^2.12",
+        "jakub-onderka/php-parallel-lint": "^1.0"
     },
     "authors": [
         {
