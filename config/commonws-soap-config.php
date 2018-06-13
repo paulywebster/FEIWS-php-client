@@ -1,7 +1,6 @@
 <?php
 
 use FEIWebServicesClient\Environment;
-use FEIWebServicesClient\FEIWsdl;
 use FEIWebServicesClient\Service;
 use Phpro\SoapClient\CodeGenerator\Config\Config;
 use Phpro\SoapClient\CodeGenerator\Rules;
@@ -9,7 +8,7 @@ use Phpro\SoapClient\CodeGenerator\Assembler;
 
 $config = require __DIR__.'parameters.php';
 
-$wsdl = FEIWsdl::factory(Environment::fromString($config['environment']), Service::common());
+$wsdl = Environment::fromString($config['environment'])->url().Service::common()->uri();
 
 return Config::create()
     ->setWsdl($wsdl)
