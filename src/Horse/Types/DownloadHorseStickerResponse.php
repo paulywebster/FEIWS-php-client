@@ -2,12 +2,10 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-
 use Phpro\SoapClient\Type\ResultInterface;
 
 class DownloadHorseStickerResponse implements ResultInterface
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\base64Binary
      */
@@ -21,7 +19,7 @@ class DownloadHorseStickerResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\base64Binary
      */
-    public function getDownloadHorseStickerResult() : \FEIWebServicesClient\Horse\Types\base64Binary
+    public function getDownloadHorseStickerResult(): \FEIWebServicesClient\Horse\Types\base64Binary
     {
         return $this->downloadHorseStickerResult;
     }
@@ -29,11 +27,8 @@ class DownloadHorseStickerResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    public function getMessages() : \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
     {
         return $this->Messages;
     }
-
-
 }
-

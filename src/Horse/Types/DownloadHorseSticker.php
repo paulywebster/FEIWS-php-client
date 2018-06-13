@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class DownloadHorseSticker
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class DownloadHorseSticker
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -26,11 +25,8 @@ class DownloadHorseSticker
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseStickerTypeEnums
      */
-    public function getStickerType() : \FEIWebServicesClient\Horse\Types\HorseStickerTypeEnums
+    public function getStickerType(): \FEIWebServicesClient\Horse\Types\HorseStickerTypeEnums
     {
         return $this->StickerType;
     }
-
-
 }
-

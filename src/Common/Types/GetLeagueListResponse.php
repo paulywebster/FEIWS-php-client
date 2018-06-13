@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetLeagueListResponse implements ResultInterface
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\ArrayOfLeague
      */
@@ -20,7 +19,7 @@ class GetLeagueListResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Common\Types\ArrayOfLeague
      */
-    public function getGetLeagueListResult() : \FEIWebServicesClient\Common\Types\ArrayOfLeague
+    public function getGetLeagueListResult(): \FEIWebServicesClient\Common\Types\ArrayOfLeague
     {
         return $this->getLeagueListResult;
     }
@@ -28,11 +27,8 @@ class GetLeagueListResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Common\Types\ArrayOfMessage
      */
-    public function getMessages() : \FEIWebServicesClient\Common\Types\ArrayOfMessage
+    public function getMessages(): \FEIWebServicesClient\Common\Types\ArrayOfMessage
     {
         return $this->Messages;
     }
-
-
 }
-

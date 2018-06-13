@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class DocIssuingBody
 {
-
     /**
      * @var string
      */
@@ -23,7 +22,7 @@ class DocIssuingBody
     /**
      * @return string
      */
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->Code;
     }
@@ -31,7 +30,7 @@ class DocIssuingBody
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->Name;
     }
@@ -39,11 +38,8 @@ class DocIssuingBody
     /**
      * @return string
      */
-    public function getCountryCode() : string
+    public function getCountryCode(): string
     {
         return $this->CountryCode;
     }
-
-
 }
-

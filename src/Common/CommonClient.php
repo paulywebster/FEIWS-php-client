@@ -2,7 +2,6 @@
 
 namespace FEIWebServicesClient\Common;
 
-
 use FEIWebServicesClient\Common\Types\GetAdditionalRoleList;
 use FEIWebServicesClient\Common\Types\GetAdditionalRoleListResponse;
 use FEIWebServicesClient\Common\Types\GetAddressNameList;
@@ -53,111 +52,108 @@ class CommonClient extends \Phpro\SoapClient\Client
         $this->soapClient->__setCookie($name, $value);
     }
 
-    public function getVersion() : getVersionResponse
+    public function getVersion(): getVersionResponse
     {
-        return $this->call('getVersion', new GetVersion);
+        return $this->call('getVersion', new GetVersion());
     }
 
-    public function getLookupDateList() : getLookupDateListResponse
+    public function getLookupDateList(): getLookupDateListResponse
     {
-        return $this->call('getLookupDateList', new getLookupDateList);
+        return $this->call('getLookupDateList', new getLookupDateList());
     }
 
-    public function getCountryList() : getCountryListResponse
+    public function getCountryList(): getCountryListResponse
     {
-        return $this->call('getCountryList', new getCountryList);
+        return $this->call('getCountryList', new getCountryList());
     }
 
-    public function getDisciplineList() : getDisciplineListResponse
+    public function getDisciplineList(): getDisciplineListResponse
     {
-        return $this->call('getDisciplineList', new getDisciplineList);
+        return $this->call('getDisciplineList', new getDisciplineList());
     }
 
-    public function getDocIssuingBodyList() : getDocIssuingBodyListResponse
+    public function getDocIssuingBodyList(): getDocIssuingBodyListResponse
     {
-        return $this->call('getDocIssuingBodyList', new getDocIssuingBodyList);
+        return $this->call('getDocIssuingBodyList', new getDocIssuingBodyList());
     }
 
-    public function getNationalFederationList() : getNationalFederationListResponse
+    public function getNationalFederationList(): getNationalFederationListResponse
     {
-        return $this->call('getNationalFederationList', new getNationalFederationList);
+        return $this->call('getNationalFederationList', new getNationalFederationList());
     }
 
-    public function getDocumentTypeList() : getDocumentTypeListResponse
+    public function getDocumentTypeList(): getDocumentTypeListResponse
     {
-        return $this->call('getDocumentTypeList', new getDocumentTypeList);
+        return $this->call('getDocumentTypeList', new getDocumentTypeList());
     }
 
-    public function getHorseNameKindChangeList() : getHorseNameKindChangeListResponse
+    public function getHorseNameKindChangeList(): getHorseNameKindChangeListResponse
     {
-        return $this->call('getHorseNameKindChangeList', new getHorseNameKindChangeList);
+        return $this->call('getHorseNameKindChangeList', new getHorseNameKindChangeList());
     }
 
-    public function getLanguageList() : getLanguageListResponse
+    public function getLanguageList(): getLanguageListResponse
     {
-        return $this->call('getLanguageList', new getLanguageList);
+        return $this->call('getLanguageList', new getLanguageList());
     }
 
-    public function getCategoryList() : getCategoryListResponse
+    public function getCategoryList(): getCategoryListResponse
     {
-        return $this->call('getCategoryList', new getCategoryList);
+        return $this->call('getCategoryList', new getCategoryList());
     }
 
-    public function getAddressNameList() : getAddressNameListResponse
+    public function getAddressNameList(): getAddressNameListResponse
     {
-        return $this->call('getAddressNameList', new getAddressNameList);
+        return $this->call('getAddressNameList', new getAddressNameList());
     }
 
-    public function getHorseGenderList() : getHorseGenderListResponse
+    public function getHorseGenderList(): getHorseGenderListResponse
     {
-        return $this->call('getHorseGenderList', new getHorseGenderList);
+        return $this->call('getHorseGenderList', new getHorseGenderList());
     }
 
-    public function getHorseFEIIDTypeList() : getHorseFEIIDTypeListResponse
+    public function getHorseFEIIDTypeList(): getHorseFEIIDTypeListResponse
     {
-        return $this->call('getHorseFEIIDTypeList', new getHorseFEIIDTypeList);
+        return $this->call('getHorseFEIIDTypeList', new getHorseFEIIDTypeList());
     }
 
-    public function getMessageTypeList() : getMessageTypeListResponse
+    public function getMessageTypeList(): getMessageTypeListResponse
     {
-        return $this->call('getMessageTypeList', new getMessageTypeList);
+        return $this->call('getMessageTypeList', new getMessageTypeList());
     }
 
-    public function getAdditionalRoleList() : getAdditionalRoleListResponse
+    public function getAdditionalRoleList(): getAdditionalRoleListResponse
     {
-        return $this->call('getAdditionalRoleList', new getAdditionalRoleList);
+        return $this->call('getAdditionalRoleList', new getAdditionalRoleList());
     }
 
-    public function getOfficialFunctionList() : getOfficialFunctionListResponse
+    public function getOfficialFunctionList(): getOfficialFunctionListResponse
     {
-        return $this->call('getOfficialFunctionList', new getOfficialFunctionList);
+        return $this->call('getOfficialFunctionList', new getOfficialFunctionList());
     }
 
-    public function getOfficialStatusList() : getOfficialStatusListResponse
+    public function getOfficialStatusList(): getOfficialStatusListResponse
     {
-        return $this->call('getOfficialStatusList', new getOfficialStatusList);
+        return $this->call('getOfficialStatusList', new getOfficialStatusList());
     }
 
-    public function getPersonGenderList() : getPersonGenderListResponse
+    public function getPersonGenderList(): getPersonGenderListResponse
     {
-        return $this->call('getPersonGenderList', new getPersonGenderList);
+        return $this->call('getPersonGenderList', new getPersonGenderList());
     }
 
-    public function getPersonCivilityList() : getPersonCivilityListResponse
+    public function getPersonCivilityList(): getPersonCivilityListResponse
     {
-        return $this->call('getPersonCivilityList', new getPersonCivilityList);
+        return $this->call('getPersonCivilityList', new getPersonCivilityList());
     }
 
-    public function getSeasonList() : getSeasonListResponse
+    public function getSeasonList(): getSeasonListResponse
     {
-        return $this->call('getSeasonList', new getSeasonList);
+        return $this->call('getSeasonList', new getSeasonList());
     }
 
-    public function getLeagueList() : getLeagueListResponse
+    public function getLeagueList(): getLeagueListResponse
     {
-        return $this->call('getLeagueList', new getLeagueList);
+        return $this->call('getLeagueList', new getLeagueList());
     }
-
-
 }
-

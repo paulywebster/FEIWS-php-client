@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class UploadHorseDiagram
 {
-
     /**
      * @var string
      */
@@ -23,7 +22,7 @@ class UploadHorseDiagram
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -31,7 +30,7 @@ class UploadHorseDiagram
     /**
      * @return \FEIWebServicesClient\Horse\Types\base64Binary
      */
-    public function getDocument() : \FEIWebServicesClient\Horse\Types\base64Binary
+    public function getDocument(): \FEIWebServicesClient\Horse\Types\base64Binary
     {
         return $this->Document;
     }
@@ -39,11 +38,8 @@ class UploadHorseDiagram
     /**
      * @return string
      */
-    public function getExtension() : string
+    public function getExtension(): string
     {
         return $this->Extension;
     }
-
-
 }
-

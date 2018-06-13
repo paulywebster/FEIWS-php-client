@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class HorseOwnership
 {
-
     /**
      * @var string
      */
@@ -23,7 +22,7 @@ class HorseOwnership
     /**
      * @return string
      */
-    public function getNationalityOfOwnership() : string
+    public function getNationalityOfOwnership(): string
     {
         return $this->NationalityOfOwnership;
     }
@@ -31,7 +30,7 @@ class HorseOwnership
     /**
      * @return \DateTime
      */
-    public function getDateFrom() : \DateTime
+    public function getDateFrom(): \DateTime
     {
         return $this->DateFrom;
     }
@@ -39,11 +38,8 @@ class HorseOwnership
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfHorseOwnershipMember
      */
-    public function getMembers() : \FEIWebServicesClient\Horse\Types\ArrayOfHorseOwnershipMember
+    public function getMembers(): \FEIWebServicesClient\Horse\Types\ArrayOfHorseOwnershipMember
     {
         return $this->Members;
     }
-
-
 }
-

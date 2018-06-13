@@ -14,11 +14,8 @@ class LoginResponse implements ResultInterface
     /**
      * @return LoginResult
      */
-    public function getLoginResult() : LoginResult
+    public function getLoginResult(): LoginResult
     {
         return $this->LoginResult;
     }
-
-
 }
-

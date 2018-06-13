@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class SCHorsePendAdmNFReq
 {
-
     /**
      * @var bool
      */
@@ -13,11 +12,8 @@ class SCHorsePendAdmNFReq
     /**
      * @return bool
      */
-    public function isValue() : bool
+    public function isValue(): bool
     {
         return $this->Value;
     }
-
-
 }
-

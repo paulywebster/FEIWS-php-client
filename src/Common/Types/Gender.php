@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class Gender
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class Gender
     /**
      * @return string
      */
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->Code;
     }
@@ -26,11 +25,8 @@ class Gender
     /**
      * @return string
      */
-    public function getLabel() : string
+    public function getLabel(): string
     {
         return $this->Label;
     }
-
-
 }
-

@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class AuthHeader
 {
-
     /**
      * @var string
      */
@@ -23,7 +22,7 @@ class AuthHeader
     /**
      * @return string
      */
-    public function getUserName() : string
+    public function getUserName(): string
     {
         return $this->UserName;
     }
@@ -31,7 +30,7 @@ class AuthHeader
     /**
      * @return string
      */
-    public function getLanguage() : string
+    public function getLanguage(): string
     {
         return $this->Language;
     }
@@ -39,11 +38,8 @@ class AuthHeader
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfString
      */
-    public function getExceptions() : \FEIWebServicesClient\Horse\Types\ArrayOfString
+    public function getExceptions(): \FEIWebServicesClient\Horse\Types\ArrayOfString
     {
         return $this->Exceptions;
     }
-
-
 }
-

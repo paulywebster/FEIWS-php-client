@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class SCHorseName
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class SCHorseName
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->Name;
     }
@@ -26,11 +25,8 @@ class SCHorseName
     /**
      * @return bool
      */
-    public function isUnconstrained() : bool
+    public function isUnconstrained(): bool
     {
         return $this->Unconstrained;
     }
-
-
 }
-

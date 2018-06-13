@@ -9,19 +9,18 @@ use FEIWebServicesClient\Authentication\Types\ModeResponse;
 
 class AuthenticationClient extends \Phpro\SoapClient\Client
 {
-    public function getCookies():? array
+    public function getCookies(): ? array
     {
         return $this->soapClient->_cookies ?? null;
     }
 
-    public function login(string $username, string $password) : LoginResponse
+    public function login(string $username, string $password): LoginResponse
     {
         return $this->call('Login', new Login($username, $password));
     }
 
-    public function mode() : ModeResponse
+    public function mode(): ModeResponse
     {
-        return $this->call('Mode', new Mode);
+        return $this->call('Mode', new Mode());
     }
 }
-

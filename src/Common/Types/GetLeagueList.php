@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetLeagueList implements RequestInterface
 {
-
     /**
      * @var string
      */
@@ -20,7 +19,7 @@ class GetLeagueList implements RequestInterface
     /**
      * @return string
      */
-    public function getDisciplineCode() : string
+    public function getDisciplineCode(): string
     {
         return $this->DisciplineCode;
     }
@@ -28,11 +27,8 @@ class GetLeagueList implements RequestInterface
     /**
      * @return string
      */
-    public function getSeasonCode() : string
+    public function getSeasonCode(): string
     {
         return $this->SeasonCode;
     }
-
-
 }
-

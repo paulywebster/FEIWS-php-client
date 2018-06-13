@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class DeleteHorseNoviceQualification
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class DeleteHorseNoviceQualification
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -26,11 +25,8 @@ class DeleteHorseNoviceQualification
     /**
      * @return \DateTime
      */
-    public function getNoviceQualificationDate() : \DateTime
+    public function getNoviceQualificationDate(): \DateTime
     {
         return $this->NoviceQualificationDate;
     }
-
-
 }
-

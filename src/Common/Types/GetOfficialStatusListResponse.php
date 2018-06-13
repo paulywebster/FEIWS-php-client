@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetOfficialStatusListResponse implements ResultInterface
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\ArrayOfOfficialStatus
      */
@@ -15,11 +14,8 @@ class GetOfficialStatusListResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Common\Types\ArrayOfOfficialStatus
      */
-    public function getGetOfficialStatusListResult() : \FEIWebServicesClient\Common\Types\ArrayOfOfficialStatus
+    public function getGetOfficialStatusListResult(): \FEIWebServicesClient\Common\Types\ArrayOfOfficialStatus
     {
         return $this->getOfficialStatusListResult;
     }
-
-
 }
-

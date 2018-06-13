@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class LookupDate
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class LookupDate
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->Name;
     }
@@ -26,11 +25,8 @@ class LookupDate
     /**
      * @return \DateTime
      */
-    public function getDateModified() : \DateTime
+    public function getDateModified(): \DateTime
     {
         return $this->DateModified;
     }
-
-
 }
-

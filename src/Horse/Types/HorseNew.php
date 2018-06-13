@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class HorseNew
 {
-
     /**
      * @var string
      */
@@ -58,7 +57,7 @@ class HorseNew
     /**
      * @return string
      */
-    public function getOwnerName() : string
+    public function getOwnerName(): string
     {
         return $this->OwnerName;
     }
@@ -66,7 +65,7 @@ class HorseNew
     /**
      * @return \DateTime
      */
-    public function getOwnerDateFrom() : \DateTime
+    public function getOwnerDateFrom(): \DateTime
     {
         return $this->OwnerDateFrom;
     }
@@ -74,7 +73,7 @@ class HorseNew
     /**
      * @return string
      */
-    public function getOwnerAddress1() : string
+    public function getOwnerAddress1(): string
     {
         return $this->OwnerAddress1;
     }
@@ -82,7 +81,7 @@ class HorseNew
     /**
      * @return string
      */
-    public function getOwnerAddress2() : string
+    public function getOwnerAddress2(): string
     {
         return $this->OwnerAddress2;
     }
@@ -90,7 +89,7 @@ class HorseNew
     /**
      * @return string
      */
-    public function getOwnerAddress3() : string
+    public function getOwnerAddress3(): string
     {
         return $this->OwnerAddress3;
     }
@@ -98,7 +97,7 @@ class HorseNew
     /**
      * @return string
      */
-    public function getOwnerZip() : string
+    public function getOwnerZip(): string
     {
         return $this->OwnerZip;
     }
@@ -106,7 +105,7 @@ class HorseNew
     /**
      * @return string
      */
-    public function getOwnerCity() : string
+    public function getOwnerCity(): string
     {
         return $this->OwnerCity;
     }
@@ -114,7 +113,7 @@ class HorseNew
     /**
      * @return string
      */
-    public function getOwnerCountryCode() : string
+    public function getOwnerCountryCode(): string
     {
         return $this->OwnerCountryCode;
     }
@@ -122,7 +121,7 @@ class HorseNew
     /**
      * @return string
      */
-    public function getOwnerNationalityCode() : string
+    public function getOwnerNationalityCode(): string
     {
         return $this->OwnerNationalityCode;
     }
@@ -130,11 +129,8 @@ class HorseNew
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseOwnership
      */
-    public function getOwnership() : \FEIWebServicesClient\Horse\Types\HorseOwnership
+    public function getOwnership(): \FEIWebServicesClient\Horse\Types\HorseOwnership
     {
         return $this->Ownership;
     }
-
-
 }
-

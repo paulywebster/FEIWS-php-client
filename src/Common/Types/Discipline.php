@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class Discipline
 {
-
     /**
      * @var string
      */
@@ -23,7 +22,7 @@ class Discipline
     /**
      * @return string
      */
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->Code;
     }
@@ -31,7 +30,7 @@ class Discipline
     /**
      * @return string
      */
-    public function getLabel() : string
+    public function getLabel(): string
     {
         return $this->Label;
     }
@@ -39,11 +38,8 @@ class Discipline
     /**
      * @return bool
      */
-    public function isIsParaEquestrian() : bool
+    public function isIsParaEquestrian(): bool
     {
         return $this->IsParaEquestrian;
     }
-
-
 }
-

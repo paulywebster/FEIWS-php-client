@@ -2,12 +2,10 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-
 use Phpro\SoapClient\Type\ResultInterface;
 
 class GetStudBookListResponse implements ResultInterface
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfStudBook
      */
@@ -16,11 +14,8 @@ class GetStudBookListResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfStudBook
      */
-    public function getGetStudBookListResult() : \FEIWebServicesClient\Horse\Types\ArrayOfStudBook
+    public function getGetStudBookListResult(): \FEIWebServicesClient\Horse\Types\ArrayOfStudBook
     {
         return $this->getStudBookListResult;
     }
-
-
 }
-

@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class ArrayOfGender
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\Gender
      */
@@ -13,11 +12,8 @@ class ArrayOfGender
     /**
      * @return \FEIWebServicesClient\Common\Types\Gender
      */
-    public function getGender() : \FEIWebServicesClient\Common\Types\Gender
+    public function getGender(): \FEIWebServicesClient\Common\Types\Gender
     {
         return $this->Gender;
     }
-
-
 }
-

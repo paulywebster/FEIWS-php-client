@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class ArrayOfMessage
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\Message
      */
@@ -13,11 +12,8 @@ class ArrayOfMessage
     /**
      * @return \FEIWebServicesClient\Common\Types\Message
      */
-    public function getMessage() : \FEIWebServicesClient\Common\Types\Message
+    public function getMessage(): \FEIWebServicesClient\Common\Types\Message
     {
         return $this->Message;
     }
-
-
 }
-

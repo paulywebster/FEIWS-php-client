@@ -22,11 +22,10 @@ class Login implements RequestInterface
         $this->password = $password;
     }
 
-
     /**
      * @return string
      */
-    public function getUsername() : string
+    public function getUsername(): string
     {
         return $this->username;
     }
@@ -34,9 +33,8 @@ class Login implements RequestInterface
     /**
      * @return string
      */
-    public function getPassword() : string
+    public function getPassword(): string
     {
         return $this->password;
     }
 }
-

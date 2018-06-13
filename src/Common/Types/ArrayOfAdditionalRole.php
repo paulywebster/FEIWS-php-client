@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class ArrayOfAdditionalRole
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\AdditionalRole
      */
@@ -13,11 +12,8 @@ class ArrayOfAdditionalRole
     /**
      * @return \FEIWebServicesClient\Common\Types\AdditionalRole
      */
-    public function getAdditionalRole() : \FEIWebServicesClient\Common\Types\AdditionalRole
+    public function getAdditionalRole(): \FEIWebServicesClient\Common\Types\AdditionalRole
     {
         return $this->AdditionalRole;
     }
-
-
 }
-

@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class ArrayOfHorseDuplicate
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseDuplicate
      */
@@ -13,11 +12,8 @@ class ArrayOfHorseDuplicate
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseDuplicate
      */
-    public function getHorseDuplicate() : \FEIWebServicesClient\Horse\Types\HorseDuplicate
+    public function getHorseDuplicate(): \FEIWebServicesClient\Horse\Types\HorseDuplicate
     {
         return $this->HorseDuplicate;
     }
-
-
 }
-

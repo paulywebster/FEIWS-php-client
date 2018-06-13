@@ -17,7 +17,7 @@ class LoginResult
     /**
      * @return string
      */
-    public function getCookieName() : string
+    public function getCookieName(): string
     {
         return $this->CookieName;
     }
@@ -25,9 +25,8 @@ class LoginResult
     /**
      * @return string
      */
-    public function getErrorCode() : string
+    public function getErrorCode(): string
     {
         return $this->ErrorCode;
     }
 }
-

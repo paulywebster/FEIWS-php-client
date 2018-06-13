@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class RequestAdministrationChange
 {
-
     /**
      * @var string
      */
@@ -13,11 +12,8 @@ class RequestAdministrationChange
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
-
-
 }
-

@@ -4,7 +4,4 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class GetAdminChangeStatusList
 {
-
-
 }
-

@@ -2,12 +2,10 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-
 use Phpro\SoapClient\Type\ResultInterface;
 
 class UploadHorseDocumentResponse implements ResultInterface
 {
-
     /**
      * @var bool
      */
@@ -21,7 +19,7 @@ class UploadHorseDocumentResponse implements ResultInterface
     /**
      * @return bool
      */
-    public function isUploadHorseDocumentResult() : bool
+    public function isUploadHorseDocumentResult(): bool
     {
         return $this->uploadHorseDocumentResult;
     }
@@ -29,11 +27,8 @@ class UploadHorseDocumentResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    public function getMessages() : \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
     {
         return $this->Messages;
     }
-
-
 }
-

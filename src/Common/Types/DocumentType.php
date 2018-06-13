@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class DocumentType
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class DocumentType
     /**
      * @return string
      */
-    public function getExtension() : string
+    public function getExtension(): string
     {
         return $this->Extension;
     }
@@ -26,11 +25,8 @@ class DocumentType
     /**
      * @return string
      */
-    public function getLabel() : string
+    public function getLabel(): string
     {
         return $this->Label;
     }
-
-
 }
-

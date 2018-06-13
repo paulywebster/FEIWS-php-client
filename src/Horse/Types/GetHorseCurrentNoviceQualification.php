@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class GetHorseCurrentNoviceQualification
 {
-
     /**
      * @var string
      */
@@ -13,11 +12,8 @@ class GetHorseCurrentNoviceQualification
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
-
-
 }
-

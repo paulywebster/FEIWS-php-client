@@ -8,8 +8,7 @@ use Phpro\SoapClient\Soap\ClassMap\ClassMap;
 
 class HorseWSClassmap
 {
-
-    public static function getCollection() : \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection(): \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
     {
         return new ClassMapCollection([
             new ClassMap('getAdminChangeReasonList', Type\GetAdminChangeReasonList::class),
@@ -142,7 +141,4 @@ class HorseWSClassmap
             new ClassMap('SearchClassesHelperResponse', Type\SearchClassesHelperResponse::class),
         ]);
     }
-
-
 }
-

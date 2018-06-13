@@ -11,15 +11,13 @@ use Phpro\SoapClient\ClientBuilder;
 
 class CommonClientFactory
 {
-
-    public static function factory(string $user) : \FEIWebServicesClient\Common\CommonClient
+    public static function factory(string $user): \FEIWebServicesClient\Common\CommonClient
     {
         $config = require __DIR__.'/../../config/parameters.php';
 
         $factory = AuthenticationClientFactory::factory($config['environment']);
         $response = $factory->login($config['username'], $config['password']);
-        if($response->getLoginResult()->getErrorCode() !== 'NoError')
-        {
+        if ('NoError' !== $response->getLoginResult()->getErrorCode()) {
             throw new \Exception('Login failed !');
         }
         $cookies = $factory->getCookies();
@@ -41,7 +39,4 @@ class CommonClientFactory
 
         return $client;
     }
-
-
 }
-

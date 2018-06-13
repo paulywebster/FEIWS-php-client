@@ -2,12 +2,10 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-
 use Phpro\SoapClient\Type\ResultInterface;
 
 class ChangeHorseNameResponse implements ResultInterface
 {
-
     /**
      * @var bool
      */
@@ -36,7 +34,7 @@ class ChangeHorseNameResponse implements ResultInterface
     /**
      * @return bool
      */
-    public function isChangeHorseNameResult() : bool
+    public function isChangeHorseNameResult(): bool
     {
         return $this->changeHorseNameResult;
     }
@@ -44,7 +42,7 @@ class ChangeHorseNameResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseName
      */
-    public function getHorseName() : \FEIWebServicesClient\Horse\Types\HorseName
+    public function getHorseName(): \FEIWebServicesClient\Horse\Types\HorseName
     {
         return $this->HorseName;
     }
@@ -52,7 +50,7 @@ class ChangeHorseNameResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    public function getMessages() : \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
     {
         return $this->Messages;
     }
@@ -60,7 +58,7 @@ class ChangeHorseNameResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfHorseDuplicate
      */
-    public function getPotentialHorseDuplicates() : \FEIWebServicesClient\Horse\Types\ArrayOfHorseDuplicate
+    public function getPotentialHorseDuplicates(): \FEIWebServicesClient\Horse\Types\ArrayOfHorseDuplicate
     {
         return $this->PotentialHorseDuplicates;
     }
@@ -68,11 +66,8 @@ class ChangeHorseNameResponse implements ResultInterface
     /**
      * @return string
      */
-    public function getTicket() : string
+    public function getTicket(): string
     {
         return $this->Ticket;
     }
-
-
 }
-

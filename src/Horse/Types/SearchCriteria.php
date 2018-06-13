@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class SearchCriteria
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class SearchCriteria
     /**
      * @return string
      */
-    public function getField() : string
+    public function getField(): string
     {
         return $this->Field;
     }
@@ -26,11 +25,8 @@ class SearchCriteria
     /**
      * @return string
      */
-    public function getValue() : string
+    public function getValue(): string
     {
         return $this->Value;
     }
-
-
 }
-

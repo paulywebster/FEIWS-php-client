@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class SCHorseInclHistNames
 {
-
     /**
      * @var bool
      */
@@ -13,11 +12,8 @@ class SCHorseInclHistNames
     /**
      * @return bool
      */
-    public function isValue() : bool
+    public function isValue(): bool
     {
         return $this->Value;
     }
-
-
 }
-

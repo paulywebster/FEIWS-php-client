@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class MessageType
 {
-
     /**
      * @var string
      */
@@ -38,7 +37,7 @@ class MessageType
     /**
      * @return string
      */
-    public function getId() : string
+    public function getId(): string
     {
         return $this->Id;
     }
@@ -46,7 +45,7 @@ class MessageType
     /**
      * @return bool
      */
-    public function isIsCritical() : bool
+    public function isIsCritical(): bool
     {
         return $this->IsCritical;
     }
@@ -54,7 +53,7 @@ class MessageType
     /**
      * @return bool
      */
-    public function isIsError() : bool
+    public function isIsError(): bool
     {
         return $this->IsError;
     }
@@ -62,7 +61,7 @@ class MessageType
     /**
      * @return bool
      */
-    public function isIsWarning() : bool
+    public function isIsWarning(): bool
     {
         return $this->IsWarning;
     }
@@ -70,7 +69,7 @@ class MessageType
     /**
      * @return string
      */
-    public function getCEW() : string
+    public function getCEW(): string
     {
         return $this->CEW;
     }
@@ -78,11 +77,8 @@ class MessageType
     /**
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return $this->Description;
     }
-
-
 }
-

@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class ArrayOfHorseOwnershipMember
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseOwnershipMember
      */
@@ -13,11 +12,8 @@ class ArrayOfHorseOwnershipMember
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseOwnershipMember
      */
-    public function getHorseOwnershipMember() : \FEIWebServicesClient\Horse\Types\HorseOwnershipMember
+    public function getHorseOwnershipMember(): \FEIWebServicesClient\Horse\Types\HorseOwnershipMember
     {
         return $this->HorseOwnershipMember;
     }
-
-
 }
-

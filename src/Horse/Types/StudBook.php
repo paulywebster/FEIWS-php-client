@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class StudBook
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class StudBook
     /**
      * @return string
      */
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->Code;
     }
@@ -26,11 +25,8 @@ class StudBook
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->Name;
     }
-
-
 }
-

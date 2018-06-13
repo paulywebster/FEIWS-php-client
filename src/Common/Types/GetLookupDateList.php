@@ -6,7 +6,4 @@ use Phpro\SoapClient\Type\RequestInterface;
 
 class GetLookupDateList implements RequestInterface
 {
-
-
 }
-

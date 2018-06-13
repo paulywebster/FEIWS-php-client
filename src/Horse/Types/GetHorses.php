@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class GetHorses
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfString
      */
@@ -13,11 +12,8 @@ class GetHorses
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfString
      */
-    public function getHorseFEICodes() : \FEIWebServicesClient\Horse\Types\ArrayOfString
+    public function getHorseFEICodes(): \FEIWebServicesClient\Horse\Types\ArrayOfString
     {
         return $this->HorseFEICodes;
     }
-
-
 }
-

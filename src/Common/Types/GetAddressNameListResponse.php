@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetAddressNameListResponse implements ResultInterface
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\ArrayOfAddressName
      */
@@ -15,11 +14,8 @@ class GetAddressNameListResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Common\Types\ArrayOfAddressName
      */
-    public function getGetAddressNameListResult() : \FEIWebServicesClient\Common\Types\ArrayOfAddressName
+    public function getGetAddressNameListResult(): \FEIWebServicesClient\Common\Types\ArrayOfAddressName
     {
         return $this->getAddressNameListResult;
     }
-
-
 }
-

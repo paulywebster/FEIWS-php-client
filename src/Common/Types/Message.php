@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class Message
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class Message
     /**
      * @return string
      */
-    public function getUID() : string
+    public function getUID(): string
     {
         return $this->UID;
     }
@@ -26,11 +25,8 @@ class Message
     /**
      * @return string
      */
-    public function getDetail() : string
+    public function getDetail(): string
     {
         return $this->Detail;
     }
-
-
 }
-

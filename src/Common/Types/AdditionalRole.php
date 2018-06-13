@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class AdditionalRole
 {
-
     /**
      * @var string
      */
@@ -23,7 +22,7 @@ class AdditionalRole
     /**
      * @return string
      */
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->Code;
     }
@@ -31,7 +30,7 @@ class AdditionalRole
     /**
      * @return string
      */
-    public function getLabel() : string
+    public function getLabel(): string
     {
         return $this->Label;
     }
@@ -39,11 +38,8 @@ class AdditionalRole
     /**
      * @return \FEIWebServicesClient\Common\Types\ArrayOfString
      */
-    public function getDisciplineCodes() : \FEIWebServicesClient\Common\Types\ArrayOfString
+    public function getDisciplineCodes(): \FEIWebServicesClient\Common\Types\ArrayOfString
     {
         return $this->DisciplineCodes;
     }
-
-
 }
-

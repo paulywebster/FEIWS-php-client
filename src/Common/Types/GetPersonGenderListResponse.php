@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetPersonGenderListResponse implements ResultInterface
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\ArrayOfGender
      */
@@ -15,11 +14,8 @@ class GetPersonGenderListResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Common\Types\ArrayOfGender
      */
-    public function getGetPersonGenderListResult() : \FEIWebServicesClient\Common\Types\ArrayOfGender
+    public function getGetPersonGenderListResult(): \FEIWebServicesClient\Common\Types\ArrayOfGender
     {
         return $this->getPersonGenderListResult;
     }
-
-
 }
-

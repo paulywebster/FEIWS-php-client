@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class Horse
 {
-
     /**
      * @var string
      */
@@ -238,7 +237,7 @@ class Horse
     /**
      * @return string
      */
-    public function getFEICode() : string
+    public function getFEICode(): string
     {
         return $this->FEICode;
     }
@@ -246,7 +245,7 @@ class Horse
     /**
      * @return string
      */
-    public function getAdmNFCode() : string
+    public function getAdmNFCode(): string
     {
         return $this->AdmNFCode;
     }
@@ -254,7 +253,7 @@ class Horse
     /**
      * @return string
      */
-    public function getCurrentName() : string
+    public function getCurrentName(): string
     {
         return $this->CurrentName;
     }
@@ -262,7 +261,7 @@ class Horse
     /**
      * @return string
      */
-    public function getCommercialName() : string
+    public function getCommercialName(): string
     {
         return $this->CommercialName;
     }
@@ -270,7 +269,7 @@ class Horse
     /**
      * @return string
      */
-    public function getBirthName() : string
+    public function getBirthName(): string
     {
         return $this->BirthName;
     }
@@ -278,7 +277,7 @@ class Horse
     /**
      * @return string
      */
-    public function getShortName() : string
+    public function getShortName(): string
     {
         return $this->ShortName;
     }
@@ -286,7 +285,7 @@ class Horse
     /**
      * @return string
      */
-    public function getCompleteName() : string
+    public function getCompleteName(): string
     {
         return $this->CompleteName;
     }
@@ -294,7 +293,7 @@ class Horse
     /**
      * @return bool
      */
-    public function isIsCNSuffix() : bool
+    public function isIsCNSuffix(): bool
     {
         return $this->IsCNSuffix;
     }
@@ -302,7 +301,7 @@ class Horse
     /**
      * @return string
      */
-    public function getGenderCode() : string
+    public function getGenderCode(): string
     {
         return $this->GenderCode;
     }
@@ -310,7 +309,7 @@ class Horse
     /**
      * @return string
      */
-    public function getColorCode() : string
+    public function getColorCode(): string
     {
         return $this->ColorCode;
     }
@@ -318,7 +317,7 @@ class Horse
     /**
      * @return string
      */
-    public function getBirthCountryCode() : string
+    public function getBirthCountryCode(): string
     {
         return $this->BirthCountryCode;
     }
@@ -326,7 +325,7 @@ class Horse
     /**
      * @return \DateTime
      */
-    public function getDateBirth() : \DateTime
+    public function getDateBirth(): \DateTime
     {
         return $this->DateBirth;
     }
@@ -334,7 +333,7 @@ class Horse
     /**
      * @return \DateTime
      */
-    public function getDateRetirement() : \DateTime
+    public function getDateRetirement(): \DateTime
     {
         return $this->DateRetirement;
     }
@@ -342,7 +341,7 @@ class Horse
     /**
      * @return \DateTime
      */
-    public function getDateDeath() : \DateTime
+    public function getDateDeath(): \DateTime
     {
         return $this->DateDeath;
     }
@@ -350,7 +349,7 @@ class Horse
     /**
      * @return string
      */
-    public function getColorComplement() : string
+    public function getColorComplement(): string
     {
         return $this->ColorComplement;
     }
@@ -358,7 +357,7 @@ class Horse
     /**
      * @return bool
      */
-    public function isIsActive() : bool
+    public function isIsActive(): bool
     {
         return $this->IsActive;
     }
@@ -366,7 +365,7 @@ class Horse
     /**
      * @return string
      */
-    public function getInactiveReason() : string
+    public function getInactiveReason(): string
     {
         return $this->InactiveReason;
     }
@@ -374,7 +373,7 @@ class Horse
     /**
      * @return int
      */
-    public function getCastratedId() : int
+    public function getCastratedId(): int
     {
         return $this->CastratedId;
     }
@@ -382,7 +381,7 @@ class Horse
     /**
      * @return \DateTime
      */
-    public function getDateCastration() : \DateTime
+    public function getDateCastration(): \DateTime
     {
         return $this->DateCastration;
     }
@@ -390,7 +389,7 @@ class Horse
     /**
      * @return int
      */
-    public function getHeight() : int
+    public function getHeight(): int
     {
         return $this->Height;
     }
@@ -398,7 +397,7 @@ class Horse
     /**
      * @return bool
      */
-    public function isIsPony() : bool
+    public function isIsPony(): bool
     {
         return $this->IsPony;
     }
@@ -406,7 +405,7 @@ class Horse
     /**
      * @return string
      */
-    public function getBreed() : string
+    public function getBreed(): string
     {
         return $this->Breed;
     }
@@ -414,7 +413,7 @@ class Horse
     /**
      * @return string
      */
-    public function getBreeder() : string
+    public function getBreeder(): string
     {
         return $this->Breeder;
     }
@@ -422,7 +421,7 @@ class Horse
     /**
      * @return string
      */
-    public function getStudBookCode() : string
+    public function getStudBookCode(): string
     {
         return $this->StudBookCode;
     }
@@ -430,7 +429,7 @@ class Horse
     /**
      * @return string
      */
-    public function getFEICodeType() : string
+    public function getFEICodeType(): string
     {
         return $this->FEICodeType;
     }
@@ -438,7 +437,7 @@ class Horse
     /**
      * @return string
      */
-    public function getUELN() : string
+    public function getUELN(): string
     {
         return $this->UELN;
     }
@@ -446,7 +445,7 @@ class Horse
     /**
      * @return string
      */
-    public function getMicrochip() : string
+    public function getMicrochip(): string
     {
         return $this->Microchip;
     }
@@ -454,7 +453,7 @@ class Horse
     /**
      * @return string
      */
-    public function getNatPassport() : string
+    public function getNatPassport(): string
     {
         return $this->NatPassport;
     }
@@ -462,7 +461,7 @@ class Horse
     /**
      * @return string
      */
-    public function getRecognitionCode() : string
+    public function getRecognitionCode(): string
     {
         return $this->RecognitionCode;
     }
@@ -470,7 +469,7 @@ class Horse
     /**
      * @return string
      */
-    public function getNFData() : string
+    public function getNFData(): string
     {
         return $this->NFData;
     }
@@ -478,7 +477,7 @@ class Horse
     /**
      * @return string
      */
-    public function getIssuingNFCode() : string
+    public function getIssuingNFCode(): string
     {
         return $this->IssuingNFCode;
     }
@@ -486,7 +485,7 @@ class Horse
     /**
      * @return string
      */
-    public function getIssuingBodyCode() : string
+    public function getIssuingBodyCode(): string
     {
         return $this->IssuingBodyCode;
     }
@@ -494,7 +493,7 @@ class Horse
     /**
      * @return \DateTime
      */
-    public function getDateIssuing() : \DateTime
+    public function getDateIssuing(): \DateTime
     {
         return $this->DateIssuing;
     }
@@ -502,7 +501,7 @@ class Horse
     /**
      * @return \DateTime
      */
-    public function getDateOfExpiry() : \DateTime
+    public function getDateOfExpiry(): \DateTime
     {
         return $this->DateOfExpiry;
     }
@@ -510,7 +509,7 @@ class Horse
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseTrainer
      */
-    public function getTrainer() : \FEIWebServicesClient\Horse\Types\HorseTrainer
+    public function getTrainer(): \FEIWebServicesClient\Horse\Types\HorseTrainer
     {
         return $this->Trainer;
     }
@@ -518,7 +517,7 @@ class Horse
     /**
      * @return int
      */
-    public function getEnduranceQualificationLevel() : int
+    public function getEnduranceQualificationLevel(): int
     {
         return $this->EnduranceQualificationLevel;
     }
@@ -526,7 +525,7 @@ class Horse
     /**
      * @return \DateTime
      */
-    public function getEnduranceRestPeriodEnd() : \DateTime
+    public function getEnduranceRestPeriodEnd(): \DateTime
     {
         return $this->EnduranceRestPeriodEnd;
     }
@@ -534,7 +533,7 @@ class Horse
     /**
      * @return string
      */
-    public function getTCN() : string
+    public function getTCN(): string
     {
         return $this->TCN;
     }
@@ -542,7 +541,7 @@ class Horse
     /**
      * @return string
      */
-    public function getHorseSireName() : string
+    public function getHorseSireName(): string
     {
         return $this->HorseSireName;
     }
@@ -550,7 +549,7 @@ class Horse
     /**
      * @return string
      */
-    public function getHorseSireUELN() : string
+    public function getHorseSireUELN(): string
     {
         return $this->HorseSireUELN;
     }
@@ -558,7 +557,7 @@ class Horse
     /**
      * @return string
      */
-    public function getHorseDamName() : string
+    public function getHorseDamName(): string
     {
         return $this->HorseDamName;
     }
@@ -566,7 +565,7 @@ class Horse
     /**
      * @return string
      */
-    public function getHorseDamUELN() : string
+    public function getHorseDamUELN(): string
     {
         return $this->HorseDamUELN;
     }
@@ -574,7 +573,7 @@ class Horse
     /**
      * @return string
      */
-    public function getHorseSireOfDamName() : string
+    public function getHorseSireOfDamName(): string
     {
         return $this->HorseSireOfDamName;
     }
@@ -582,7 +581,7 @@ class Horse
     /**
      * @return string
      */
-    public function getHorseSireOfDamUELN() : string
+    public function getHorseSireOfDamUELN(): string
     {
         return $this->HorseSireOfDamUELN;
     }
@@ -590,7 +589,7 @@ class Horse
     /**
      * @return string
      */
-    public function getKindOfName() : string
+    public function getKindOfName(): string
     {
         return $this->KindOfName;
     }
@@ -598,11 +597,8 @@ class Horse
     /**
      * @return bool
      */
-    public function isMissingDocuments() : bool
+    public function isMissingDocuments(): bool
     {
         return $this->MissingDocuments;
     }
-
-
 }
-

@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class NationalFederation
 {
-
     /**
      * @var string
      */
@@ -28,7 +27,7 @@ class NationalFederation
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->Name;
     }
@@ -36,7 +35,7 @@ class NationalFederation
     /**
      * @return string
      */
-    public function getCountryCode() : string
+    public function getCountryCode(): string
     {
         return $this->CountryCode;
     }
@@ -44,7 +43,7 @@ class NationalFederation
     /**
      * @return bool
      */
-    public function isIsHorseAdminChangeAutoAccepted() : bool
+    public function isIsHorseAdminChangeAutoAccepted(): bool
     {
         return $this->IsHorseAdminChangeAutoAccepted;
     }
@@ -52,11 +51,8 @@ class NationalFederation
     /**
      * @return bool
      */
-    public function isIsRiderAdminChangeAutoAccepted() : bool
+    public function isIsRiderAdminChangeAutoAccepted(): bool
     {
         return $this->IsRiderAdminChangeAutoAccepted;
     }
-
-
 }
-

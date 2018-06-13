@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class Category
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class Category
     /**
      * @return string
      */
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->Code;
     }
@@ -26,11 +25,8 @@ class Category
     /**
      * @return string
      */
-    public function getLabel() : string
+    public function getLabel(): string
     {
         return $this->Label;
     }
-
-
 }
-

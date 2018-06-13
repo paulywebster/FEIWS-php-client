@@ -30,7 +30,7 @@ class Environment
 
     public static function fromString(string $environment): self
     {
-        if(!in_array($environment, self::list())){
+        if (!in_array($environment, self::list())) {
             throw new \InvalidArgumentException(sprintf('The environment "%s" does not exist', $environment));
         }
 
@@ -59,15 +59,15 @@ class Environment
 
     public function url(): string
     {
-        if(self::INTEGRATION === $this->environment){
+        if (self::INTEGRATION === $this->environment) {
             return self::INTEGRATION_URL;
         }
 
-        if(self::VALIDATION === $this->environment){
+        if (self::VALIDATION === $this->environment) {
             return self::VALIDATION_URL;
         }
 
-        if(self::PRODUCTION === $this->environment){
+        if (self::PRODUCTION === $this->environment) {
             return self::PRODUCTION_URL;
         }
 

@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class ArrayOfCivility
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\Civility
      */
@@ -13,11 +12,8 @@ class ArrayOfCivility
     /**
      * @return \FEIWebServicesClient\Common\Types\Civility
      */
-    public function getCivility() : \FEIWebServicesClient\Common\Types\Civility
+    public function getCivility(): \FEIWebServicesClient\Common\Types\Civility
     {
         return $this->Civility;
     }
-
-
 }
-

@@ -2,12 +2,10 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-
 use Phpro\SoapClient\Type\ResultInterface;
 
 class SearchClassesHelperResponse implements ResultInterface
 {
-
     /**
      * @var string
      */
@@ -16,11 +14,8 @@ class SearchClassesHelperResponse implements ResultInterface
     /**
      * @return string
      */
-    public function getSearchClassesHelperResult() : string
+    public function getSearchClassesHelperResult(): string
     {
         return $this->SearchClassesHelperResult;
     }
-
-
 }
-

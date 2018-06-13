@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class ArrayOfAdminChangeStatusHorse
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\AdminChangeStatusHorse
      */
@@ -13,11 +12,8 @@ class ArrayOfAdminChangeStatusHorse
     /**
      * @return \FEIWebServicesClient\Horse\Types\AdminChangeStatusHorse
      */
-    public function getAdminChangeStatusHorse() : \FEIWebServicesClient\Horse\Types\AdminChangeStatusHorse
+    public function getAdminChangeStatusHorse(): \FEIWebServicesClient\Horse\Types\AdminChangeStatusHorse
     {
         return $this->AdminChangeStatusHorse;
     }
-
-
 }
-

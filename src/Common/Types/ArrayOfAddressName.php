@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class ArrayOfAddressName
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\AddressName
      */
@@ -13,11 +12,8 @@ class ArrayOfAddressName
     /**
      * @return \FEIWebServicesClient\Common\Types\AddressName
      */
-    public function getAddressName() : \FEIWebServicesClient\Common\Types\AddressName
+    public function getAddressName(): \FEIWebServicesClient\Common\Types\AddressName
     {
         return $this->AddressName;
     }
-
-
 }
-

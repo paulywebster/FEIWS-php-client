@@ -14,9 +14,8 @@ class ModeResponse implements ResultInterface
     /**
      * @return string
      */
-    public function getModeResult() : string
+    public function getModeResult(): string
     {
         return $this->ModeResult;
     }
 }
-

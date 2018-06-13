@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class SCHorseAnyID
 {
-
     /**
      * @var string
      */
@@ -13,11 +12,8 @@ class SCHorseAnyID
     /**
      * @return string
      */
-    public function getID() : string
+    public function getID(): string
     {
         return $this->ID;
     }
-
-
 }
-

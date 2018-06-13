@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class EnduranceNationalResult
 {
-
     /**
      * @var float
      */
@@ -38,7 +37,7 @@ class EnduranceNationalResult
     /**
      * @return float
      */
-    public function getAverageSpeed() : float
+    public function getAverageSpeed(): float
     {
         return $this->AverageSpeed;
     }
@@ -46,7 +45,7 @@ class EnduranceNationalResult
     /**
      * @return float
      */
-    public function getDistance() : float
+    public function getDistance(): float
     {
         return $this->Distance;
     }
@@ -54,7 +53,7 @@ class EnduranceNationalResult
     /**
      * @return int
      */
-    public function getRankPosition() : int
+    public function getRankPosition(): int
     {
         return $this->RankPosition;
     }
@@ -62,7 +61,7 @@ class EnduranceNationalResult
     /**
      * @return string
      */
-    public function getVenueName() : string
+    public function getVenueName(): string
     {
         return $this->VenueName;
     }
@@ -70,7 +69,7 @@ class EnduranceNationalResult
     /**
      * @return string
      */
-    public function getCountryCode() : string
+    public function getCountryCode(): string
     {
         return $this->CountryCode;
     }
@@ -78,11 +77,8 @@ class EnduranceNationalResult
     /**
      * @return \DateTime
      */
-    public function getCompetitionDate() : \DateTime
+    public function getCompetitionDate(): \DateTime
     {
         return $this->CompetitionDate;
     }
-
-
 }
-

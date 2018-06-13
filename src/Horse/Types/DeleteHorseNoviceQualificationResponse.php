@@ -2,12 +2,10 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-
 use Phpro\SoapClient\Type\ResultInterface;
 
 class DeleteHorseNoviceQualificationResponse implements ResultInterface
 {
-
     /**
      * @var bool
      */
@@ -21,7 +19,7 @@ class DeleteHorseNoviceQualificationResponse implements ResultInterface
     /**
      * @return bool
      */
-    public function isDeleteHorseNoviceQualificationResult() : bool
+    public function isDeleteHorseNoviceQualificationResult(): bool
     {
         return $this->deleteHorseNoviceQualificationResult;
     }
@@ -29,11 +27,8 @@ class DeleteHorseNoviceQualificationResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    public function getMessages() : \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
     {
         return $this->Messages;
     }
-
-
 }
-

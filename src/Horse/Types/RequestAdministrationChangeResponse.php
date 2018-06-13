@@ -2,12 +2,10 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-
 use Phpro\SoapClient\Type\ResultInterface;
 
 class RequestAdministrationChangeResponse implements ResultInterface
 {
-
     /**
      * @var string
      */
@@ -21,7 +19,7 @@ class RequestAdministrationChangeResponse implements ResultInterface
     /**
      * @return string
      */
-    public function getRequestAdministrationChangeResult() : string
+    public function getRequestAdministrationChangeResult(): string
     {
         return $this->requestAdministrationChangeResult;
     }
@@ -29,11 +27,8 @@ class RequestAdministrationChangeResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    public function getMessages() : \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
     {
         return $this->Messages;
     }
-
-
 }
-

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetCountryListResponse implements ResultInterface
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\ArrayOfCountry
      */
@@ -15,11 +14,8 @@ class GetCountryListResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Common\Types\ArrayOfCountry
      */
-    public function getGetCountryListResult() : \FEIWebServicesClient\Common\Types\ArrayOfCountry
+    public function getGetCountryListResult(): \FEIWebServicesClient\Common\Types\ArrayOfCountry
     {
         return $this->getCountryListResult;
     }
-
-
 }
-

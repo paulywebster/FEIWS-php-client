@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetOfficialFunctionListResponse implements ResultInterface
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\ArrayOfOfficialFunction
      */
@@ -15,11 +14,8 @@ class GetOfficialFunctionListResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Common\Types\ArrayOfOfficialFunction
      */
-    public function getGetOfficialFunctionListResult() : \FEIWebServicesClient\Common\Types\ArrayOfOfficialFunction
+    public function getGetOfficialFunctionListResult(): \FEIWebServicesClient\Common\Types\ArrayOfOfficialFunction
     {
         return $this->getOfficialFunctionListResult;
     }
-
-
 }
-

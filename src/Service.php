@@ -42,11 +42,11 @@ class Service
 
     public function uri(): string
     {
-        if(self::AUTHENTICATION === $this->service){
+        if (self::AUTHENTICATION === $this->service) {
             return self::AUTHENTICATION_SERVICE_URI;
         }
 
-        if(self::COMMON === $this->service){
+        if (self::COMMON === $this->service) {
             return self::COMMON_SERVICE_URI;
         }
 

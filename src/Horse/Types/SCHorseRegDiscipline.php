@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class SCHorseRegDiscipline
 {
-
     /**
      * @var string
      */
@@ -13,11 +12,8 @@ class SCHorseRegDiscipline
     /**
      * @return string
      */
-    public function getValue() : string
+    public function getValue(): string
     {
         return $this->Value;
     }
-
-
 }
-

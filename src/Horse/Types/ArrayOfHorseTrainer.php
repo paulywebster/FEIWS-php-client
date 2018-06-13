@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class ArrayOfHorseTrainer
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseTrainer
      */
@@ -13,11 +12,8 @@ class ArrayOfHorseTrainer
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseTrainer
      */
-    public function getHorseTrainer() : \FEIWebServicesClient\Horse\Types\HorseTrainer
+    public function getHorseTrainer(): \FEIWebServicesClient\Horse\Types\HorseTrainer
     {
         return $this->HorseTrainer;
     }
-
-
 }
-

@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class ArrayOfOfficialStatus
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\OfficialStatus
      */
@@ -13,11 +12,8 @@ class ArrayOfOfficialStatus
     /**
      * @return \FEIWebServicesClient\Common\Types\OfficialStatus
      */
-    public function getOfficialStatus() : \FEIWebServicesClient\Common\Types\OfficialStatus
+    public function getOfficialStatus(): \FEIWebServicesClient\Common\Types\OfficialStatus
     {
         return $this->OfficialStatus;
     }
-
-
 }
-

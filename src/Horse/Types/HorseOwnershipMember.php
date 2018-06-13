@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class HorseOwnershipMember
 {
-
     /**
      * @var int
      */
@@ -53,7 +52,7 @@ class HorseOwnershipMember
     /**
      * @return int
      */
-    public function getFEIID() : int
+    public function getFEIID(): int
     {
         return $this->FEIID;
     }
@@ -61,7 +60,7 @@ class HorseOwnershipMember
     /**
      * @return string
      */
-    public function getFamilyName() : string
+    public function getFamilyName(): string
     {
         return $this->FamilyName;
     }
@@ -69,7 +68,7 @@ class HorseOwnershipMember
     /**
      * @return string
      */
-    public function getFirstName() : string
+    public function getFirstName(): string
     {
         return $this->FirstName;
     }
@@ -77,7 +76,7 @@ class HorseOwnershipMember
     /**
      * @return string
      */
-    public function getCorporationName() : string
+    public function getCorporationName(): string
     {
         return $this->CorporationName;
     }
@@ -85,7 +84,7 @@ class HorseOwnershipMember
     /**
      * @return \FEIWebServicesClient\Horse\Types\Address
      */
-    public function getAddress() : \FEIWebServicesClient\Horse\Types\Address
+    public function getAddress(): \FEIWebServicesClient\Horse\Types\Address
     {
         return $this->Address;
     }
@@ -93,7 +92,7 @@ class HorseOwnershipMember
     /**
      * @return int
      */
-    public function getCorporationContactFEIID() : int
+    public function getCorporationContactFEIID(): int
     {
         return $this->CorporationContactFEIID;
     }
@@ -101,7 +100,7 @@ class HorseOwnershipMember
     /**
      * @return string
      */
-    public function getCorporationContactFamilyName() : string
+    public function getCorporationContactFamilyName(): string
     {
         return $this->CorporationContactFamilyName;
     }
@@ -109,7 +108,7 @@ class HorseOwnershipMember
     /**
      * @return string
      */
-    public function getCorporationContactFirstName() : string
+    public function getCorporationContactFirstName(): string
     {
         return $this->CorporationContactFirstName;
     }
@@ -117,11 +116,8 @@ class HorseOwnershipMember
     /**
      * @return float
      */
-    public function getOwnershipPercentage() : float
+    public function getOwnershipPercentage(): float
     {
         return $this->OwnershipPercentage;
     }
-
-
 }
-

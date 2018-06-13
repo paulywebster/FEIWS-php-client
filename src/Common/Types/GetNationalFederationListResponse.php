@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetNationalFederationListResponse implements ResultInterface
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\ArrayOfNationalFederation
      */
@@ -15,11 +14,8 @@ class GetNationalFederationListResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Common\Types\ArrayOfNationalFederation
      */
-    public function getGetNationalFederationListResult() : \FEIWebServicesClient\Common\Types\ArrayOfNationalFederation
+    public function getGetNationalFederationListResult(): \FEIWebServicesClient\Common\Types\ArrayOfNationalFederation
     {
         return $this->getNationalFederationListResult;
     }
-
-
 }
-

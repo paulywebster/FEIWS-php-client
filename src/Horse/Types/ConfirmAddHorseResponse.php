@@ -2,12 +2,10 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-
 use Phpro\SoapClient\Type\ResultInterface;
 
 class ConfirmAddHorseResponse implements ResultInterface
 {
-
     /**
      * @var bool
      */
@@ -26,7 +24,7 @@ class ConfirmAddHorseResponse implements ResultInterface
     /**
      * @return bool
      */
-    public function isConfirmAddHorseResult() : bool
+    public function isConfirmAddHorseResult(): bool
     {
         return $this->confirmAddHorseResult;
     }
@@ -34,7 +32,7 @@ class ConfirmAddHorseResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseNew
      */
-    public function getHorse() : \FEIWebServicesClient\Horse\Types\HorseNew
+    public function getHorse(): \FEIWebServicesClient\Horse\Types\HorseNew
     {
         return $this->Horse;
     }
@@ -42,11 +40,8 @@ class ConfirmAddHorseResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    public function getMessages() : \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
     {
         return $this->Messages;
     }
-
-
 }
-

@@ -10,7 +10,7 @@ use Phpro\SoapClient\ClientBuilder;
 
 class AuthenticationClientFactory
 {
-    public static function factory($environment) : AuthenticationClient
+    public static function factory($environment): AuthenticationClient
     {
         $environment = Environment::fromString($environment);
         $service = Service::authentication();
@@ -22,4 +22,3 @@ class AuthenticationClientFactory
         return $clientBuilder->build();
     }
 }
-

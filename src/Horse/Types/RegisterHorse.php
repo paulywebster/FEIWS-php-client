@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class RegisterHorse
 {
-
     /**
      * @var string
      */
@@ -23,7 +22,7 @@ class RegisterHorse
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -31,7 +30,7 @@ class RegisterHorse
     /**
      * @return int
      */
-    public function getYear() : int
+    public function getYear(): int
     {
         return $this->Year;
     }
@@ -39,11 +38,8 @@ class RegisterHorse
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfString
      */
-    public function getDisciplineCodes() : \FEIWebServicesClient\Horse\Types\ArrayOfString
+    public function getDisciplineCodes(): \FEIWebServicesClient\Horse\Types\ArrayOfString
     {
         return $this->DisciplineCodes;
     }
-
-
 }
-

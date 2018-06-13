@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class SearchClassesHelper
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\SearchClasses
      */
@@ -13,11 +12,8 @@ class SearchClassesHelper
     /**
      * @return \FEIWebServicesClient\Horse\Types\SearchClasses
      */
-    public function getClassStructure() : \FEIWebServicesClient\Horse\Types\SearchClasses
+    public function getClassStructure(): \FEIWebServicesClient\Horse\Types\SearchClasses
     {
         return $this->ClassStructure;
     }
-
-
 }
-

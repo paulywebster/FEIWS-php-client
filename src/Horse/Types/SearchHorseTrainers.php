@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class SearchHorseTrainers
 {
-
     /**
      * @var string
      */
@@ -28,7 +27,7 @@ class SearchHorseTrainers
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -36,7 +35,7 @@ class SearchHorseTrainers
     /**
      * @return int
      */
-    public function getPersonFEIID() : int
+    public function getPersonFEIID(): int
     {
         return $this->PersonFEIID;
     }
@@ -44,7 +43,7 @@ class SearchHorseTrainers
     /**
      * @return \DateTime
      */
-    public function getEvalDate() : \DateTime
+    public function getEvalDate(): \DateTime
     {
         return $this->EvalDate;
     }
@@ -52,11 +51,8 @@ class SearchHorseTrainers
     /**
      * @return int
      */
-    public function getPageNumber() : int
+    public function getPageNumber(): int
     {
         return $this->PageNumber;
     }
-
-
 }
-

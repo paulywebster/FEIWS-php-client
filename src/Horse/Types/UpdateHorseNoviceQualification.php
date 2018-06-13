@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class UpdateHorseNoviceQualification
 {
-
     /**
      * @var string
      */
@@ -23,7 +22,7 @@ class UpdateHorseNoviceQualification
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -31,7 +30,7 @@ class UpdateHorseNoviceQualification
     /**
      * @return \DateTime
      */
-    public function getNoviceQualificationDate() : \DateTime
+    public function getNoviceQualificationDate(): \DateTime
     {
         return $this->NoviceQualificationDate;
     }
@@ -39,11 +38,8 @@ class UpdateHorseNoviceQualification
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
      */
-    public function getNationalResults() : \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
+    public function getNationalResults(): \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
     {
         return $this->NationalResults;
     }
-
-
 }
-

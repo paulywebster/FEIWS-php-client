@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class HorseName
 {
-
     /**
      * @var string
      */
@@ -63,7 +62,7 @@ class HorseName
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -71,7 +70,7 @@ class HorseName
     /**
      * @return \DateTime
      */
-    public function getDateChange() : \DateTime
+    public function getDateChange(): \DateTime
     {
         return $this->DateChange;
     }
@@ -79,7 +78,7 @@ class HorseName
     /**
      * @return string
      */
-    public function getChangedBy() : string
+    public function getChangedBy(): string
     {
         return $this->ChangedBy;
     }
@@ -87,7 +86,7 @@ class HorseName
     /**
      * @return string
      */
-    public function getReasonNF() : string
+    public function getReasonNF(): string
     {
         return $this->ReasonNF;
     }
@@ -95,7 +94,7 @@ class HorseName
     /**
      * @return string
      */
-    public function getReasonFEI() : string
+    public function getReasonFEI(): string
     {
         return $this->ReasonFEI;
     }
@@ -103,7 +102,7 @@ class HorseName
     /**
      * @return string
      */
-    public function getCurrentName() : string
+    public function getCurrentName(): string
     {
         return $this->CurrentName;
     }
@@ -111,7 +110,7 @@ class HorseName
     /**
      * @return string
      */
-    public function getBirthName() : string
+    public function getBirthName(): string
     {
         return $this->BirthName;
     }
@@ -119,7 +118,7 @@ class HorseName
     /**
      * @return string
      */
-    public function getShortName() : string
+    public function getShortName(): string
     {
         return $this->ShortName;
     }
@@ -127,7 +126,7 @@ class HorseName
     /**
      * @return string
      */
-    public function getCommercialName() : string
+    public function getCommercialName(): string
     {
         return $this->CommercialName;
     }
@@ -135,7 +134,7 @@ class HorseName
     /**
      * @return bool
      */
-    public function isIsCNSuffix() : bool
+    public function isIsCNSuffix(): bool
     {
         return $this->IsCNSuffix;
     }
@@ -143,11 +142,8 @@ class HorseName
     /**
      * @return string
      */
-    public function getTCN() : string
+    public function getTCN(): string
     {
         return $this->TCN;
     }
-
-
 }
-

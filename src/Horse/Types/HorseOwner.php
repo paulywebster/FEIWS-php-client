@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class HorseOwner
 {
-
     /**
      * @var int
      */
@@ -63,7 +62,7 @@ class HorseOwner
     /**
      * @return int
      */
-    public function getFEIID() : int
+    public function getFEIID(): int
     {
         return $this->FEIID;
     }
@@ -71,7 +70,7 @@ class HorseOwner
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->Name;
     }
@@ -79,7 +78,7 @@ class HorseOwner
     /**
      * @return \DateTime
      */
-    public function getDateFrom() : \DateTime
+    public function getDateFrom(): \DateTime
     {
         return $this->DateFrom;
     }
@@ -87,7 +86,7 @@ class HorseOwner
     /**
      * @return string
      */
-    public function getAddress1() : string
+    public function getAddress1(): string
     {
         return $this->Address1;
     }
@@ -95,7 +94,7 @@ class HorseOwner
     /**
      * @return string
      */
-    public function getAddress2() : string
+    public function getAddress2(): string
     {
         return $this->Address2;
     }
@@ -103,7 +102,7 @@ class HorseOwner
     /**
      * @return string
      */
-    public function getAddress3() : string
+    public function getAddress3(): string
     {
         return $this->Address3;
     }
@@ -111,7 +110,7 @@ class HorseOwner
     /**
      * @return string
      */
-    public function getZip() : string
+    public function getZip(): string
     {
         return $this->Zip;
     }
@@ -119,7 +118,7 @@ class HorseOwner
     /**
      * @return string
      */
-    public function getCity() : string
+    public function getCity(): string
     {
         return $this->City;
     }
@@ -127,7 +126,7 @@ class HorseOwner
     /**
      * @return string
      */
-    public function getCountryCode() : string
+    public function getCountryCode(): string
     {
         return $this->CountryCode;
     }
@@ -135,7 +134,7 @@ class HorseOwner
     /**
      * @return string
      */
-    public function getNationalityCode() : string
+    public function getNationalityCode(): string
     {
         return $this->NationalityCode;
     }
@@ -143,11 +142,8 @@ class HorseOwner
     /**
      * @return string
      */
-    public function getNationalityCodes() : string
+    public function getNationalityCodes(): string
     {
         return $this->NationalityCodes;
     }
-
-
 }
-

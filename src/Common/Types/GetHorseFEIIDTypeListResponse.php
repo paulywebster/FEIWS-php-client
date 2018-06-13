@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetHorseFEIIDTypeListResponse implements ResultInterface
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\ArrayOfFEIIDType
      */
@@ -15,11 +14,8 @@ class GetHorseFEIIDTypeListResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Common\Types\ArrayOfFEIIDType
      */
-    public function getGetHorseFEIIDTypeListResult() : \FEIWebServicesClient\Common\Types\ArrayOfFEIIDType
+    public function getGetHorseFEIIDTypeListResult(): \FEIWebServicesClient\Common\Types\ArrayOfFEIIDType
     {
         return $this->getHorseFEIIDTypeListResult;
     }
-
-
 }
-

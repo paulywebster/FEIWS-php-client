@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class HorseDuplicate
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\Horse
      */
@@ -18,7 +17,7 @@ class HorseDuplicate
     /**
      * @return \FEIWebServicesClient\Horse\Types\Horse
      */
-    public function getDuplicate() : \FEIWebServicesClient\Horse\Types\Horse
+    public function getDuplicate(): \FEIWebServicesClient\Horse\Types\Horse
     {
         return $this->Duplicate;
     }
@@ -26,11 +25,8 @@ class HorseDuplicate
     /**
      * @return string
      */
-    public function getRuleDescription() : string
+    public function getRuleDescription(): string
     {
         return $this->RuleDescription;
     }
-
-
 }
-

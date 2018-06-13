@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class ArrayOfString
 {
-
     /**
      * @var string
      */
@@ -13,11 +12,8 @@ class ArrayOfString
     /**
      * @return string
      */
-    public function getString() : string
+    public function getString(): string
     {
         return $this->string;
     }
-
-
 }
-

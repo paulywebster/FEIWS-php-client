@@ -2,12 +2,10 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-
 use Phpro\SoapClient\Type\ResultInterface;
 
 class UpgradeHorsePassportResponse implements ResultInterface
 {
-
     /**
      * @var bool
      */
@@ -21,7 +19,7 @@ class UpgradeHorsePassportResponse implements ResultInterface
     /**
      * @return bool
      */
-    public function isUpgradeHorsePassportResult() : bool
+    public function isUpgradeHorsePassportResult(): bool
     {
         return $this->upgradeHorsePassportResult;
     }
@@ -29,11 +27,8 @@ class UpgradeHorsePassportResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    public function getMessages() : \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
     {
         return $this->Messages;
     }
-
-
 }
-

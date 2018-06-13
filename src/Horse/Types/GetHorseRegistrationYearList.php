@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class GetHorseRegistrationYearList
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class GetHorseRegistrationYearList
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -26,11 +25,8 @@ class GetHorseRegistrationYearList
     /**
      * @return int
      */
-    public function getYear() : int
+    public function getYear(): int
     {
         return $this->Year;
     }
-
-
 }
-

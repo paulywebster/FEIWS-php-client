@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class ArrayOfDiscipline
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\Discipline
      */
@@ -13,11 +12,8 @@ class ArrayOfDiscipline
     /**
      * @return \FEIWebServicesClient\Common\Types\Discipline
      */
-    public function getDiscipline() : \FEIWebServicesClient\Common\Types\Discipline
+    public function getDiscipline(): \FEIWebServicesClient\Common\Types\Discipline
     {
         return $this->Discipline;
     }
-
-
 }
-

@@ -2,12 +2,10 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-
 use Phpro\SoapClient\Type\ResultInterface;
 
 class GetHorseOwnerResponse implements ResultInterface
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseOwner
      */
@@ -21,7 +19,7 @@ class GetHorseOwnerResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseOwner
      */
-    public function getGetHorseOwnerResult() : \FEIWebServicesClient\Horse\Types\HorseOwner
+    public function getGetHorseOwnerResult(): \FEIWebServicesClient\Horse\Types\HorseOwner
     {
         return $this->getHorseOwnerResult;
     }
@@ -29,11 +27,8 @@ class GetHorseOwnerResponse implements ResultInterface
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    public function getMessages() : \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
     {
         return $this->Messages;
     }
-
-
 }
-

@@ -6,7 +6,6 @@ use Phpro\SoapClient\Type\ResultInterface;
 
 class GetVersionResponse implements ResultInterface
 {
-
     /**
      * @var string
      */
@@ -15,11 +14,8 @@ class GetVersionResponse implements ResultInterface
     /**
      * @return string
      */
-    public function getVersionResult() : string
+    public function getVersionResult(): string
     {
         return $this->getVersionResult;
     }
-
-
 }
-

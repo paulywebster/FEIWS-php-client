@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class AddHorse
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseNew
      */
@@ -13,11 +12,8 @@ class AddHorse
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseNew
      */
-    public function getHorse() : \FEIWebServicesClient\Horse\Types\HorseNew
+    public function getHorse(): \FEIWebServicesClient\Horse\Types\HorseNew
     {
         return $this->Horse;
     }
-
-
 }
-

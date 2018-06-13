@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class ArrayOfLookupDate
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\LookupDate
      */
@@ -13,11 +12,8 @@ class ArrayOfLookupDate
     /**
      * @return \FEIWebServicesClient\Common\Types\LookupDate
      */
-    public function getLookupDate() : \FEIWebServicesClient\Common\Types\LookupDate
+    public function getLookupDate(): \FEIWebServicesClient\Common\Types\LookupDate
     {
         return $this->LookupDate;
     }
-
-
 }
-

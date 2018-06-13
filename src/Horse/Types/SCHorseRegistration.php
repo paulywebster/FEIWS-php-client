@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class SCHorseRegistration
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\RegistrationEnum
      */
@@ -18,7 +17,7 @@ class SCHorseRegistration
     /**
      * @return \FEIWebServicesClient\Horse\Types\RegistrationEnum
      */
-    public function getStatus() : \FEIWebServicesClient\Horse\Types\RegistrationEnum
+    public function getStatus(): \FEIWebServicesClient\Horse\Types\RegistrationEnum
     {
         return $this->Status;
     }
@@ -26,11 +25,8 @@ class SCHorseRegistration
     /**
      * @return int
      */
-    public function getYear() : int
+    public function getYear(): int
     {
         return $this->Year;
     }
-
-
 }
-

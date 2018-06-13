@@ -8,8 +8,7 @@ use Phpro\SoapClient\Soap\ClassMap\ClassMap;
 
 class AuthenticationWSClassmap
 {
-
-    public static function getCollection() : ClassMapCollection
+    public static function getCollection(): ClassMapCollection
     {
         return new ClassMapCollection([
             new ClassMap('Login', Type\Login::class),
@@ -19,7 +18,4 @@ class AuthenticationWSClassmap
             new ClassMap('ModeResponse', Type\ModeResponse::class),
         ]);
     }
-
-
 }
-

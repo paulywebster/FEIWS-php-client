@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class AddTrainerToHorse
 {
-
     /**
      * @var string
      */
@@ -28,7 +27,7 @@ class AddTrainerToHorse
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -36,7 +35,7 @@ class AddTrainerToHorse
     /**
      * @return int
      */
-    public function getPersonFEIID() : int
+    public function getPersonFEIID(): int
     {
         return $this->PersonFEIID;
     }
@@ -44,7 +43,7 @@ class AddTrainerToHorse
     /**
      * @return \DateTime
      */
-    public function getTrainerStartDate() : \DateTime
+    public function getTrainerStartDate(): \DateTime
     {
         return $this->TrainerStartDate;
     }
@@ -52,11 +51,8 @@ class AddTrainerToHorse
     /**
      * @return \DateTime
      */
-    public function getTrainerEndDate() : \DateTime
+    public function getTrainerEndDate(): \DateTime
     {
         return $this->TrainerEndDate;
     }
-
-
 }
-

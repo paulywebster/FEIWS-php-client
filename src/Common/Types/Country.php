@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class Country
 {
-
     /**
      * @var string
      */
@@ -28,7 +27,7 @@ class Country
     /**
      * @return string
      */
-    public function getISONumeric() : string
+    public function getISONumeric(): string
     {
         return $this->ISONumeric;
     }
@@ -36,7 +35,7 @@ class Country
     /**
      * @return string
      */
-    public function getISOAlpha() : string
+    public function getISOAlpha(): string
     {
         return $this->ISOAlpha;
     }
@@ -44,7 +43,7 @@ class Country
     /**
      * @return string
      */
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->Code;
     }
@@ -52,11 +51,8 @@ class Country
     /**
      * @return string
      */
-    public function getLabel() : string
+    public function getLabel(): string
     {
         return $this->Label;
     }
-
-
 }
-

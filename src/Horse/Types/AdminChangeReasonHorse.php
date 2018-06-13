@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class AdminChangeReasonHorse
 {
-
     /**
      * @var string
      */
@@ -23,7 +22,7 @@ class AdminChangeReasonHorse
     /**
      * @return string
      */
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->Code;
     }
@@ -31,7 +30,7 @@ class AdminChangeReasonHorse
     /**
      * @return string
      */
-    public function getStatusCode() : string
+    public function getStatusCode(): string
     {
         return $this->StatusCode;
     }
@@ -39,11 +38,8 @@ class AdminChangeReasonHorse
     /**
      * @return string
      */
-    public function getLabel() : string
+    public function getLabel(): string
     {
         return $this->Label;
     }
-
-
 }
-

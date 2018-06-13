@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class HorseTrainer
 {
-
     /**
      * @var \DateTime
      */
@@ -58,7 +57,7 @@ class HorseTrainer
     /**
      * @return \DateTime
      */
-    public function getStartDate() : \DateTime
+    public function getStartDate(): \DateTime
     {
         return $this->StartDate;
     }
@@ -66,7 +65,7 @@ class HorseTrainer
     /**
      * @return \DateTime
      */
-    public function getEndDate() : \DateTime
+    public function getEndDate(): \DateTime
     {
         return $this->EndDate;
     }
@@ -74,7 +73,7 @@ class HorseTrainer
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -82,7 +81,7 @@ class HorseTrainer
     /**
      * @return string
      */
-    public function getCompleteName() : string
+    public function getCompleteName(): string
     {
         return $this->CompleteName;
     }
@@ -90,7 +89,7 @@ class HorseTrainer
     /**
      * @return string
      */
-    public function getHorseAdminNF() : string
+    public function getHorseAdminNF(): string
     {
         return $this->HorseAdminNF;
     }
@@ -98,7 +97,7 @@ class HorseTrainer
     /**
      * @return int
      */
-    public function getPersonFEIID() : int
+    public function getPersonFEIID(): int
     {
         return $this->PersonFEIID;
     }
@@ -106,7 +105,7 @@ class HorseTrainer
     /**
      * @return string
      */
-    public function getFirstName() : string
+    public function getFirstName(): string
     {
         return $this->FirstName;
     }
@@ -114,7 +113,7 @@ class HorseTrainer
     /**
      * @return string
      */
-    public function getFamilyName() : string
+    public function getFamilyName(): string
     {
         return $this->FamilyName;
     }
@@ -122,7 +121,7 @@ class HorseTrainer
     /**
      * @return string
      */
-    public function getPersonAdminNF() : string
+    public function getPersonAdminNF(): string
     {
         return $this->PersonAdminNF;
     }
@@ -130,11 +129,8 @@ class HorseTrainer
     /**
      * @return string
      */
-    public function getComment() : string
+    public function getComment(): string
     {
         return $this->Comment;
     }
-
-
 }
-

@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class UploadHorseDocument
 {
-
     /**
      * @var string
      */
@@ -33,7 +32,7 @@ class UploadHorseDocument
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -41,7 +40,7 @@ class UploadHorseDocument
     /**
      * @return \FEIWebServicesClient\Horse\Types\base64Binary
      */
-    public function getDocument() : \FEIWebServicesClient\Horse\Types\base64Binary
+    public function getDocument(): \FEIWebServicesClient\Horse\Types\base64Binary
     {
         return $this->Document;
     }
@@ -49,7 +48,7 @@ class UploadHorseDocument
     /**
      * @return string
      */
-    public function getDocumentGenderCode() : string
+    public function getDocumentGenderCode(): string
     {
         return $this->DocumentGenderCode;
     }
@@ -57,7 +56,7 @@ class UploadHorseDocument
     /**
      * @return string
      */
-    public function getHorseIdentityTypeCode() : string
+    public function getHorseIdentityTypeCode(): string
     {
         return $this->HorseIdentityTypeCode;
     }
@@ -65,11 +64,8 @@ class UploadHorseDocument
     /**
      * @return string
      */
-    public function getExtension() : string
+    public function getExtension(): string
     {
         return $this->Extension;
     }
-
-
 }
-

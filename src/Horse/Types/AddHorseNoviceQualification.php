@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class AddHorseNoviceQualification
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class AddHorseNoviceQualification
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -26,11 +25,8 @@ class AddHorseNoviceQualification
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
      */
-    public function getNationalResults() : \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
+    public function getNationalResults(): \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
     {
         return $this->NationalResults;
     }
-
-
 }
-

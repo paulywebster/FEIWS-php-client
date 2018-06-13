@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class Address
 {
-
     /**
      * @var string
      */
@@ -68,7 +67,7 @@ class Address
     /**
      * @return string
      */
-    public function getCountryCode() : string
+    public function getCountryCode(): string
     {
         return $this->CountryCode;
     }
@@ -76,7 +75,7 @@ class Address
     /**
      * @return string
      */
-    public function getAddressNameCode() : string
+    public function getAddressNameCode(): string
     {
         return $this->AddressNameCode;
     }
@@ -84,7 +83,7 @@ class Address
     /**
      * @return string
      */
-    public function getZip() : string
+    public function getZip(): string
     {
         return $this->Zip;
     }
@@ -92,7 +91,7 @@ class Address
     /**
      * @return string
      */
-    public function getCity() : string
+    public function getCity(): string
     {
         return $this->City;
     }
@@ -100,7 +99,7 @@ class Address
     /**
      * @return string
      */
-    public function getAddress1() : string
+    public function getAddress1(): string
     {
         return $this->Address1;
     }
@@ -108,7 +107,7 @@ class Address
     /**
      * @return string
      */
-    public function getAddress2() : string
+    public function getAddress2(): string
     {
         return $this->Address2;
     }
@@ -116,7 +115,7 @@ class Address
     /**
      * @return string
      */
-    public function getAddress3() : string
+    public function getAddress3(): string
     {
         return $this->Address3;
     }
@@ -124,7 +123,7 @@ class Address
     /**
      * @return string
      */
-    public function getPhoneNr() : string
+    public function getPhoneNr(): string
     {
         return $this->PhoneNr;
     }
@@ -132,7 +131,7 @@ class Address
     /**
      * @return string
      */
-    public function getFaxNr() : string
+    public function getFaxNr(): string
     {
         return $this->FaxNr;
     }
@@ -140,7 +139,7 @@ class Address
     /**
      * @return bool
      */
-    public function isIsMailingAddress() : bool
+    public function isIsMailingAddress(): bool
     {
         return $this->IsMailingAddress;
     }
@@ -148,7 +147,7 @@ class Address
     /**
      * @return string
      */
-    public function getComment() : string
+    public function getComment(): string
     {
         return $this->Comment;
     }
@@ -156,11 +155,8 @@ class Address
     /**
      * @return string
      */
-    public function getTCN() : string
+    public function getTCN(): string
     {
         return $this->TCN;
     }
-
-
 }
-

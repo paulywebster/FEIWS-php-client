@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class AssignHorseOwnership
 {
-
     /**
      * @var string
      */
@@ -18,7 +17,7 @@ class AssignHorseOwnership
     /**
      * @return string
      */
-    public function getHorseFEICode() : string
+    public function getHorseFEICode(): string
     {
         return $this->HorseFEICode;
     }
@@ -26,11 +25,8 @@ class AssignHorseOwnership
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseOwnership
      */
-    public function getOwnership() : \FEIWebServicesClient\Horse\Types\HorseOwnership
+    public function getOwnership(): \FEIWebServicesClient\Horse\Types\HorseOwnership
     {
         return $this->Ownership;
     }
-
-
 }
-

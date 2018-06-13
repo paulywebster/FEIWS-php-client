@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class ArrayOfSearchCriteria
 {
-
     /**
      * @var \FEIWebServicesClient\Horse\Types\SearchCriteria
      */
@@ -13,11 +12,8 @@ class ArrayOfSearchCriteria
     /**
      * @return \FEIWebServicesClient\Horse\Types\SearchCriteria
      */
-    public function getSearchCriteria() : \FEIWebServicesClient\Horse\Types\SearchCriteria
+    public function getSearchCriteria(): \FEIWebServicesClient\Horse\Types\SearchCriteria
     {
         return $this->SearchCriteria;
     }
-
-
 }
-

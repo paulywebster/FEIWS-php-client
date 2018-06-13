@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class ArrayOfDocIssuingBody
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\DocIssuingBody
      */
@@ -13,11 +12,8 @@ class ArrayOfDocIssuingBody
     /**
      * @return \FEIWebServicesClient\Common\Types\DocIssuingBody
      */
-    public function getDocIssuingBody() : \FEIWebServicesClient\Common\Types\DocIssuingBody
+    public function getDocIssuingBody(): \FEIWebServicesClient\Common\Types\DocIssuingBody
     {
         return $this->DocIssuingBody;
     }
-
-
 }
-

@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Common\Types;
 
 class ArrayOfLeague
 {
-
     /**
      * @var \FEIWebServicesClient\Common\Types\League
      */
@@ -13,11 +12,8 @@ class ArrayOfLeague
     /**
      * @return \FEIWebServicesClient\Common\Types\League
      */
-    public function getLeague() : \FEIWebServicesClient\Common\Types\League
+    public function getLeague(): \FEIWebServicesClient\Common\Types\League
     {
         return $this->League;
     }
-
-
 }
-

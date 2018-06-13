@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class SCHorseRegDateFrom
 {
-
     /**
      * @var \DateTime
      */
@@ -13,11 +12,8 @@ class SCHorseRegDateFrom
     /**
      * @return \DateTime
      */
-    public function getValue() : \DateTime
+    public function getValue(): \DateTime
     {
         return $this->Value;
     }
-
-
 }
-

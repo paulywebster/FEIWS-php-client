@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Horse\Types;
 
 class ConfirmAddHorse
 {
-
     /**
      * @var string
      */
@@ -13,11 +12,8 @@ class ConfirmAddHorse
     /**
      * @return string
      */
-    public function getTicket() : string
+    public function getTicket(): string
     {
         return $this->Ticket;
     }
-
-
 }
-
