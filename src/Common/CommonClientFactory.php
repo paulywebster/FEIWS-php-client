@@ -22,6 +22,9 @@ class CommonClientFactory
         }
         $cookies = $factory->getCookies();
 
+        if (null === $cookies) {
+            throw new \Exception('No cookie !');
+        }
         $environment = Environment::fromString($config['environment']);
         $service = Service::common();
         $clientFactory = new PhproClientFactory(CommonClient::class);
