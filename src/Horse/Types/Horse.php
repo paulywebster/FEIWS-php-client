@@ -7,232 +7,232 @@ class Horse
     /**
      * @var string
      */
-    private $FEICode = null;
+    private $FEICode;
 
     /**
      * @var string
      */
-    private $AdmNFCode = null;
+    private $AdmNFCode;
 
     /**
      * @var string
      */
-    private $CurrentName = null;
+    private $CurrentName;
 
     /**
      * @var string
      */
-    private $CommercialName = null;
+    private $CommercialName;
 
     /**
      * @var string
      */
-    private $BirthName = null;
+    private $BirthName;
 
     /**
      * @var string
      */
-    private $ShortName = null;
+    private $ShortName;
 
     /**
      * @var string
      */
-    private $CompleteName = null;
+    private $CompleteName;
 
     /**
      * @var bool
      */
-    private $IsCNSuffix = null;
+    private $IsCNSuffix;
 
     /**
      * @var string
      */
-    private $GenderCode = null;
+    private $GenderCode;
 
     /**
      * @var string
      */
-    private $ColorCode = null;
+    private $ColorCode;
 
     /**
      * @var string
      */
-    private $BirthCountryCode = null;
+    private $BirthCountryCode;
 
     /**
      * @var \DateTime
      */
-    private $DateBirth = null;
+    private $DateBirth;
 
     /**
      * @var \DateTime
      */
-    private $DateRetirement = null;
+    private $DateRetirement;
 
     /**
      * @var \DateTime
      */
-    private $DateDeath = null;
+    private $DateDeath;
 
     /**
      * @var string
      */
-    private $ColorComplement = null;
+    private $ColorComplement;
 
     /**
      * @var bool
      */
-    private $IsActive = null;
+    private $IsActive;
 
     /**
      * @var string
      */
-    private $InactiveReason = null;
+    private $InactiveReason;
 
     /**
      * @var int
      */
-    private $CastratedId = null;
+    private $CastratedId;
 
     /**
      * @var \DateTime
      */
-    private $DateCastration = null;
+    private $DateCastration;
 
     /**
      * @var int
      */
-    private $Height = null;
+    private $Height;
 
     /**
      * @var bool
      */
-    private $IsPony = null;
+    private $IsPony;
 
     /**
      * @var string
      */
-    private $Breed = null;
+    private $Breed;
 
     /**
      * @var string
      */
-    private $Breeder = null;
+    private $Breeder;
 
     /**
      * @var string
      */
-    private $StudBookCode = null;
+    private $StudBookCode;
 
     /**
      * @var string
      */
-    private $FEICodeType = null;
+    private $FEICodeType;
 
     /**
      * @var string
      */
-    private $UELN = null;
+    private $UELN;
 
     /**
      * @var string
      */
-    private $Microchip = null;
+    private $Microchip;
 
     /**
      * @var string
      */
-    private $NatPassport = null;
+    private $NatPassport;
 
     /**
      * @var string
      */
-    private $RecognitionCode = null;
+    private $RecognitionCode;
 
     /**
      * @var string
      */
-    private $NFData = null;
+    private $NFData;
 
     /**
      * @var string
      */
-    private $IssuingNFCode = null;
+    private $IssuingNFCode;
 
     /**
      * @var string
      */
-    private $IssuingBodyCode = null;
+    private $IssuingBodyCode;
 
     /**
      * @var \DateTime
      */
-    private $DateIssuing = null;
+    private $DateIssuing;
 
     /**
      * @var \DateTime
      */
-    private $DateOfExpiry = null;
+    private $DateOfExpiry;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseTrainer
      */
-    private $Trainer = null;
+    private $Trainer;
 
     /**
      * @var int
      */
-    private $EnduranceQualificationLevel = null;
+    private $EnduranceQualificationLevel;
 
     /**
      * @var \DateTime
      */
-    private $EnduranceRestPeriodEnd = null;
+    private $EnduranceRestPeriodEnd;
 
     /**
      * @var string
      */
-    private $TCN = null;
+    private $TCN;
 
     /**
      * @var string
      */
-    private $HorseSireName = null;
+    private $HorseSireName;
 
     /**
      * @var string
      */
-    private $HorseSireUELN = null;
+    private $HorseSireUELN;
 
     /**
      * @var string
      */
-    private $HorseDamName = null;
+    private $HorseDamName;
 
     /**
      * @var string
      */
-    private $HorseDamUELN = null;
+    private $HorseDamUELN;
 
     /**
      * @var string
      */
-    private $HorseSireOfDamName = null;
+    private $HorseSireOfDamName;
 
     /**
      * @var string
      */
-    private $HorseSireOfDamUELN = null;
+    private $HorseSireOfDamUELN;
 
     /**
      * @var string
      */
-    private $KindOfName = null;
+    private $KindOfName;
 
     /**
      * @var bool
      */
-    private $MissingDocuments = null;
+    private $MissingDocuments;
 
     /**
      * @return string

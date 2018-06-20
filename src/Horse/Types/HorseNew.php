@@ -7,52 +7,52 @@ class HorseNew
     /**
      * @var string
      */
-    private $OwnerName = null;
+    private $OwnerName;
 
     /**
      * @var \DateTime
      */
-    private $OwnerDateFrom = null;
+    private $OwnerDateFrom;
 
     /**
      * @var string
      */
-    private $OwnerAddress1 = null;
+    private $OwnerAddress1;
 
     /**
      * @var string
      */
-    private $OwnerAddress2 = null;
+    private $OwnerAddress2;
 
     /**
      * @var string
      */
-    private $OwnerAddress3 = null;
+    private $OwnerAddress3;
 
     /**
      * @var string
      */
-    private $OwnerZip = null;
+    private $OwnerZip;
 
     /**
      * @var string
      */
-    private $OwnerCity = null;
+    private $OwnerCity;
 
     /**
      * @var string
      */
-    private $OwnerCountryCode = null;
+    private $OwnerCountryCode;
 
     /**
      * @var string
      */
-    private $OwnerNationalityCode = null;
+    private $OwnerNationalityCode;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseOwnership
      */
-    private $Ownership = null;
+    private $Ownership;
 
     /**
      * @return string

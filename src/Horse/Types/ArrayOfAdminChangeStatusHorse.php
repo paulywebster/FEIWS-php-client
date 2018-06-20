@@ -7,7 +7,7 @@ class ArrayOfAdminChangeStatusHorse
     /**
      * @var \FEIWebServicesClient\Horse\Types\AdminChangeStatusHorse
      */
-    private $AdminChangeStatusHorse = null;
+    private $AdminChangeStatusHorse;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\AdminChangeStatusHorse

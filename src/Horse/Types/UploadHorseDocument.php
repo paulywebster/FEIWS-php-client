@@ -7,27 +7,27 @@ class UploadHorseDocument
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\base64Binary
      */
-    private $Document = null;
+    private $Document;
 
     /**
      * @var string
      */
-    private $DocumentGenderCode = null;
+    private $DocumentGenderCode;
 
     /**
      * @var string
      */
-    private $HorseIdentityTypeCode = null;
+    private $HorseIdentityTypeCode;
 
     /**
      * @var string
      */
-    private $Extension = null;
+    private $Extension;
 
     /**
      * @return string

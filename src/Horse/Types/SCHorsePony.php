@@ -7,7 +7,7 @@ class SCHorsePony
     /**
      * @var \FEIWebServicesClient\Horse\Types\PonyEnum
      */
-    private $Value = null;
+    private $Value;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\PonyEnum

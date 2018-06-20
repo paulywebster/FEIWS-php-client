@@ -7,7 +7,7 @@ class ArrayOfSearchCriteria
     /**
      * @var \FEIWebServicesClient\Horse\Types\SearchCriteria
      */
-    private $SearchCriteria = null;
+    private $SearchCriteria;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\SearchCriteria

@@ -7,22 +7,22 @@ class AddTrainerToHorse
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var int
      */
-    private $PersonFEIID = null;
+    private $PersonFEIID;
 
     /**
      * @var \DateTime
      */
-    private $TrainerStartDate = null;
+    private $TrainerStartDate;
 
     /**
      * @var \DateTime
      */
-    private $TrainerEndDate = null;
+    private $TrainerEndDate;
 
     /**
      * @return string

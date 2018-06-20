@@ -9,27 +9,27 @@ class AddHorseResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $addHorseResult = null;
+    private $addHorseResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseNew
      */
-    private $Horse = null;
+    private $Horse;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseDuplicate
      */
-    private $PotentialHorseDuplicates = null;
+    private $PotentialHorseDuplicates;
 
     /**
      * @var string
      */
-    private $Ticket = null;
+    private $Ticket;
 
     /**
      * @return bool

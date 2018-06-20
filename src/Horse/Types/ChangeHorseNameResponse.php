@@ -9,27 +9,27 @@ class ChangeHorseNameResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $changeHorseNameResult = null;
+    private $changeHorseNameResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseName
      */
-    private $HorseName = null;
+    private $HorseName;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseDuplicate
      */
-    private $PotentialHorseDuplicates = null;
+    private $PotentialHorseDuplicates;
 
     /**
      * @var string
      */
-    private $Ticket = null;
+    private $Ticket;
 
     /**
      * @return bool

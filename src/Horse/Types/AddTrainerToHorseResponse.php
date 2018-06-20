@@ -9,12 +9,12 @@ class AddTrainerToHorseResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $addTrainerToHorseResult = null;
+    private $addTrainerToHorseResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return bool

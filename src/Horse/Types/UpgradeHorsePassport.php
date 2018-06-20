@@ -7,7 +7,7 @@ class UpgradeHorsePassport
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @return string

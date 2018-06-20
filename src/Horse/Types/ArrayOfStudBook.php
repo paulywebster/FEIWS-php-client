@@ -7,7 +7,7 @@ class ArrayOfStudBook
     /**
      * @var \FEIWebServicesClient\Horse\Types\StudBook
      */
-    private $StudBook = null;
+    private $StudBook;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\StudBook

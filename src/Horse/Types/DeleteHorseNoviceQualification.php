@@ -7,12 +7,12 @@ class DeleteHorseNoviceQualification
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var \DateTime
      */
-    private $NoviceQualificationDate = null;
+    private $NoviceQualificationDate;
 
     /**
      * @return string

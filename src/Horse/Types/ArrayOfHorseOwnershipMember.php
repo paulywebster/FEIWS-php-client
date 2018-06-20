@@ -7,7 +7,7 @@ class ArrayOfHorseOwnershipMember
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseOwnershipMember
      */
-    private $HorseOwnershipMember = null;
+    private $HorseOwnershipMember;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseOwnershipMember

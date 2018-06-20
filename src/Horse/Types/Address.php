@@ -7,62 +7,62 @@ class Address
     /**
      * @var string
      */
-    private $CountryCode = null;
+    private $CountryCode;
 
     /**
      * @var string
      */
-    private $AddressNameCode = null;
+    private $AddressNameCode;
 
     /**
      * @var string
      */
-    private $Zip = null;
+    private $Zip;
 
     /**
      * @var string
      */
-    private $City = null;
+    private $City;
 
     /**
      * @var string
      */
-    private $Address1 = null;
+    private $Address1;
 
     /**
      * @var string
      */
-    private $Address2 = null;
+    private $Address2;
 
     /**
      * @var string
      */
-    private $Address3 = null;
+    private $Address3;
 
     /**
      * @var string
      */
-    private $PhoneNr = null;
+    private $PhoneNr;
 
     /**
      * @var string
      */
-    private $FaxNr = null;
+    private $FaxNr;
 
     /**
      * @var bool
      */
-    private $IsMailingAddress = null;
+    private $IsMailingAddress;
 
     /**
      * @var string
      */
-    private $Comment = null;
+    private $Comment;
 
     /**
      * @var string
      */
-    private $TCN = null;
+    private $TCN;
 
     /**
      * @return string

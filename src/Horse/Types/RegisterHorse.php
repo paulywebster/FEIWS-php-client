@@ -7,17 +7,17 @@ class RegisterHorse
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var int
      */
-    private $Year = null;
+    private $Year;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfString
      */
-    private $DisciplineCodes = null;
+    private $DisciplineCodes;
 
     /**
      * @return string

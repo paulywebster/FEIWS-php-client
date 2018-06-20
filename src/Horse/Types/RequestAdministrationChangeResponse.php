@@ -9,12 +9,12 @@ class RequestAdministrationChangeResponse implements ResultInterface
     /**
      * @var string
      */
-    private $requestAdministrationChangeResult = null;
+    private $requestAdministrationChangeResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return string

@@ -7,7 +7,7 @@ class SCHorseRegDiscipline
     /**
      * @var string
      */
-    private $Value = null;
+    private $Value;
 
     /**
      * @return string

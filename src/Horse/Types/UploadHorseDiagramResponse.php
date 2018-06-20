@@ -9,12 +9,12 @@ class UploadHorseDiagramResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $uploadHorseDiagramResult = null;
+    private $uploadHorseDiagramResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return bool

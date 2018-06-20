@@ -7,7 +7,7 @@ class GetHorseRegistrationList
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @return string

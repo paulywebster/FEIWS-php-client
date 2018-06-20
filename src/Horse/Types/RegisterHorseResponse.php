@@ -9,12 +9,12 @@ class RegisterHorseResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $registerHorseResult = null;
+    private $registerHorseResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return bool

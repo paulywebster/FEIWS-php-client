@@ -9,12 +9,12 @@ class UpgradeHorsePassportResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $upgradeHorsePassportResult = null;
+    private $upgradeHorsePassportResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return bool

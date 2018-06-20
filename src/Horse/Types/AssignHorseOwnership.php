@@ -7,12 +7,12 @@ class AssignHorseOwnership
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseOwnership
      */
-    private $Ownership = null;
+    private $Ownership;
 
     /**
      * @return string

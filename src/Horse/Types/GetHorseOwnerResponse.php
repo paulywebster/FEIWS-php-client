@@ -9,12 +9,12 @@ class GetHorseOwnerResponse implements ResultInterface
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseOwner
      */
-    private $getHorseOwnerResult = null;
+    private $getHorseOwnerResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseOwner

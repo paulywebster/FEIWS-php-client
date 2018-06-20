@@ -7,22 +7,22 @@ class SearchHorseTrainers
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var int
      */
-    private $PersonFEIID = null;
+    private $PersonFEIID;
 
     /**
      * @var \DateTime
      */
-    private $EvalDate = null;
+    private $EvalDate;
 
     /**
      * @var int
      */
-    private $PageNumber = null;
+    private $PageNumber;
 
     /**
      * @return string

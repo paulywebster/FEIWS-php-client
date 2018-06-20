@@ -9,12 +9,12 @@ class GetHorseRegistrationYearListResponse implements ResultInterface
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseRegistration
      */
-    private $getHorseRegistrationYearListResult = null;
+    private $getHorseRegistrationYearListResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfHorseRegistration

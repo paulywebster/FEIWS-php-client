@@ -7,12 +7,12 @@ class HorseDuplicate
     /**
      * @var \FEIWebServicesClient\Horse\Types\Horse
      */
-    private $Duplicate = null;
+    private $Duplicate;
 
     /**
      * @var string
      */
-    private $RuleDescription = null;
+    private $RuleDescription;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\Horse

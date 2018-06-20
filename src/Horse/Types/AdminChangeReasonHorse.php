@@ -7,17 +7,17 @@ class AdminChangeReasonHorse
     /**
      * @var string
      */
-    private $Code = null;
+    private $Code;
 
     /**
      * @var string
      */
-    private $StatusCode = null;
+    private $StatusCode;
 
     /**
      * @var string
      */
-    private $Label = null;
+    private $Label;
 
     /**
      * @return string

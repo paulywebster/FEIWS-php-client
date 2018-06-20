@@ -7,12 +7,12 @@ class AdminChangeStatusHorse
     /**
      * @var string
      */
-    private $Code = null;
+    private $Code;
 
     /**
      * @var string
      */
-    private $Label = null;
+    private $Label;
 
     /**
      * @return string

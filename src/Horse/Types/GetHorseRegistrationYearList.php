@@ -7,12 +7,12 @@ class GetHorseRegistrationYearList
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var int
      */
-    private $Year = null;
+    private $Year;
 
     /**
      * @return string

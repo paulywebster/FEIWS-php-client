@@ -9,17 +9,17 @@ class AssignHorseOwnerResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $assignHorseOwnerResult = null;
+    private $assignHorseOwnerResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseOwner
      */
-    private $Owner = null;
+    private $Owner;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return bool

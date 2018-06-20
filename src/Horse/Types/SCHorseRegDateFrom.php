@@ -7,7 +7,7 @@ class SCHorseRegDateFrom
     /**
      * @var \DateTime
      */
-    private $Value = null;
+    private $Value;
 
     /**
      * @return \DateTime

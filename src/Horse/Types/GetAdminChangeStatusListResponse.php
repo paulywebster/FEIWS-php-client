@@ -9,7 +9,7 @@ class GetAdminChangeStatusListResponse implements ResultInterface
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfAdminChangeStatusHorse
      */
-    private $getAdminChangeStatusListResult = null;
+    private $getAdminChangeStatusListResult;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfAdminChangeStatusHorse

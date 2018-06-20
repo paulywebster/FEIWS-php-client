@@ -7,7 +7,7 @@ class SCHorseCurrentOwner
     /**
      * @var string
      */
-    private $Value = null;
+    private $Value;
 
     /**
      * @return string

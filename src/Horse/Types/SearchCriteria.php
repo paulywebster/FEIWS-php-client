@@ -7,12 +7,12 @@ class SearchCriteria
     /**
      * @var string
      */
-    private $Field = null;
+    private $Field;
 
     /**
      * @var string
      */
-    private $Value = null;
+    private $Value;
 
     /**
      * @return string

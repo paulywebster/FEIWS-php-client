@@ -7,7 +7,7 @@ class ArrayOfSCBase
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCBase
      */
-    private $SCBase = null;
+    private $SCBase;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\SCBase

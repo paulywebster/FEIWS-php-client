@@ -9,7 +9,7 @@ class GetHorseColorListResponse implements ResultInterface
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseColor
      */
-    private $getHorseColorListResult = null;
+    private $getHorseColorListResult;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfHorseColor

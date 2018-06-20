@@ -7,12 +7,12 @@ class SCHorseRegistration
     /**
      * @var \FEIWebServicesClient\Horse\Types\RegistrationEnum
      */
-    private $Status = null;
+    private $Status;
 
     /**
      * @var int
      */
-    private $Year = null;
+    private $Year;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\RegistrationEnum

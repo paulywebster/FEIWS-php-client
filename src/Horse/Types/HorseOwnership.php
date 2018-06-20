@@ -7,17 +7,17 @@ class HorseOwnership
     /**
      * @var string
      */
-    private $NationalityOfOwnership = null;
+    private $NationalityOfOwnership;
 
     /**
      * @var \DateTime
      */
-    private $DateFrom = null;
+    private $DateFrom;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseOwnershipMember
      */
-    private $Members = null;
+    private $Members;
 
     /**
      * @return string

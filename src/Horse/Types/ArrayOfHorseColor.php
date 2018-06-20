@@ -7,7 +7,7 @@ class ArrayOfHorseColor
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseColor
      */
-    private $HorseColor = null;
+    private $HorseColor;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseColor

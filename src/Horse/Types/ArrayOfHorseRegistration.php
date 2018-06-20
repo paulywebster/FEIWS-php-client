@@ -7,7 +7,7 @@ class ArrayOfHorseRegistration
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseRegistration
      */
-    private $HorseRegistration = null;
+    private $HorseRegistration;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseRegistration

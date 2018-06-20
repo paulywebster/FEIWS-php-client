@@ -9,12 +9,12 @@ class DeleteHorseNoviceQualificationResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $deleteHorseNoviceQualificationResult = null;
+    private $deleteHorseNoviceQualificationResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return bool

@@ -7,17 +7,17 @@ class UpdateHorseNoviceQualification
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var \DateTime
      */
-    private $NoviceQualificationDate = null;
+    private $NoviceQualificationDate;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
      */
-    private $NationalResults = null;
+    private $NationalResults;
 
     /**
      * @return string

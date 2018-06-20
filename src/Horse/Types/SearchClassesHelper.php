@@ -7,7 +7,7 @@ class SearchClassesHelper
     /**
      * @var \FEIWebServicesClient\Horse\Types\SearchClasses
      */
-    private $ClassStructure = null;
+    private $ClassStructure;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\SearchClasses

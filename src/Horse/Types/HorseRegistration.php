@@ -7,22 +7,22 @@ class HorseRegistration
     /**
      * @var string
      */
-    private $FEIID = null;
+    private $FEIID;
 
     /**
      * @var string
      */
-    private $DisciplineCode = null;
+    private $DisciplineCode;
 
     /**
      * @var int
      */
-    private $Year = null;
+    private $Year;
 
     /**
      * @var \DateTime
      */
-    private $DateRegistration = null;
+    private $DateRegistration;
 
     /**
      * @return string

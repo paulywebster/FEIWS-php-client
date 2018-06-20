@@ -7,7 +7,7 @@ class GetHorses
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfString
      */
-    private $HorseFEICodes = null;
+    private $HorseFEICodes;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfString

@@ -7,7 +7,7 @@ class SearchForHorseAlt
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfSearchCriteria
      */
-    private $Conditions = null;
+    private $Conditions;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfSearchCriteria

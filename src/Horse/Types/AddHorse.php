@@ -7,7 +7,7 @@ class AddHorse
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseNew
      */
-    private $Horse = null;
+    private $Horse;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseNew

@@ -7,7 +7,7 @@ class ChangeHorseName
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseName
      */
-    private $HorseName = null;
+    private $HorseName;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseName

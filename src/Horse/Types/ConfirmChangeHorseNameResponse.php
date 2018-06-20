@@ -9,17 +9,17 @@ class ConfirmChangeHorseNameResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $confirmChangeHorseNameResult = null;
+    private $confirmChangeHorseNameResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseName
      */
-    private $HorseName = null;
+    private $HorseName;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return bool

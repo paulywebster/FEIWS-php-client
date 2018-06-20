@@ -7,32 +7,32 @@ class EnduranceNationalResult
     /**
      * @var float
      */
-    private $AverageSpeed = null;
+    private $AverageSpeed;
 
     /**
      * @var float
      */
-    private $Distance = null;
+    private $Distance;
 
     /**
      * @var int
      */
-    private $RankPosition = null;
+    private $RankPosition;
 
     /**
      * @var string
      */
-    private $VenueName = null;
+    private $VenueName;
 
     /**
      * @var string
      */
-    private $CountryCode = null;
+    private $CountryCode;
 
     /**
      * @var \DateTime
      */
-    private $CompetitionDate = null;
+    private $CompetitionDate;
 
     /**
      * @return float

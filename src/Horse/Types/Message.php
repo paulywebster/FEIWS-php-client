@@ -7,12 +7,12 @@ class Message
     /**
      * @var string
      */
-    private $UID = null;
+    private $UID;
 
     /**
      * @var string
      */
-    private $Detail = null;
+    private $Detail;
 
     /**
      * @return string

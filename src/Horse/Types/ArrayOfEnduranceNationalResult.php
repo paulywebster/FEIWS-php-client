@@ -7,7 +7,7 @@ class ArrayOfEnduranceNationalResult
     /**
      * @var \FEIWebServicesClient\Horse\Types\EnduranceNationalResult
      */
-    private $EnduranceNationalResult = null;
+    private $EnduranceNationalResult;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\EnduranceNationalResult

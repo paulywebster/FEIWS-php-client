@@ -7,7 +7,7 @@ class SCHorseAnyID
     /**
      * @var string
      */
-    private $ID = null;
+    private $ID;
 
     /**
      * @return string

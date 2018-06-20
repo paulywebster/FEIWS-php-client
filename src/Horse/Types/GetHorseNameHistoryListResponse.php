@@ -9,12 +9,12 @@ class GetHorseNameHistoryListResponse implements ResultInterface
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseName
      */
-    private $getHorseNameHistoryListResult = null;
+    private $getHorseNameHistoryListResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfHorseName

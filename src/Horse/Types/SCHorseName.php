@@ -7,12 +7,12 @@ class SCHorseName
     /**
      * @var string
      */
-    private $Name = null;
+    private $Name;
 
     /**
      * @var bool
      */
-    private $Unconstrained = null;
+    private $Unconstrained;
 
     /**
      * @return string

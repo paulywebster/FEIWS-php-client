@@ -7,7 +7,7 @@ class ArrayOfHorseDuplicate
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseDuplicate
      */
-    private $HorseDuplicate = null;
+    private $HorseDuplicate;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\HorseDuplicate

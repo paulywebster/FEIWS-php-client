@@ -7,17 +7,17 @@ class HorseColor
     /**
      * @var string
      */
-    private $Code = null;
+    private $Code;
 
     /**
      * @var string
      */
-    private $Label = null;
+    private $Label;
 
     /**
      * @var bool
      */
-    private $ReqColorComplement = null;
+    private $ReqColorComplement;
 
     /**
      * @return string

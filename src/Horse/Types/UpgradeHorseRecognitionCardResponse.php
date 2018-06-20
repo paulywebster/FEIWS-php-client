@@ -9,12 +9,12 @@ class UpgradeHorseRecognitionCardResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $upgradeHorseRecognitionCardResult = null;
+    private $upgradeHorseRecognitionCardResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return bool

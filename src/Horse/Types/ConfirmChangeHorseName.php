@@ -7,7 +7,7 @@ class ConfirmChangeHorseName
     /**
      * @var string
      */
-    private $Ticket = null;
+    private $Ticket;
 
     /**
      * @return string

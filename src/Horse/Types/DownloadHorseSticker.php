@@ -7,12 +7,12 @@ class DownloadHorseSticker
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\HorseStickerTypeEnums
      */
-    private $StickerType = null;
+    private $StickerType;
 
     /**
      * @return string

@@ -7,47 +7,47 @@ class HorseOwnershipMember
     /**
      * @var int
      */
-    private $FEIID = null;
+    private $FEIID;
 
     /**
      * @var string
      */
-    private $FamilyName = null;
+    private $FamilyName;
 
     /**
      * @var string
      */
-    private $FirstName = null;
+    private $FirstName;
 
     /**
      * @var string
      */
-    private $CorporationName = null;
+    private $CorporationName;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\Address
      */
-    private $Address = null;
+    private $Address;
 
     /**
      * @var int
      */
-    private $CorporationContactFEIID = null;
+    private $CorporationContactFEIID;
 
     /**
      * @var string
      */
-    private $CorporationContactFamilyName = null;
+    private $CorporationContactFamilyName;
 
     /**
      * @var string
      */
-    private $CorporationContactFirstName = null;
+    private $CorporationContactFirstName;
 
     /**
      * @var float
      */
-    private $OwnershipPercentage = null;
+    private $OwnershipPercentage;
 
     /**
      * @return int

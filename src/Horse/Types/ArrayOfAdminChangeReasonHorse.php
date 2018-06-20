@@ -7,7 +7,7 @@ class ArrayOfAdminChangeReasonHorse
     /**
      * @var \FEIWebServicesClient\Horse\Types\AdminChangeReasonHorse
      */
-    private $AdminChangeReasonHorse = null;
+    private $AdminChangeReasonHorse;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\AdminChangeReasonHorse

@@ -9,7 +9,7 @@ class GetAdminChangeReasonListResponse implements ResultInterface
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfAdminChangeReasonHorse
      */
-    private $getAdminChangeReasonListResult = null;
+    private $getAdminChangeReasonListResult;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfAdminChangeReasonHorse

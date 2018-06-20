@@ -9,17 +9,17 @@ class ConfirmUpdateHorseResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $confirmUpdateHorseResult = null;
+    private $confirmUpdateHorseResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\Horse
      */
-    private $Horse = null;
+    private $Horse;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return bool

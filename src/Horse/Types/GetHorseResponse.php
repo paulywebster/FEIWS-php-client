@@ -9,12 +9,12 @@ class GetHorseResponse implements ResultInterface
     /**
      * @var \FEIWebServicesClient\Horse\Types\Horse
      */
-    private $getHorseResult = null;
+    private $getHorseResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\Horse

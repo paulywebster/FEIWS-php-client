@@ -9,7 +9,7 @@ class GetStudBookListResponse implements ResultInterface
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfStudBook
      */
-    private $getStudBookListResult = null;
+    private $getStudBookListResult;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfStudBook

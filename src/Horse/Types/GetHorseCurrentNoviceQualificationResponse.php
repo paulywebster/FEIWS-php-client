@@ -9,12 +9,12 @@ class GetHorseCurrentNoviceQualificationResponse implements ResultInterface
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
      */
-    private $getHorseCurrentNoviceQualificationResult = null;
+    private $getHorseCurrentNoviceQualificationResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult

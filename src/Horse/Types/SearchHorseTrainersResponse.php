@@ -9,12 +9,12 @@ class SearchHorseTrainersResponse implements ResultInterface
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseTrainer
      */
-    private $searchHorseTrainersResult = null;
+    private $searchHorseTrainersResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfHorseTrainer

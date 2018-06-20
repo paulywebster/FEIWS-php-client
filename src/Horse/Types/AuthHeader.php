@@ -7,17 +7,17 @@ class AuthHeader
     /**
      * @var string
      */
-    private $UserName = null;
+    private $UserName;
 
     /**
      * @var string
      */
-    private $Language = null;
+    private $Language;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfString
      */
-    private $Exceptions = null;
+    private $Exceptions;
 
     /**
      * @return string

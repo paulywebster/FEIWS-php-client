@@ -7,57 +7,57 @@ class HorseName
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var \DateTime
      */
-    private $DateChange = null;
+    private $DateChange;
 
     /**
      * @var string
      */
-    private $ChangedBy = null;
+    private $ChangedBy;
 
     /**
      * @var string
      */
-    private $ReasonNF = null;
+    private $ReasonNF;
 
     /**
      * @var string
      */
-    private $ReasonFEI = null;
+    private $ReasonFEI;
 
     /**
      * @var string
      */
-    private $CurrentName = null;
+    private $CurrentName;
 
     /**
      * @var string
      */
-    private $BirthName = null;
+    private $BirthName;
 
     /**
      * @var string
      */
-    private $ShortName = null;
+    private $ShortName;
 
     /**
      * @var string
      */
-    private $CommercialName = null;
+    private $CommercialName;
 
     /**
      * @var bool
      */
-    private $IsCNSuffix = null;
+    private $IsCNSuffix;
 
     /**
      * @var string
      */
-    private $TCN = null;
+    private $TCN;
 
     /**
      * @return string

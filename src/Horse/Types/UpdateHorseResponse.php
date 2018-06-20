@@ -9,27 +9,27 @@ class UpdateHorseResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $updateHorseResult = null;
+    private $updateHorseResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\Horse
      */
-    private $Horse = null;
+    private $Horse;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseDuplicate
      */
-    private $PotentialHorseDuplicates = null;
+    private $PotentialHorseDuplicates;
 
     /**
      * @var string
      */
-    private $Ticket = null;
+    private $Ticket;
 
     /**
      * @return bool

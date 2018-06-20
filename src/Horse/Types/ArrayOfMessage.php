@@ -7,7 +7,7 @@ class ArrayOfMessage
     /**
      * @var \FEIWebServicesClient\Horse\Types\Message
      */
-    private $Message = null;
+    private $Message;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\Message

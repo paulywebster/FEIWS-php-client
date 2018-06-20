@@ -7,52 +7,52 @@ class HorseTrainer
     /**
      * @var \DateTime
      */
-    private $StartDate = null;
+    private $StartDate;
 
     /**
      * @var \DateTime
      */
-    private $EndDate = null;
+    private $EndDate;
 
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var string
      */
-    private $CompleteName = null;
+    private $CompleteName;
 
     /**
      * @var string
      */
-    private $HorseAdminNF = null;
+    private $HorseAdminNF;
 
     /**
      * @var int
      */
-    private $PersonFEIID = null;
+    private $PersonFEIID;
 
     /**
      * @var string
      */
-    private $FirstName = null;
+    private $FirstName;
 
     /**
      * @var string
      */
-    private $FamilyName = null;
+    private $FamilyName;
 
     /**
      * @var string
      */
-    private $PersonAdminNF = null;
+    private $PersonAdminNF;
 
     /**
      * @var string
      */
-    private $Comment = null;
+    private $Comment;
 
     /**
      * @return \DateTime

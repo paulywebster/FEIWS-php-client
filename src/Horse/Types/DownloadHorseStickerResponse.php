@@ -9,12 +9,12 @@ class DownloadHorseStickerResponse implements ResultInterface
     /**
      * @var \FEIWebServicesClient\Horse\Types\base64Binary
      */
-    private $downloadHorseStickerResult = null;
+    private $downloadHorseStickerResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\base64Binary

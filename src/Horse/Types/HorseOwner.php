@@ -7,57 +7,57 @@ class HorseOwner
     /**
      * @var int
      */
-    private $FEIID = null;
+    private $FEIID;
 
     /**
      * @var string
      */
-    private $Name = null;
+    private $Name;
 
     /**
      * @var \DateTime
      */
-    private $DateFrom = null;
+    private $DateFrom;
 
     /**
      * @var string
      */
-    private $Address1 = null;
+    private $Address1;
 
     /**
      * @var string
      */
-    private $Address2 = null;
+    private $Address2;
 
     /**
      * @var string
      */
-    private $Address3 = null;
+    private $Address3;
 
     /**
      * @var string
      */
-    private $Zip = null;
+    private $Zip;
 
     /**
      * @var string
      */
-    private $City = null;
+    private $City;
 
     /**
      * @var string
      */
-    private $CountryCode = null;
+    private $CountryCode;
 
     /**
      * @var string
      */
-    private $NationalityCode = null;
+    private $NationalityCode;
 
     /**
      * @var string
      */
-    private $NationalityCodes = null;
+    private $NationalityCodes;
 
     /**
      * @return int

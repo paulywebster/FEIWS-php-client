@@ -7,12 +7,12 @@ class StudBook
     /**
      * @var string
      */
-    private $Code = null;
+    private $Code;
 
     /**
      * @var string
      */
-    private $Name = null;
+    private $Name;
 
     /**
      * @return string

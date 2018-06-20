@@ -7,7 +7,7 @@ class ArrayOfString
     /**
      * @var string
      */
-    private $string = null;
+    private $string;
 
     /**
      * @return string

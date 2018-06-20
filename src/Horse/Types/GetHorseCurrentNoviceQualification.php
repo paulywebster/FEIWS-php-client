@@ -7,7 +7,7 @@ class GetHorseCurrentNoviceQualification
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @return string

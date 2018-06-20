@@ -7,7 +7,7 @@ class SearchForHorse
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfSCBase
      */
-    private $Conditions = null;
+    private $Conditions;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\ArrayOfSCBase

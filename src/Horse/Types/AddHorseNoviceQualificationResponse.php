@@ -9,12 +9,12 @@ class AddHorseNoviceQualificationResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $addHorseNoviceQualificationResult = null;
+    private $addHorseNoviceQualificationResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return bool

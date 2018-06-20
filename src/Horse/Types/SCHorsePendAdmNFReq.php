@@ -7,7 +7,7 @@ class SCHorsePendAdmNFReq
     /**
      * @var bool
      */
-    private $Value = null;
+    private $Value;
 
     /**
      * @return bool

@@ -7,12 +7,12 @@ class AddHorseNoviceQualification
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
      */
-    private $NationalResults = null;
+    private $NationalResults;
 
     /**
      * @return string

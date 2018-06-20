@@ -9,7 +9,7 @@ class SearchClassesHelperResponse implements ResultInterface
     /**
      * @var string
      */
-    private $SearchClassesHelperResult = null;
+    private $SearchClassesHelperResult;
 
     /**
      * @return string

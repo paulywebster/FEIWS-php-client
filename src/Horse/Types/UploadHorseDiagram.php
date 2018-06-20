@@ -7,17 +7,17 @@ class UploadHorseDiagram
     /**
      * @var string
      */
-    private $HorseFEICode = null;
+    private $HorseFEICode;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\base64Binary
      */
-    private $Document = null;
+    private $Document;
 
     /**
      * @var string
      */
-    private $Extension = null;
+    private $Extension;
 
     /**
      * @return string

@@ -9,12 +9,12 @@ class UploadHorseDocumentResponse implements ResultInterface
     /**
      * @var bool
      */
-    private $uploadHorseDocumentResult = null;
+    private $uploadHorseDocumentResult;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
      */
-    private $Messages = null;
+    private $Messages;
 
     /**
      * @return bool

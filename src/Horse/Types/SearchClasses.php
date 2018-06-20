@@ -7,67 +7,67 @@ class SearchClasses
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorseAnyID
      */
-    private $SCHorseAnyID = null;
+    private $SCHorseAnyID;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorseName
      */
-    private $SCHorseName = null;
+    private $SCHorseName;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorseInclHistNames
      */
-    private $SCHorseInclHistNames = null;
+    private $SCHorseInclHistNames;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorsePony
      */
-    private $SCHorsePony = null;
+    private $SCHorsePony;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorseCurrentOwner
      */
-    private $SCHorseCurrentOwner = null;
+    private $SCHorseCurrentOwner;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorseHorseStatus
      */
-    private $SCHorseHorseStatus = null;
+    private $SCHorseHorseStatus;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorseAdminNF
      */
-    private $SCHorseAdminNF = null;
+    private $SCHorseAdminNF;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorsePendAdmNFReq
      */
-    private $SCHorsePendAdmNFReq = null;
+    private $SCHorsePendAdmNFReq;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorseRegistration
      */
-    private $SCHorseRegistration = null;
+    private $SCHorseRegistration;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorseRegDiscipline
      */
-    private $SCHorseRegDiscipline = null;
+    private $SCHorseRegDiscipline;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorseRegDateFrom
      */
-    private $SCHorseRegDateFrom = null;
+    private $SCHorseRegDateFrom;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorseRegDateTo
      */
-    private $SCHorseRegDateTo = null;
+    private $SCHorseRegDateTo;
 
     /**
      * @var \FEIWebServicesClient\Horse\Types\SCHorseStudbook
      */
-    private $SCHorseStudbook = null;
+    private $SCHorseStudbook;
 
     /**
      * @return \FEIWebServicesClient\Horse\Types\SCHorseAnyID
