@@ -14,15 +14,6 @@ class Service
 
     private $service;
 
-    public static function list(): array
-    {
-        return [
-            self::AUTHENTICATION,
-            self::COMMON,
-            self::HORSE,
-        ];
-    }
-
     private function __construct(string $service)
     {
         $this->service = $service;
@@ -50,10 +41,6 @@ class Service
 
     public function uri(): string
     {
-        if (self::AUTHENTICATION === $this->service) {
-            return self::AUTHENTICATION_SERVICE_URI;
-        }
-
         if (self::COMMON === $this->service) {
             return self::COMMON_SERVICE_URI;
         }
@@ -62,6 +49,6 @@ class Service
             return self::HORSE_SERVICE_URI;
         }
 
-        throw new \Exception(sprintf('The service "%s" does not exist.', $this->service));
+        return self::AUTHENTICATION_SERVICE_URI;
     }
 }
