@@ -7,3 +7,4 @@ parameters:
     tasks:
         phplint: ~
         phpcsfixer2: ~
+        phpunit:

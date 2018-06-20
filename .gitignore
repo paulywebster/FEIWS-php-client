@@ -6,3 +6,4 @@ vendor/
 # composer.lock
 /config/parameters.php
 /.php_cs.cache
+/build/
