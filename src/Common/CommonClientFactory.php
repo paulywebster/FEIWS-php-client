@@ -11,7 +11,7 @@ use Phpro\SoapClient\ClientBuilder;
 
 class CommonClientFactory
 {
-    public static function factory(string $user): \FEIWebServicesClient\Common\CommonClient
+    public static function factory(string $user): CommonClient
     {
         $config = require __DIR__.'/../../config/parameters.php';
 
