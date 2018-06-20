@@ -8,7 +8,7 @@ use Phpro\SoapClient\Soap\ClassMap\ClassMap;
 
 class CommonWSClassmap
 {
-    public static function getCollection(): \Phpro\SoapClient\Soap\ClassMap\ClassMapCollection
+    public static function getCollection(): ClassMapCollection
     {
         return new ClassMapCollection([
             new ClassMap('getVersion', Type\GetVersion::class),

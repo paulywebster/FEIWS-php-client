@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetHorseNameKindChangeListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfKindChange
+     * @var ArrayOfKindChange
      */
     private $getHorseNameKindChangeListResult;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfKindChange
+     * @return ArrayOfKindChange
      */
-    public function getGetHorseNameKindChangeListResult(): \FEIWebServicesClient\Common\Types\ArrayOfKindChange
+    public function result(): ArrayOfKindChange
     {
         return $this->getHorseNameKindChangeListResult;
     }

@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetAdditionalRoleListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfAdditionalRole
+     * @var ArrayOfAdditionalRole
      */
     private $getAdditionalRoleListResult;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfAdditionalRole
+     * @return ArrayOfAdditionalRole
      */
-    public function getGetAdditionalRoleListResult(): \FEIWebServicesClient\Common\Types\ArrayOfAdditionalRole
+    public function result(): ArrayOfAdditionalRole
     {
         return $this->getAdditionalRoleListResult;
     }

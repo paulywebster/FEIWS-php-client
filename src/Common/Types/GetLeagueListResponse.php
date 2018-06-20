@@ -7,27 +7,38 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetLeagueListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfLeague
+     * @var ArrayOfLeague
      */
     private $getLeagueListResult;
 
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfLeague
+     * @return ArrayOfLeague
+     *
+     * @throws \InvalidArgumentException
+     * @throws \Exception
      */
-    public function getGetLeagueListResult(): \FEIWebServicesClient\Common\Types\ArrayOfLeague
+    public function result(): ArrayOfLeague
     {
+        if (!$this->getLeagueListResult) {
+            if ('InvalidSeasonCode' === $this->getMessages()->current()->getUID()) {
+                throw new \InvalidArgumentException('The SeasonCode is not a valid one.');
+            }
+
+            throw new \Exception(sprintf('Unhandled error code %s', $this->getMessages()->current()->getUID()));
+        }
+
         return $this->getLeagueListResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Common\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

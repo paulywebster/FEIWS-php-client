@@ -15,7 +15,7 @@ class AdditionalRole
     private $Label;
 
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfString
+     * @var ArrayOfString
      */
     private $DisciplineCodes;
 
@@ -36,9 +36,9 @@ class AdditionalRole
     }
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfString
+     * @return ArrayOfString
      */
-    public function getDisciplineCodes(): \FEIWebServicesClient\Common\Types\ArrayOfString
+    public function getDisciplineCodes(): ArrayOfString
     {
         return $this->DisciplineCodes;
     }

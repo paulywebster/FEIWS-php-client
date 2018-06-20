@@ -147,13 +147,13 @@ class CommonClient extends \Phpro\SoapClient\Client
         return $this->call('getPersonCivilityList', new getPersonCivilityList());
     }
 
-    public function getSeasonList(): getSeasonListResponse
+    public function getSeasonList(string $DisciplineCode): getSeasonListResponse
     {
-        return $this->call('getSeasonList', new getSeasonList());
+        return $this->call('getSeasonList', new getSeasonList($DisciplineCode));
     }
 
-    public function getLeagueList(): getLeagueListResponse
+    public function getLeagueList(string $DisciplineCode, string $seasonCode): getLeagueListResponse
     {
-        return $this->call('getLeagueList', new getLeagueList());
+        return $this->call('getLeagueList', new getLeagueList($DisciplineCode, $seasonCode));
     }
 }

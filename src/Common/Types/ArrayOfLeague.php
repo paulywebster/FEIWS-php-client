@@ -2,18 +2,37 @@
 
 namespace FEIWebServicesClient\Common\Types;
 
-class ArrayOfLeague
+class ArrayOfLeague implements \Iterator
 {
+    private $position = 0;
+
     /**
-     * @var \FEIWebServicesClient\Common\Types\League
+     * @var League[]
      */
     private $League;
 
-    /**
-     * @return \FEIWebServicesClient\Common\Types\League
-     */
-    public function getLeague(): \FEIWebServicesClient\Common\Types\League
+    public function current(): League
     {
-        return $this->League;
+        return $this->League[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->League[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

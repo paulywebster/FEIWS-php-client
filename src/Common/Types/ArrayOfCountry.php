@@ -2,18 +2,37 @@
 
 namespace FEIWebServicesClient\Common\Types;
 
-class ArrayOfCountry
+class ArrayOfCountry implements \Iterator
 {
+    private $position = 0;
+
     /**
-     * @var \FEIWebServicesClient\Common\Types\Country
+     * @var Country[]
      */
     private $Country;
 
-    /**
-     * @return \FEIWebServicesClient\Common\Types\Country
-     */
-    public function getCountry(): \FEIWebServicesClient\Common\Types\Country
+    public function current(): Country
     {
-        return $this->Country;
+        return $this->Country[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->Country[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

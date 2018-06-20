@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetMessageTypeListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfMessageType
+     * @var ArrayOfMessageType
      */
     private $getMessageTypeListResult;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfMessageType
+     * @return ArrayOfMessageType
      */
-    public function getGetMessageTypeListResult(): \FEIWebServicesClient\Common\Types\ArrayOfMessageType
+    public function result(): ArrayOfMessageType
     {
         return $this->getMessageTypeListResult;
     }

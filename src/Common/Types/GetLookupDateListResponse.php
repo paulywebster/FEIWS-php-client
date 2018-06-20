@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetLookupDateListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfLookupDate
+     * @var ArrayOfLookupDate
      */
     private $getLookupDateListResult;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfLookupDate
+     * @return ArrayOfLookupDate
      */
-    public function getGetLookupDateListResult(): \FEIWebServicesClient\Common\Types\ArrayOfLookupDate
+    public function result(): ArrayOfLookupDate
     {
         return $this->getLookupDateListResult;
     }

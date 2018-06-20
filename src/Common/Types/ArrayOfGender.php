@@ -2,18 +2,37 @@
 
 namespace FEIWebServicesClient\Common\Types;
 
-class ArrayOfGender
+class ArrayOfGender implements \Iterator
 {
+    private $position = 0;
+
     /**
-     * @var \FEIWebServicesClient\Common\Types\Gender
+     * @var Gender
      */
     private $Gender;
 
-    /**
-     * @return \FEIWebServicesClient\Common\Types\Gender
-     */
-    public function getGender(): \FEIWebServicesClient\Common\Types\Gender
+    public function current(): Gender
     {
-        return $this->Gender;
+        return $this->Gender[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->Gender[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

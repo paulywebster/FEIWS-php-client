@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetCategoryListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfCategory
+     * @var ArrayOfCategory
      */
     private $getCategoryListResult;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfCategory
+     * @return ArrayOfCategory
      */
-    public function getGetCategoryListResult(): \FEIWebServicesClient\Common\Types\ArrayOfCategory
+    public function result(): ArrayOfCategory
     {
         return $this->getCategoryListResult;
     }

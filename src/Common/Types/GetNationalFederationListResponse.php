@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetNationalFederationListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfNationalFederation
+     * @var ArrayOfNationalFederation
      */
     private $getNationalFederationListResult;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfNationalFederation
+     * @return ArrayOfNationalFederation
      */
-    public function getGetNationalFederationListResult(): \FEIWebServicesClient\Common\Types\ArrayOfNationalFederation
+    public function result(): ArrayOfNationalFederation
     {
         return $this->getNationalFederationListResult;
     }

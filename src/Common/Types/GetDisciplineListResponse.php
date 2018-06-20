@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetDisciplineListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfDiscipline
+     * @var ArrayOfDiscipline
      */
     private $getDisciplineListResult;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfDiscipline
+     * @return ArrayOfDiscipline
      */
-    public function getGetDisciplineListResult(): \FEIWebServicesClient\Common\Types\ArrayOfDiscipline
+    public function result(): ArrayOfDiscipline
     {
         return $this->getDisciplineListResult;
     }

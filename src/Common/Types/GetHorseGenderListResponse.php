@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetHorseGenderListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfGender
+     * @var ArrayOfGender
      */
     private $getHorseGenderListResult;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfGender
+     * @return ArrayOfGender
      */
-    public function getGetHorseGenderListResult(): \FEIWebServicesClient\Common\Types\ArrayOfGender
+    public function result(): ArrayOfGender
     {
         return $this->getHorseGenderListResult;
     }

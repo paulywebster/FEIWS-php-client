@@ -2,18 +2,37 @@
 
 namespace FEIWebServicesClient\Common\Types;
 
-class ArrayOfOfficialFunction
+class ArrayOfOfficialFunction implements \Iterator
 {
+    private $position = 0;
+
     /**
-     * @var \FEIWebServicesClient\Common\Types\OfficialFunction
+     * @var OfficialFunction[]
      */
     private $OfficialFunction;
 
-    /**
-     * @return \FEIWebServicesClient\Common\Types\OfficialFunction
-     */
-    public function getOfficialFunction(): \FEIWebServicesClient\Common\Types\OfficialFunction
+    public function current(): OfficialFunction
     {
-        return $this->OfficialFunction;
+        return $this->OfficialFunction[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->OfficialFunction[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

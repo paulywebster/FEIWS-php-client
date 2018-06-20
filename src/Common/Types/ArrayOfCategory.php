@@ -2,18 +2,37 @@
 
 namespace FEIWebServicesClient\Common\Types;
 
-class ArrayOfCategory
+class ArrayOfCategory implements \Iterator
 {
+    private $position = 0;
+
     /**
-     * @var \FEIWebServicesClient\Common\Types\Category
+     * @var Category[]
      */
     private $Category;
 
-    /**
-     * @return \FEIWebServicesClient\Common\Types\Category
-     */
-    public function getCategory(): \FEIWebServicesClient\Common\Types\Category
+    public function current(): Category
     {
-        return $this->Category;
+        return $this->Category[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->Category[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

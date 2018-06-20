@@ -7,27 +7,27 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetSeasonListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfString
+     * @var ArrayOfString
      */
     private $getSeasonListResult;
 
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfString
+     * @return ArrayOfString
      */
-    public function getGetSeasonListResult(): \FEIWebServicesClient\Common\Types\ArrayOfString
+    public function result(): ArrayOfString
     {
         return $this->getSeasonListResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Common\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

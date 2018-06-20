@@ -2,18 +2,37 @@
 
 namespace FEIWebServicesClient\Common\Types;
 
-class ArrayOfMessage
+class ArrayOfMessage implements \Iterator
 {
+    private $position = 0;
+
     /**
-     * @var \FEIWebServicesClient\Common\Types\Message
+     * @var Message[]
      */
     private $Message;
 
-    /**
-     * @return \FEIWebServicesClient\Common\Types\Message
-     */
-    public function getMessage(): \FEIWebServicesClient\Common\Types\Message
+    public function current(): Message
     {
-        return $this->Message;
+        return $this->Message[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->Message[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

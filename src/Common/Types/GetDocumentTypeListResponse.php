@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetDocumentTypeListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfDocumentType
+     * @var ArrayOfDocumentType
      */
     private $getDocumentTypeListResult;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfDocumentType
+     * @return ArrayOfDocumentType
      */
-    public function getGetDocumentTypeListResult(): \FEIWebServicesClient\Common\Types\ArrayOfDocumentType
+    public function result(): ArrayOfDocumentType
     {
         return $this->getDocumentTypeListResult;
     }

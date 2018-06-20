@@ -2,18 +2,37 @@
 
 namespace FEIWebServicesClient\Common\Types;
 
-class ArrayOfAdditionalRole
+class ArrayOfAdditionalRole implements \Iterator
 {
+    private $position = 0;
+
     /**
-     * @var \FEIWebServicesClient\Common\Types\AdditionalRole
+     * @var AdditionalRole[]
      */
     private $AdditionalRole;
 
-    /**
-     * @return \FEIWebServicesClient\Common\Types\AdditionalRole
-     */
-    public function getAdditionalRole(): \FEIWebServicesClient\Common\Types\AdditionalRole
+    public function current(): AdditionalRole
     {
-        return $this->AdditionalRole;
+        return $this->AdditionalRole[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->AdditionalRole[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

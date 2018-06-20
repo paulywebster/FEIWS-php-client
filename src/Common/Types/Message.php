@@ -25,7 +25,7 @@ class Message
     /**
      * @return string
      */
-    public function getDetail(): string
+    public function getDetail(): ? string
     {
         return $this->Detail;
     }

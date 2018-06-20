@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetDocIssuingBodyListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfDocIssuingBody
+     * @var ArrayOfDocIssuingBody
      */
     private $getDocIssuingBodyListResult;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfDocIssuingBody
+     * @return ArrayOfDocIssuingBody
      */
-    public function getGetDocIssuingBodyListResult(): \FEIWebServicesClient\Common\Types\ArrayOfDocIssuingBody
+    public function result(): ArrayOfDocIssuingBody
     {
         return $this->getDocIssuingBodyListResult;
     }

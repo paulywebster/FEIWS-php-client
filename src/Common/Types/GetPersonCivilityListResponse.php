@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetPersonCivilityListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfCivility
+     * @var ArrayOfCivility
      */
     private $getPersonCivilityListResult;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfCivility
+     * @return ArrayOfCivility
      */
-    public function getGetPersonCivilityListResult(): \FEIWebServicesClient\Common\Types\ArrayOfCivility
+    public function result(): ArrayOfCivility
     {
         return $this->getPersonCivilityListResult;
     }

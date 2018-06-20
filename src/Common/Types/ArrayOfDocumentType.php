@@ -2,18 +2,37 @@
 
 namespace FEIWebServicesClient\Common\Types;
 
-class ArrayOfDocumentType
+class ArrayOfDocumentType implements \Iterator
 {
+    private $position = 0;
+
     /**
-     * @var \FEIWebServicesClient\Common\Types\DocumentType
+     * @var DocumentType[]
      */
     private $DocumentType;
 
-    /**
-     * @return \FEIWebServicesClient\Common\Types\DocumentType
-     */
-    public function getDocumentType(): \FEIWebServicesClient\Common\Types\DocumentType
+    public function current(): DocumentType
     {
-        return $this->DocumentType;
+        return $this->DocumentType[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->DocumentType[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

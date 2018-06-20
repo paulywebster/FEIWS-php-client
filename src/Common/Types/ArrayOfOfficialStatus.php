@@ -2,18 +2,37 @@
 
 namespace FEIWebServicesClient\Common\Types;
 
-class ArrayOfOfficialStatus
+class ArrayOfOfficialStatus implements \Iterator
 {
+    private $position = 0;
+
     /**
-     * @var \FEIWebServicesClient\Common\Types\OfficialStatus
+     * @var OfficialStatus[]
      */
     private $OfficialStatus;
 
-    /**
-     * @return \FEIWebServicesClient\Common\Types\OfficialStatus
-     */
-    public function getOfficialStatus(): \FEIWebServicesClient\Common\Types\OfficialStatus
+    public function current(): OfficialStatus
     {
-        return $this->OfficialStatus;
+        return $this->OfficialStatus[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->OfficialStatus[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

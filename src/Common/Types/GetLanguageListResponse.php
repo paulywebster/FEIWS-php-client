@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetLanguageListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Common\Types\ArrayOfLanguage
+     * @var ArrayOfLanguage
      */
     private $getLanguageListResult;
 
     /**
-     * @return \FEIWebServicesClient\Common\Types\ArrayOfLanguage
+     * @return ArrayOfLanguage
      */
-    public function getGetLanguageListResult(): \FEIWebServicesClient\Common\Types\ArrayOfLanguage
+    public function result(): ArrayOfLanguage
     {
         return $this->getLanguageListResult;
     }
