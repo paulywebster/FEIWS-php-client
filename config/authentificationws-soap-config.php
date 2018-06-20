@@ -6,7 +6,7 @@ use Phpro\SoapClient\CodeGenerator\Config\Config;
 use Phpro\SoapClient\CodeGenerator\Rules;
 use Phpro\SoapClient\CodeGenerator\Assembler;
 
-$config = require __DIR__.'parameters.php';
+$config = require __DIR__.'/parameters.php';
 
 $wsdl = Environment::fromString($config['environment'])->url().Service::authentication()->uri();
 
