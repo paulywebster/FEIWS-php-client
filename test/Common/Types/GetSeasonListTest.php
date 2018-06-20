@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class GetSeasonListTest extends TestCase
 {
-    public function testCanBeCreatedWithValidDisciplineAndSeasonCode(): void
+    public function testCanBeCreatedWithValidDisciplineCode(): void
     {
         $this->assertInstanceOf(GetSeasonList::class, new GetSeasonList('D'));
     }
