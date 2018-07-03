@@ -2,17 +2,31 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class GetHorses
+use Phpro\SoapClient\Type\RequestInterface;
+
+class GetHorses implements RequestInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfString
+     * @var ArrayOfString
      */
     private $HorseFEICodes;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfString
+     * @var array
+     *
+     * @throws \InvalidArgumentException
      */
-    public function getHorseFEICodes(): \FEIWebServicesClient\Horse\Types\ArrayOfString
+    public function __construct(array $HorseFEICodes)
+    {
+        foreach ($HorseFEICodes as $code) {
+            $this->HorseFEICodes[] = new HorseFEICode($code);
+        }
+    }
+
+    /**
+     * @return ArrayOfString
+     */
+    public function getHorseFEICodes(): ArrayOfString
     {
         return $this->HorseFEICodes;
     }

@@ -2,6 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
+use Assert\Assert;
+use FEIWebServicesClient\Shared\Types\Country;
+
 class HorseOwnership
 {
     /**
@@ -15,9 +18,36 @@ class HorseOwnership
     private $DateFrom;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseOwnershipMember
+     * @var ArrayOfHorseOwnershipMember
      */
     private $Members;
+
+    public function __construct(array $ownership, \DateTimeImmutable $birthDate) {
+        Assert::that($ownership)
+            ->keyExists('NationalityOfOwnership')
+            ->keyExists('DateFrom')
+            ->keyExists('Members')
+            ;
+        Assert::that($ownership['DateFrom'])->string()->notBlank();
+        Assert::that($ownership['Members'])->isArray()->notEmpty();
+
+        $ownerDateFrom = new \DateTimeImmutable($ownership['DateFrom']);
+        if ($ownerDateFrom < $birthDate || $ownerDateFrom > new \DateTimeImmutable('now')) {
+            throw new \LogicException('The ownership date from cannot be set before the birthdate or in the future.');
+        }
+        $this->NationalityOfOwnership = Country::fromString($ownership['NationalityOfOwnership'])->FEIcode();
+        $this->DateFrom = new \DateTimeImmutable($ownership['DateFrom']);
+        $this->Members = new ArrayOfHorseOwnershipMember($ownership['Members']);
+    }
+
+    public function data(): array
+    {
+        return [
+            'NationalityOfOwnership' => $this->NationalityOfOwnership,
+            'DateFrom' => $this->DateFrom,
+            'Members' => $this->Members->data(),
+        ];
+    }
 
     /**
      * @return string
@@ -36,9 +66,9 @@ class HorseOwnership
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfHorseOwnershipMember
+     * @return ArrayOfHorseOwnershipMember
      */
-    public function getMembers(): \FEIWebServicesClient\Horse\Types\ArrayOfHorseOwnershipMember
+    public function getMembers(): ArrayOfHorseOwnershipMember
     {
         return $this->Members;
     }

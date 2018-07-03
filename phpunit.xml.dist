@@ -20,6 +20,7 @@
         <whitelist>
             <file>src/Common/Types/GetLeagueList.php</file>
             <file>src/Common/Types/GetSeasonList.php</file>
+            <file>src/Horse/Types/HorseFEICode.php</file>
             <file>src/Environment.php</file>
             <file>src/Service.php</file>
         </whitelist>

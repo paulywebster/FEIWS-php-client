@@ -2,17 +2,19 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class SearchClassesHelper
+use Phpro\SoapClient\Type\RequestInterface;
+
+class SearchClassesHelper implements RequestInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SearchClasses
+     * @var SearchClasses
      */
     private $ClassStructure;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SearchClasses
+     * @return SearchClasses
      */
-    public function getClassStructure(): \FEIWebServicesClient\Horse\Types\SearchClasses
+    public function getClassStructure(): SearchClasses
     {
         return $this->ClassStructure;
     }

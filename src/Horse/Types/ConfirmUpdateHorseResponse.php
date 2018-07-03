@@ -12,35 +12,35 @@ class ConfirmUpdateHorseResponse implements ResultInterface
     private $confirmUpdateHorseResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\Horse
+     * @var Horse
      */
     private $Horse;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
      * @return bool
      */
-    public function isConfirmUpdateHorseResult(): bool
+    public function result(): bool
     {
         return $this->confirmUpdateHorseResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\Horse
+     * @return Horse
      */
-    public function getHorse(): \FEIWebServicesClient\Horse\Types\Horse
+    public function getHorse(): Horse
     {
         return $this->Horse;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

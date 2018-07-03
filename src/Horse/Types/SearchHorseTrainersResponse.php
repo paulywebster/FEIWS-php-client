@@ -7,27 +7,27 @@ use Phpro\SoapClient\Type\ResultInterface;
 class SearchHorseTrainersResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseTrainer
+     * @var ArrayOfHorseTrainer
      */
     private $searchHorseTrainersResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfHorseTrainer
+     * @return ArrayOfHorseTrainer
      */
-    public function getSearchHorseTrainersResult(): \FEIWebServicesClient\Horse\Types\ArrayOfHorseTrainer
+    public function result(): ArrayOfHorseTrainer
     {
         return $this->searchHorseTrainersResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

@@ -12,22 +12,22 @@ class UploadHorseDiagramResponse implements ResultInterface
     private $uploadHorseDiagramResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
      * @return bool
      */
-    public function isUploadHorseDiagramResult(): bool
+    public function result(): bool
     {
         return $this->uploadHorseDiagramResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

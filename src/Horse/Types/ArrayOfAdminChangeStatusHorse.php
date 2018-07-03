@@ -2,18 +2,36 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class ArrayOfAdminChangeStatusHorse
+class ArrayOfAdminChangeStatusHorse implements \Iterator
 {
+    private $position = 0;
     /**
-     * @var \FEIWebServicesClient\Horse\Types\AdminChangeStatusHorse
+     * @var AdminChangeStatusHorse
      */
     private $AdminChangeStatusHorse;
 
-    /**
-     * @return \FEIWebServicesClient\Horse\Types\AdminChangeStatusHorse
-     */
-    public function getAdminChangeStatusHorse(): \FEIWebServicesClient\Horse\Types\AdminChangeStatusHorse
+    public function current(): AdminChangeStatusHorse
     {
-        return $this->AdminChangeStatusHorse;
+        return $this->AdminChangeStatusHorse[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->AdminChangeStatusHorse[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

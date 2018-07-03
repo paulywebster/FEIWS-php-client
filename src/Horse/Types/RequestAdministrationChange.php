@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class RequestAdministrationChange
+use Phpro\SoapClient\Type\RequestInterface;
+
+class RequestAdministrationChange implements RequestInterface
 {
     /**
      * @var string

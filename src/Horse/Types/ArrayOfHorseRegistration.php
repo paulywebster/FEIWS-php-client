@@ -2,18 +2,36 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class ArrayOfHorseRegistration
+class ArrayOfHorseRegistration implements \Iterator
 {
+    private $position = 0;
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseRegistration
+     * @var HorseRegistration
      */
     private $HorseRegistration;
 
-    /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseRegistration
-     */
-    public function getHorseRegistration(): \FEIWebServicesClient\Horse\Types\HorseRegistration
+    public function current(): HorseRegistration
     {
-        return $this->HorseRegistration;
+        return $this->HorseRegistration[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->HorseRegistration[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

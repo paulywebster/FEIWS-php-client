@@ -12,35 +12,35 @@ class ConfirmChangeHorseNameResponse implements ResultInterface
     private $confirmChangeHorseNameResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseName
+     * @var HorseName
      */
     private $HorseName;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
      * @return bool
      */
-    public function isConfirmChangeHorseNameResult(): bool
+    public function result(): bool
     {
         return $this->confirmChangeHorseNameResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseName
+     * @return HorseName
      */
-    public function getHorseName(): \FEIWebServicesClient\Horse\Types\HorseName
+    public function getHorseName(): HorseName
     {
         return $this->HorseName;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

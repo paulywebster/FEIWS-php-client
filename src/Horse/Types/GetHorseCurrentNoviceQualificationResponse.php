@@ -7,27 +7,27 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetHorseCurrentNoviceQualificationResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
+     * @var ArrayOfEnduranceNationalResult
      */
     private $getHorseCurrentNoviceQualificationResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
+     * @return ArrayOfEnduranceNationalResult
      */
-    public function getGetHorseCurrentNoviceQualificationResult(): \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
+    public function result(): ArrayOfEnduranceNationalResult
     {
         return $this->getHorseCurrentNoviceQualificationResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

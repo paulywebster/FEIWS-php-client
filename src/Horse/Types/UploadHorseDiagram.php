@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class UploadHorseDiagram
+use Phpro\SoapClient\Type\RequestInterface;
+
+class UploadHorseDiagram implements RequestInterface
 {
     /**
      * @var string
@@ -10,7 +12,7 @@ class UploadHorseDiagram
     private $HorseFEICode;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\base64Binary
+     * @var base64Binary
      */
     private $Document;
 
@@ -28,9 +30,9 @@ class UploadHorseDiagram
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\base64Binary
+     * @return base64Binary
      */
-    public function getDocument(): \FEIWebServicesClient\Horse\Types\base64Binary
+    public function getDocument(): base64Binary
     {
         return $this->Document;
     }

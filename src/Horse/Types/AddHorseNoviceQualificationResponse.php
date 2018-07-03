@@ -12,22 +12,22 @@ class AddHorseNoviceQualificationResponse implements ResultInterface
     private $addHorseNoviceQualificationResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
      * @return bool
      */
-    public function isAddHorseNoviceQualificationResult(): bool
+    public function result(): bool
     {
         return $this->addHorseNoviceQualificationResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

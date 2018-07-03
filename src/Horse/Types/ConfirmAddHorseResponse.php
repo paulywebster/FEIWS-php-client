@@ -12,35 +12,44 @@ class ConfirmAddHorseResponse implements ResultInterface
     private $confirmAddHorseResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseNew
+     * @var HorseNew
      */
     private $Horse;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
      * @return bool
      */
-    public function isConfirmAddHorseResult(): bool
+    public function result(): bool
     {
+        if(!$this->confirmAddHorseResult && null !== $this->getMessages() && $this->getMessages()->valid()){
+            if('ChipIDUniquenessViolation' === $this->getMessages()->current()->getUID()){
+                throw new \InvalidArgumentException('The Microchip number must be unique.');
+            }
+            if('InvalidTicket' === $this->getMessages()->current()->getUID()){
+                throw new \InvalidArgumentException('The ticket number given is invalid.');
+            }
+        }
+
         return $this->confirmAddHorseResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseNew
+     * @return HorseNew
      */
-    public function getHorse(): \FEIWebServicesClient\Horse\Types\HorseNew
+    public function getHorse(): HorseNew
     {
         return $this->Horse;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

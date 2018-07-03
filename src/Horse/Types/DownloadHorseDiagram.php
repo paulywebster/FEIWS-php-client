@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class DownloadHorseDiagram
+use Phpro\SoapClient\Type\RequestInterface;
+
+class DownloadHorseDiagram implements RequestInterface
 {
     /**
      * @var string

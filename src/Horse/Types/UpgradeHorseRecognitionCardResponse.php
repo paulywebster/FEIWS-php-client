@@ -12,22 +12,22 @@ class UpgradeHorseRecognitionCardResponse implements ResultInterface
     private $upgradeHorseRecognitionCardResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
      * @return bool
      */
-    public function isUpgradeHorseRecognitionCardResult(): bool
+    public function result(): bool
     {
         return $this->upgradeHorseRecognitionCardResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

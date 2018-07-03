@@ -2,6 +2,8 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class GetHorseColorList
+use Phpro\SoapClient\Type\RequestInterface;
+
+class GetHorseColorList implements RequestInterface
 {
 }

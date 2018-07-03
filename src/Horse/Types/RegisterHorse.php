@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class RegisterHorse
+use Phpro\SoapClient\Type\RequestInterface;
+
+class RegisterHorse implements RequestInterface
 {
     /**
      * @var string
@@ -15,7 +17,7 @@ class RegisterHorse
     private $Year;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfString
+     * @var ArrayOfString
      */
     private $DisciplineCodes;
 
@@ -36,9 +38,9 @@ class RegisterHorse
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfString
+     * @return ArrayOfString
      */
-    public function getDisciplineCodes(): \FEIWebServicesClient\Horse\Types\ArrayOfString
+    public function getDisciplineCodes(): ArrayOfString
     {
         return $this->DisciplineCodes;
     }

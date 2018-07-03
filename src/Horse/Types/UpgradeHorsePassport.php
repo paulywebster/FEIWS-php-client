@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class UpgradeHorsePassport
+use Phpro\SoapClient\Type\RequestInterface;
+
+class UpgradeHorsePassport implements RequestInterface
 {
     /**
      * @var string

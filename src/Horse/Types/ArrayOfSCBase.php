@@ -2,18 +2,36 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class ArrayOfSCBase
+class ArrayOfSCBase implements \Iterator
 {
+    private $position = 0;
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCBase
+     * @var SCBase
      */
     private $SCBase;
 
-    /**
-     * @return \FEIWebServicesClient\Horse\Types\SCBase
-     */
-    public function getSCBase(): \FEIWebServicesClient\Horse\Types\SCBase
+    public function current(): SCBase
     {
-        return $this->SCBase;
+        return $this->SCBase[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->SCBase[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

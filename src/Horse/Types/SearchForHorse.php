@@ -2,17 +2,26 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class SearchForHorse
+use Phpro\SoapClient\Type\RequestInterface;
+
+class SearchForHorse implements RequestInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfSCBase
+     * @var ArrayOfSCBase
      */
     private $Conditions;
 
+    public function __construct(array $Conditions)
+    {
+        foreach ($Conditions as $field => $value){
+            $this->Conditions['SCBase'][] = (new SCBase($field, $value))->getSearchParameter();
+        }
+    }
+
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfSCBase
+     * @return ArrayOfSCBase
      */
-    public function getConditions(): \FEIWebServicesClient\Horse\Types\ArrayOfSCBase
+    public function getConditions(): ArrayOfSCBase
     {
         return $this->Conditions;
     }

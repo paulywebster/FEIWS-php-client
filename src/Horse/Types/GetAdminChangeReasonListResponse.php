@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetAdminChangeReasonListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfAdminChangeReasonHorse
+     * @var ArrayOfAdminChangeReasonHorse
      */
     private $getAdminChangeReasonListResult;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfAdminChangeReasonHorse
+     * @return ArrayOfAdminChangeReasonHorse
      */
-    public function getGetAdminChangeReasonListResult(): \FEIWebServicesClient\Horse\Types\ArrayOfAdminChangeReasonHorse
+    public function result(): ArrayOfAdminChangeReasonHorse
     {
         return $this->getAdminChangeReasonListResult;
     }

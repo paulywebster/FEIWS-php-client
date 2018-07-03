@@ -2,32 +2,37 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
+use FEIWebServicesClient\Horse\Exception\ListTruncatedException;
 use Phpro\SoapClient\Type\ResultInterface;
 
 class SearchForHorseResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorse
+     * @var ArrayOfHorse
      */
     private $searchForHorseResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfHorse
+     * @return ArrayOfHorse
      */
-    public function getSearchForHorseResult(): \FEIWebServicesClient\Horse\Types\ArrayOfHorse
+    public function result(): ArrayOfHorse
     {
+        if(null !== $this->getMessages() && $this->getMessages()->valid() && 'ListTruncated' === $this->getMessages()->current()->getUID()){
+            throw ListTruncatedException::raise();
+        }
+
         return $this->searchForHorseResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages():? ArrayOfMessage
     {
         return $this->Messages;
     }

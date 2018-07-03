@@ -12,35 +12,35 @@ class AssignHorseOwnerResponse implements ResultInterface
     private $assignHorseOwnerResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseOwner
+     * @var HorseOwner
      */
     private $Owner;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
      * @return bool
      */
-    public function isAssignHorseOwnerResult(): bool
+    public function result(): bool
     {
         return $this->assignHorseOwnerResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseOwner
+     * @return HorseOwner
      */
-    public function getOwner(): \FEIWebServicesClient\Horse\Types\HorseOwner
+    public function getOwner(): HorseOwner
     {
         return $this->Owner;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

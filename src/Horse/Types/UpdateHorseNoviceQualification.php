@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class UpdateHorseNoviceQualification
+use Phpro\SoapClient\Type\RequestInterface;
+
+class UpdateHorseNoviceQualification implements RequestInterface
 {
     /**
      * @var string
@@ -15,7 +17,7 @@ class UpdateHorseNoviceQualification
     private $NoviceQualificationDate;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
+     * @var ArrayOfEnduranceNationalResult
      */
     private $NationalResults;
 
@@ -36,9 +38,9 @@ class UpdateHorseNoviceQualification
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
+     * @return ArrayOfEnduranceNationalResult
      */
-    public function getNationalResults(): \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
+    public function getNationalResults(): ArrayOfEnduranceNationalResult
     {
         return $this->NationalResults;
     }

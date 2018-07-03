@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class AssignHorseOwnership
+use Phpro\SoapClient\Type\RequestInterface;
+
+class AssignHorseOwnership implements RequestInterface
 {
     /**
      * @var string
@@ -10,7 +12,7 @@ class AssignHorseOwnership
     private $HorseFEICode;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseOwnership
+     * @var HorseOwnership
      */
     private $Ownership;
 
@@ -23,9 +25,9 @@ class AssignHorseOwnership
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseOwnership
+     * @return HorseOwnership
      */
-    public function getOwnership(): \FEIWebServicesClient\Horse\Types\HorseOwnership
+    public function getOwnership(): HorseOwnership
     {
         return $this->Ownership;
     }

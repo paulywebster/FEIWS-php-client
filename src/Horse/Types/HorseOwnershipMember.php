@@ -2,6 +2,8 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
+use Assert\Assert;
+
 class HorseOwnershipMember
 {
     /**
@@ -25,7 +27,7 @@ class HorseOwnershipMember
     private $CorporationName;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\Address
+     * @var Address
      */
     private $Address;
 
@@ -48,6 +50,58 @@ class HorseOwnershipMember
      * @var float
      */
     private $OwnershipPercentage;
+
+    public function __construct(array $member) {
+        Assert::that($member)
+            ->keyExists('FEIID')
+            ->keyExists('Address')
+            ->keyExists('OwnershipPercentage')
+        ;
+
+        $FEIId = new FEIID($member['FEIID']);
+        $this->FEIID = $FEIId->number();
+        if($FEIId->isPhysicalPerson()){
+            Assert::that($member)
+                ->keyExists('FamilyName')
+                ->keyExists('FirstName');
+            Assert::that($member['FamilyName'])->string()->notBlank();
+            Assert::that($member['FirstName'])->string()->notBlank();
+            $this->FamilyName = $member['FamilyName'];
+            $this->FirstName = $member['FirstName'];
+        } else {
+            Assert::that($member)
+                ->keyExists('CorporationName')
+                ->keyExists('CorporationContactFEIID')
+                ->keyExists('CorporationContactFamilyName')
+                ->keyExists('CorporationContactFirstName')
+            ;
+            Assert::that($member['CorporationName'])->string()->notBlank();
+            $this->CorporationName = $member['CorporationName'];
+            $this->CorporationContactFEIID = (new FEIID($member['CorporationContactFEIID']))->number();
+            Assert::that($member['CorporationContactFamilyName'])->string()->notBlank();
+            $this->CorporationContactFamilyName = $member['CorporationContactFamilyName'];
+            Assert::that($member['CorporationContactFirstName'])->string()->notBlank();
+            $this->CorporationContactFirstName = $member['CorporationContactFirstName'];
+        }
+
+        $this->Address = new Address($member['Address']);
+        $this->OwnershipPercentage = $member['OwnershipPercentage'];
+    }
+
+    public function data(): array
+    {
+        return [
+            'FEIID' => $this->FEIID,
+            'FamilyName' => $this->FamilyName,
+            'FirstName' => $this->FirstName,
+            'CorporationName' => $this->CorporationName,
+            'CorporationContactFEIID' => $this->CorporationContactFEIID,
+            'CorporationContactFamilyName' => $this->CorporationContactFamilyName,
+            'CorporationContactFirstName' => $this->CorporationContactFirstName,
+            'Address' => $this->Address->data(),
+            'OwnershipPercentage' => $this->OwnershipPercentage,
+        ];
+    }
 
     /**
      * @return int
@@ -82,9 +136,9 @@ class HorseOwnershipMember
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\Address
+     * @return Address
      */
-    public function getAddress(): \FEIWebServicesClient\Horse\Types\Address
+    public function getAddress(): Address
     {
         return $this->Address;
     }

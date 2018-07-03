@@ -2,17 +2,25 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class AddHorse
+use Phpro\SoapClient\Type\RequestInterface;
+
+class AddHorse implements RequestInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseNew
+     * @var HorseNew
      */
     private $Horse;
 
+    public function __construct(array $horse)
+    {
+        $this->Horse = (new HorseNew($horse))->data();
+    }
+
+
     /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseNew
+     * @return HorseNew
      */
-    public function getHorse(): \FEIWebServicesClient\Horse\Types\HorseNew
+    public function getHorse(): HorseNew
     {
         return $this->Horse;
     }

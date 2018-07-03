@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class DeleteHorseNoviceQualification
+use Phpro\SoapClient\Type\RequestInterface;
+
+class DeleteHorseNoviceQualification implements RequestInterface
 {
     /**
      * @var string

@@ -7,27 +7,27 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetHorseNameHistoryListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseName
+     * @var ArrayOfHorseName
      */
     private $getHorseNameHistoryListResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfHorseName
+     * @return ArrayOfHorseName
      */
-    public function getGetHorseNameHistoryListResult(): \FEIWebServicesClient\Horse\Types\ArrayOfHorseName
+    public function result(): ArrayOfHorseName
     {
         return $this->getHorseNameHistoryListResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

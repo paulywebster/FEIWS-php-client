@@ -12,17 +12,17 @@ class AddHorseResponse implements ResultInterface
     private $addHorseResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseNew
+     * @var HorseNew
      */
     private $Horse;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseDuplicate
+     * @var ArrayOfHorseDuplicate
      */
     private $PotentialHorseDuplicates;
 
@@ -34,31 +34,31 @@ class AddHorseResponse implements ResultInterface
     /**
      * @return bool
      */
-    public function isAddHorseResult(): bool
+    public function result(): bool
     {
         return $this->addHorseResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseNew
+     * @return HorseNew
      */
-    public function getHorse(): \FEIWebServicesClient\Horse\Types\HorseNew
+    public function getHorse():? HorseNew
     {
         return $this->Horse;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfHorseDuplicate
+     * @return ArrayOfHorseDuplicate
      */
-    public function getPotentialHorseDuplicates(): \FEIWebServicesClient\Horse\Types\ArrayOfHorseDuplicate
+    public function getPotentialHorseDuplicates(): ArrayOfHorseDuplicate
     {
         return $this->PotentialHorseDuplicates;
     }

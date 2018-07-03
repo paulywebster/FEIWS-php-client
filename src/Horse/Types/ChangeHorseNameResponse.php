@@ -12,17 +12,17 @@ class ChangeHorseNameResponse implements ResultInterface
     private $changeHorseNameResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseName
+     * @var HorseName
      */
     private $HorseName;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfHorseDuplicate
+     * @var ArrayOfHorseDuplicate
      */
     private $PotentialHorseDuplicates;
 
@@ -34,31 +34,31 @@ class ChangeHorseNameResponse implements ResultInterface
     /**
      * @return bool
      */
-    public function isChangeHorseNameResult(): bool
+    public function result(): bool
     {
         return $this->changeHorseNameResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseName
+     * @return HorseName
      */
-    public function getHorseName(): \FEIWebServicesClient\Horse\Types\HorseName
+    public function getHorseName(): HorseName
     {
         return $this->HorseName;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfHorseDuplicate
+     * @return ArrayOfHorseDuplicate
      */
-    public function getPotentialHorseDuplicates(): \FEIWebServicesClient\Horse\Types\ArrayOfHorseDuplicate
+    public function getPotentialHorseDuplicates(): ArrayOfHorseDuplicate
     {
         return $this->PotentialHorseDuplicates;
     }

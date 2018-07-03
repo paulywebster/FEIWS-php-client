@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class GetHorseOwnership
+use Phpro\SoapClient\Type\RequestInterface;
+
+class GetHorseOwnership implements RequestInterface
 {
     /**
      * @var string

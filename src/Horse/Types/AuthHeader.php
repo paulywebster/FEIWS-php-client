@@ -15,7 +15,7 @@ class AuthHeader
     private $Language;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfString
+     * @var ArrayOfString
      */
     private $Exceptions;
 
@@ -36,9 +36,9 @@ class AuthHeader
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfString
+     * @return ArrayOfString
      */
-    public function getExceptions(): \FEIWebServicesClient\Horse\Types\ArrayOfString
+    public function getExceptions(): ArrayOfString
     {
         return $this->Exceptions;
     }

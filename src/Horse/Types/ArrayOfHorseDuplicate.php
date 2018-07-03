@@ -2,18 +2,36 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class ArrayOfHorseDuplicate
+class ArrayOfHorseDuplicate implements \Iterator
 {
+    private $position = 0;
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseDuplicate
+     * @var HorseDuplicate
      */
     private $HorseDuplicate;
 
-    /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseDuplicate
-     */
-    public function getHorseDuplicate(): \FEIWebServicesClient\Horse\Types\HorseDuplicate
+    public function current(): HorseDuplicate
     {
-        return $this->HorseDuplicate;
+        return $this->HorseDuplicate[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->HorseDuplicate[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

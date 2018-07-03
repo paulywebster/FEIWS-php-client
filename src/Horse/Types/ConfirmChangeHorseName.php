@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class ConfirmChangeHorseName
+use Phpro\SoapClient\Type\RequestInterface;
+
+class ConfirmChangeHorseName implements RequestInterface
 {
     /**
      * @var string

@@ -14,7 +14,9 @@
         }
     ],
     "require": {
-        "phpro/soap-client": "^0.7.3"
+        "phpro/soap-client": "^0.7.3",
+        "beberlei/assert": "^2.9",
+        "symfony/intl": "^4.1"
     },
     "autoload": {
         "psr-4": {"FEIWebServicesClient\\": "src/"}

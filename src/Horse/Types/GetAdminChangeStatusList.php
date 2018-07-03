@@ -2,6 +2,8 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class GetAdminChangeStatusList
+use Phpro\SoapClient\Type\RequestInterface;
+
+class GetAdminChangeStatusList implements RequestInterface
 {
 }

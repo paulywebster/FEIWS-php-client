@@ -12,22 +12,22 @@ class RequestAdministrationChangeResponse implements ResultInterface
     private $requestAdministrationChangeResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
      * @return string
      */
-    public function getRequestAdministrationChangeResult(): string
+    public function result(): string
     {
         return $this->requestAdministrationChangeResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

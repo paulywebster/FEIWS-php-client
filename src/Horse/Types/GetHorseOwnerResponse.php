@@ -7,27 +7,27 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetHorseOwnerResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseOwner
+     * @var HorseOwner
      */
     private $getHorseOwnerResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseOwner
+     * @return HorseOwner
      */
-    public function getGetHorseOwnerResult(): \FEIWebServicesClient\Horse\Types\HorseOwner
+    public function result(): HorseOwner
     {
         return $this->getHorseOwnerResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

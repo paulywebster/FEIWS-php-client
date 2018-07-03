@@ -2,18 +2,36 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class ArrayOfStudBook
+class ArrayOfStudBook implements \Iterator
 {
+    private $position = 0;
     /**
-     * @var \FEIWebServicesClient\Horse\Types\StudBook
+     * @var StudBook
      */
     private $StudBook;
 
-    /**
-     * @return \FEIWebServicesClient\Horse\Types\StudBook
-     */
-    public function getStudBook(): \FEIWebServicesClient\Horse\Types\StudBook
+    public function current(): StudBook
     {
-        return $this->StudBook;
+        return $this->StudBook[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->StudBook[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

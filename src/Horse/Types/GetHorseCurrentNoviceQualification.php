@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class GetHorseCurrentNoviceQualification
+use Phpro\SoapClient\Type\RequestInterface;
+
+class GetHorseCurrentNoviceQualification implements RequestInterface
 {
     /**
      * @var string

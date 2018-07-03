@@ -7,14 +7,14 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetStudBookListResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfStudBook
+     * @var ArrayOfStudBook
      */
     private $getStudBookListResult;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfStudBook
+     * @return ArrayOfStudBook
      */
-    public function getGetStudBookListResult(): \FEIWebServicesClient\Horse\Types\ArrayOfStudBook
+    public function result(): ArrayOfStudBook
     {
         return $this->getStudBookListResult;
     }

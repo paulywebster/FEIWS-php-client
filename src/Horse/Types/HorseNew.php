@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class HorseNew
+use Assert\Assert;
+
+class HorseNew extends Horse
 {
     /**
      * @var string
@@ -10,7 +12,7 @@ class HorseNew
     private $OwnerName;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeImmutable
      */
     private $OwnerDateFrom;
 
@@ -50,9 +52,52 @@ class HorseNew
     private $OwnerNationalityCode;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseOwnership
+     * @var HorseOwnership
      */
     private $Ownership;
+
+    public function __construct(array $horse)
+    {
+        parent::__construct($horse);
+
+        Assert::that($horse)
+            ->keyExists('OwnerDateFrom')
+            ->keyExists('Ownership')
+            ;
+
+        $ownerDateFrom = new \DateTimeImmutable($horse['OwnerDateFrom']);
+        if ($ownerDateFrom < $this->getDateBirth() || $ownerDateFrom > new \DateTimeImmutable('now')) {
+            throw new \LogicException('The ownership date from cannot be set before the birthdate or in the future.');
+        }
+        $this->OwnerDateFrom = $ownerDateFrom;
+        $this->Ownership = new HorseOwnership($horse['Ownership'], $this->getDateBirth());
+    }
+
+
+    public function data():array
+    {
+        return [
+            'BirthName' => $this->getBirthName(),
+            'IsCNSuffix' => $this->isIsCNSuffix(),
+            'DateBirth' => $this->getDateBirth(),
+            'CastratedId' => $this->getCastratedId(),
+            'OwnerDateFrom' => $this->getOwnerDateFrom(),
+            'CurrentName' => $this->getCurrentName(),
+            'IsPony' => $this->isPony(),
+            'NatPassport' => $this->getNatPassport(),
+            'IsActive' => $this->isActive(),
+            'GenderCode' => $this->getGenderCode(),
+            'ColorCode' => $this->getColorCode(),
+            'ColorComplement' => $this->getColorComplement(),
+            'FEICodeType' => $this->getFEICodeType(),
+            'IssuingNFCode' => $this->getIssuingNFCode(),
+            'Microchip' => $this->getMicrochip(),
+            'IssuingBodyCode' => $this->getIssuingBodyCode(),
+            'RecognitionCode' => $this->getRecognitionCode(),
+            'Ownership' => $this->Ownership->data(),
+        ];
+    }
+
 
     /**
      * @return string
@@ -63,9 +108,9 @@ class HorseNew
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeImmutable
      */
-    public function getOwnerDateFrom(): \DateTime
+    public function getOwnerDateFrom(): \DateTimeImmutable
     {
         return $this->OwnerDateFrom;
     }
@@ -127,9 +172,9 @@ class HorseNew
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseOwnership
+     * @return HorseOwnership
      */
-    public function getOwnership(): \FEIWebServicesClient\Horse\Types\HorseOwnership
+    public function getOwnership(): HorseOwnership
     {
         return $this->Ownership;
     }

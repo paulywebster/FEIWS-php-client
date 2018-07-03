@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class GetHorseNameHistoryList
+use Phpro\SoapClient\Type\RequestInterface;
+
+class GetHorseNameHistoryList implements RequestInterface
 {
     /**
      * @var string

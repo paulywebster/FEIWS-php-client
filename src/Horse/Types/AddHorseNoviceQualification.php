@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class AddHorseNoviceQualification
+use Phpro\SoapClient\Type\RequestInterface;
+
+class AddHorseNoviceQualification implements RequestInterface
 {
     /**
      * @var string
@@ -10,7 +12,7 @@ class AddHorseNoviceQualification
     private $HorseFEICode;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
+     * @var ArrayOfEnduranceNationalResult
      */
     private $NationalResults;
 
@@ -23,9 +25,9 @@ class AddHorseNoviceQualification
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
+     * @return ArrayOfEnduranceNationalResult
      */
-    public function getNationalResults(): \FEIWebServicesClient\Horse\Types\ArrayOfEnduranceNationalResult
+    public function getNationalResults(): ArrayOfEnduranceNationalResult
     {
         return $this->NationalResults;
     }

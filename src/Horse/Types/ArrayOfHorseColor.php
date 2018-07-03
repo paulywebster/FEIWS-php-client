@@ -2,18 +2,36 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class ArrayOfHorseColor
+class ArrayOfHorseColor implements \Iterator
 {
+    private $position = 0;
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseColor
+     * @var HorseColor
      */
     private $HorseColor;
 
-    /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseColor
-     */
-    public function getHorseColor(): \FEIWebServicesClient\Horse\Types\HorseColor
+    public function current(): HorseColor
     {
-        return $this->HorseColor;
+        return $this->HorseColor[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->HorseColor[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

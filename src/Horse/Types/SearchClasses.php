@@ -5,170 +5,170 @@ namespace FEIWebServicesClient\Horse\Types;
 class SearchClasses
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorseAnyID
+     * @var SCHorseAnyID
      */
     private $SCHorseAnyID;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorseName
+     * @var SCHorseName
      */
     private $SCHorseName;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorseInclHistNames
+     * @var SCHorseInclHistNames
      */
     private $SCHorseInclHistNames;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorsePony
+     * @var SCHorsePony
      */
     private $SCHorsePony;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorseCurrentOwner
+     * @var SCHorseCurrentOwner
      */
     private $SCHorseCurrentOwner;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorseHorseStatus
+     * @var SCHorseHorseStatus
      */
     private $SCHorseHorseStatus;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorseAdminNF
+     * @var SCHorseAdminNF
      */
     private $SCHorseAdminNF;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorsePendAdmNFReq
+     * @var SCHorsePendAdmNFReq
      */
     private $SCHorsePendAdmNFReq;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorseRegistration
+     * @var SCHorseRegistration
      */
     private $SCHorseRegistration;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorseRegDiscipline
+     * @var SCHorseRegDiscipline
      */
     private $SCHorseRegDiscipline;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorseRegDateFrom
+     * @var SCHorseRegDateFrom
      */
     private $SCHorseRegDateFrom;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorseRegDateTo
+     * @var SCHorseRegDateTo
      */
     private $SCHorseRegDateTo;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\SCHorseStudbook
+     * @var SCHorseStudbook
      */
     private $SCHorseStudbook;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorseAnyID
+     * @return SCHorseAnyID
      */
-    public function getSCHorseAnyID(): \FEIWebServicesClient\Horse\Types\SCHorseAnyID
+    public function getSCHorseAnyID(): SCHorseAnyID
     {
         return $this->SCHorseAnyID;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorseName
+     * @return SCHorseName
      */
-    public function getSCHorseName(): \FEIWebServicesClient\Horse\Types\SCHorseName
+    public function getSCHorseName(): SCHorseName
     {
         return $this->SCHorseName;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorseInclHistNames
+     * @return SCHorseInclHistNames
      */
-    public function getSCHorseInclHistNames(): \FEIWebServicesClient\Horse\Types\SCHorseInclHistNames
+    public function getSCHorseInclHistNames(): SCHorseInclHistNames
     {
         return $this->SCHorseInclHistNames;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorsePony
+     * @return SCHorsePony
      */
-    public function getSCHorsePony(): \FEIWebServicesClient\Horse\Types\SCHorsePony
+    public function getSCHorsePony(): SCHorsePony
     {
         return $this->SCHorsePony;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorseCurrentOwner
+     * @return SCHorseCurrentOwner
      */
-    public function getSCHorseCurrentOwner(): \FEIWebServicesClient\Horse\Types\SCHorseCurrentOwner
+    public function getSCHorseCurrentOwner(): SCHorseCurrentOwner
     {
         return $this->SCHorseCurrentOwner;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorseHorseStatus
+     * @return SCHorseHorseStatus
      */
-    public function getSCHorseHorseStatus(): \FEIWebServicesClient\Horse\Types\SCHorseHorseStatus
+    public function getSCHorseHorseStatus(): SCHorseHorseStatus
     {
         return $this->SCHorseHorseStatus;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorseAdminNF
+     * @return SCHorseAdminNF
      */
-    public function getSCHorseAdminNF(): \FEIWebServicesClient\Horse\Types\SCHorseAdminNF
+    public function getSCHorseAdminNF(): SCHorseAdminNF
     {
         return $this->SCHorseAdminNF;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorsePendAdmNFReq
+     * @return SCHorsePendAdmNFReq
      */
-    public function getSCHorsePendAdmNFReq(): \FEIWebServicesClient\Horse\Types\SCHorsePendAdmNFReq
+    public function getSCHorsePendAdmNFReq(): SCHorsePendAdmNFReq
     {
         return $this->SCHorsePendAdmNFReq;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorseRegistration
+     * @return SCHorseRegistration
      */
-    public function getSCHorseRegistration(): \FEIWebServicesClient\Horse\Types\SCHorseRegistration
+    public function getSCHorseRegistration(): SCHorseRegistration
     {
         return $this->SCHorseRegistration;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorseRegDiscipline
+     * @return SCHorseRegDiscipline
      */
-    public function getSCHorseRegDiscipline(): \FEIWebServicesClient\Horse\Types\SCHorseRegDiscipline
+    public function getSCHorseRegDiscipline(): SCHorseRegDiscipline
     {
         return $this->SCHorseRegDiscipline;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorseRegDateFrom
+     * @return SCHorseRegDateFrom
      */
-    public function getSCHorseRegDateFrom(): \FEIWebServicesClient\Horse\Types\SCHorseRegDateFrom
+    public function getSCHorseRegDateFrom(): SCHorseRegDateFrom
     {
         return $this->SCHorseRegDateFrom;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorseRegDateTo
+     * @return SCHorseRegDateTo
      */
-    public function getSCHorseRegDateTo(): \FEIWebServicesClient\Horse\Types\SCHorseRegDateTo
+    public function getSCHorseRegDateTo(): SCHorseRegDateTo
     {
         return $this->SCHorseRegDateTo;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\SCHorseStudbook
+     * @return SCHorseStudbook
      */
-    public function getSCHorseStudbook(): \FEIWebServicesClient\Horse\Types\SCHorseStudbook
+    public function getSCHorseStudbook(): SCHorseStudbook
     {
         return $this->SCHorseStudbook;
     }

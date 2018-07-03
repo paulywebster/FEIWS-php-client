@@ -5,14 +5,14 @@ namespace FEIWebServicesClient\Horse\Types;
 class SCHorseHorseStatus
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\StatusEnum
+     * @var StatusEnum
      */
     private $Value;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\StatusEnum
+     * @return StatusEnum
      */
-    public function getValue(): \FEIWebServicesClient\Horse\Types\StatusEnum
+    public function getValue(): StatusEnum
     {
         return $this->Value;
     }

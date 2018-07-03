@@ -2,17 +2,19 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class ChangeHorseName
+use Phpro\SoapClient\Type\RequestInterface;
+
+class ChangeHorseName implements RequestInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseName
+     * @var HorseName
      */
     private $HorseName;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseName
+     * @return HorseName
      */
-    public function getHorseName(): \FEIWebServicesClient\Horse\Types\HorseName
+    public function getHorseName(): HorseName
     {
         return $this->HorseName;
     }

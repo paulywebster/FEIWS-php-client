@@ -7,27 +7,38 @@ use Phpro\SoapClient\Type\ResultInterface;
 class GetHorseResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\Horse
+     * @var Horse
      */
     private $getHorseResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\Horse
+     * @return Horse
+     *
+     * @throws \InvalidArgumentException
+     * @throws \Exception
      */
-    public function getGetHorseResult(): \FEIWebServicesClient\Horse\Types\Horse
+    public function result(): Horse
     {
+        if (!$this->getHorseResult) {
+            if ('InvalidHorseFEICode' === $this->getMessages()->current()->getUID()) {
+                throw new \InvalidArgumentException('The Horse FEI Code is not used');
+            }
+
+            throw new \Exception(sprintf('Unhandled error code %s', $this->getMessages()->current()->getUID()));
+        }
+
         return $this->getHorseResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

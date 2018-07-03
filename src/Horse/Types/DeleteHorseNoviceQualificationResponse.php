@@ -12,22 +12,22 @@ class DeleteHorseNoviceQualificationResponse implements ResultInterface
     private $deleteHorseNoviceQualificationResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
      * @return bool
      */
-    public function isDeleteHorseNoviceQualificationResult(): bool
+    public function result(): bool
     {
         return $this->deleteHorseNoviceQualificationResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

@@ -7,27 +7,27 @@ use Phpro\SoapClient\Type\ResultInterface;
 class DownloadHorseDiagramResponse implements ResultInterface
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\base64Binary
+     * @var base64Binary
      */
     private $downloadHorseDiagramResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\base64Binary
+     * @return base64Binary
      */
-    public function getDownloadHorseDiagramResult(): \FEIWebServicesClient\Horse\Types\base64Binary
+    public function result(): base64Binary
     {
         return $this->downloadHorseDiagramResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

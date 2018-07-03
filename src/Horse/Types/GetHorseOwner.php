@@ -2,12 +2,19 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class GetHorseOwner
+use Phpro\SoapClient\Type\RequestInterface;
+
+class GetHorseOwner implements RequestInterface
 {
     /**
      * @var string
      */
     private $HorseFEICode;
+
+    public function __construct(HorseFEICode $HorseFEICode)
+    {
+        $this->HorseFEICode = $HorseFEICode;
+    }
 
     /**
      * @return string

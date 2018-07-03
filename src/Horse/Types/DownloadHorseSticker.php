@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class DownloadHorseSticker
+use Phpro\SoapClient\Type\RequestInterface;
+
+class DownloadHorseSticker implements RequestInterface
 {
     /**
      * @var string
@@ -10,7 +12,7 @@ class DownloadHorseSticker
     private $HorseFEICode;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseStickerTypeEnums
+     * @var HorseStickerTypeEnums
      */
     private $StickerType;
 
@@ -23,9 +25,9 @@ class DownloadHorseSticker
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseStickerTypeEnums
+     * @return HorseStickerTypeEnums
      */
-    public function getStickerType(): \FEIWebServicesClient\Horse\Types\HorseStickerTypeEnums
+    public function getStickerType(): HorseStickerTypeEnums
     {
         return $this->StickerType;
     }

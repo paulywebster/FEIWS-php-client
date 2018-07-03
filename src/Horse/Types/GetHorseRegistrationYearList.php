@@ -2,7 +2,9 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class GetHorseRegistrationYearList
+use Phpro\SoapClient\Type\RequestInterface;
+
+class GetHorseRegistrationYearList implements RequestInterface
 {
     /**
      * @var string

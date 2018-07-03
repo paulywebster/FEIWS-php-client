@@ -12,22 +12,22 @@ class UpgradeHorsePassportResponse implements ResultInterface
     private $upgradeHorsePassportResult;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @var ArrayOfMessage
      */
     private $Messages;
 
     /**
      * @return bool
      */
-    public function isUpgradeHorsePassportResult(): bool
+    public function result(): bool
     {
         return $this->upgradeHorsePassportResult;
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+     * @return ArrayOfMessage
      */
-    public function getMessages(): \FEIWebServicesClient\Horse\Types\ArrayOfMessage
+    public function getMessages(): ArrayOfMessage
     {
         return $this->Messages;
     }

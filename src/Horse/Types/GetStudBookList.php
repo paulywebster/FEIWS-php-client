@@ -2,6 +2,8 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class GetStudBookList
+use Phpro\SoapClient\Type\RequestInterface;
+
+class GetStudBookList implements RequestInterface
 {
 }

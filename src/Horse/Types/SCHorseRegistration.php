@@ -5,7 +5,7 @@ namespace FEIWebServicesClient\Horse\Types;
 class SCHorseRegistration
 {
     /**
-     * @var \FEIWebServicesClient\Horse\Types\RegistrationEnum
+     * @var RegistrationEnum
      */
     private $Status;
 
@@ -15,9 +15,9 @@ class SCHorseRegistration
     private $Year;
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\RegistrationEnum
+     * @return RegistrationEnum
      */
-    public function getStatus(): \FEIWebServicesClient\Horse\Types\RegistrationEnum
+    public function getStatus(): RegistrationEnum
     {
         return $this->Status;
     }

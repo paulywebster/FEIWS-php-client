@@ -2,6 +2,10 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
+use Assert\Assert;
+use FEIWebServicesClient\Shared\Types\Country;
+use FEIWebServicesClient\Shared\Types\NationalFederation;
+
 class Horse
 {
     /**
@@ -42,7 +46,7 @@ class Horse
     /**
      * @var bool
      */
-    private $IsCNSuffix;
+    private $IsCNSuffix = false;
 
     /**
      * @var string
@@ -60,7 +64,7 @@ class Horse
     private $BirthCountryCode;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeImmutable
      */
     private $DateBirth;
 
@@ -175,7 +179,7 @@ class Horse
     private $DateOfExpiry;
 
     /**
-     * @var \FEIWebServicesClient\Horse\Types\HorseTrainer
+     * @var HorseTrainer
      */
     private $Trainer;
 
@@ -233,6 +237,80 @@ class Horse
      * @var bool
      */
     private $MissingDocuments;
+
+    public function __construct(array $arrayHorse)
+    {
+        Assert::that($arrayHorse)
+            ->keyExists('BirthName')
+            ->keyExists('DateBirth')
+            ->keyExists('CastratedId')
+            ->keyExists('CurrentName')
+            ->keyExists('IsPony')
+            ->keyExists('NatPassport')
+            ->keyExists('IsActive')
+            ->keyExists('GenderCode')
+            ->keyExists('ColorCode')
+            ->keyExists('IssuingNFCode')
+            ->keyExists('Microchip')
+            ->keyExists('RecognitionCode')
+        ;
+
+        $this->BirthName = (string) HorseNameFactory::createAsCurrentOrBirthName($arrayHorse['BirthName']);
+        $this->CurrentName = (string) HorseNameFactory::createAsCurrentOrBirthName($arrayHorse['CurrentName']);
+
+        $dateBirth = new \DateTimeImmutable($arrayHorse['DateBirth']);
+        if ($dateBirth <= new \DateTimeImmutable('1980-01-01') || $dateBirth > new \DateTimeImmutable('now')) {
+            throw new \LogicException('The birthdate cannot be set before 1980-01-01 or in the future.');
+        }
+        $this->DateBirth = $dateBirth;
+
+        Assert::that($arrayHorse['CastratedId'])->inArray([1,2,3]);
+        $this->CastratedId = $arrayHorse['CastratedId'];
+
+        Assert::that($arrayHorse['IsPony'])->boolean();
+        $this->IsPony = $arrayHorse['IsPony'];
+
+        Assert::that($arrayHorse['NatPassport'])->maxLength(20)->notBlank();
+        $this->NatPassport = $arrayHorse['NatPassport'];
+
+        Assert::that($arrayHorse['IsActive'])->boolean();
+        $this->IsActive = $arrayHorse['IsActive'];
+
+        Assert::that($arrayHorse['GenderCode'])->inArray(['M','F']);
+        if('M' !== $arrayHorse['GenderCode'] && \in_array($this->CastratedId, [1,3])){
+            throw new \InvalidArgumentException('The gender code expected with the CastratedId given must be M.');
+        }
+
+        $this->GenderCode = $arrayHorse['GenderCode'];
+
+        Assert::that($arrayHorse['ColorCode'])->inArray(['other','bay','black','chestnut','grey ']);
+        $this->ColorCode = $arrayHorse['ColorCode'];
+        if('other' === $arrayHorse['ColorCode']){
+            Assert::that($arrayHorse)->keyExists('ColorComplement');
+            Assert::that($arrayHorse['ColorComplement'])->maxLength(50);
+            $this->ColorComplement = $arrayHorse['ColorComplement'];
+        }
+
+        if(array_key_exists('FEICodeType', $arrayHorse)){
+            Assert::that($arrayHorse['FEICodeType'])->inArray(['R', 'C', 'P']);
+            $FEICodeType = $arrayHorse['FEICodeType'];
+        }
+        $this->FEICodeType = $FEICodeType ?? 'R';
+
+        if('R' === $this->FEICodeType){
+            Assert::that($arrayHorse)->keyExists('IssuingBodyCode');
+        }
+        if(array_key_exists('IssuingBodyCode', $arrayHorse)){
+            Assert::that($arrayHorse['IssuingBodyCode'])->notBlank();
+            $this->IssuingBodyCode = (new IssuingBody($arrayHorse['IssuingBodyCode']))->code();
+        }
+
+        Assert::that($arrayHorse['RecognitionCode'])->notBlank()->maxLength(20);
+
+        $this->RecognitionCode = $arrayHorse['RecognitionCode'];
+        $this->Microchip = (string) new Chip($arrayHorse['Microchip']);
+        $this->IssuingNFCode = (string) new NationalFederation(Country::fromString($arrayHorse['IssuingNFCode']));
+    }
 
     /**
      * @return string
@@ -323,9 +401,9 @@ class Horse
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeImmutable
      */
-    public function getDateBirth(): \DateTime
+    public function getDateBirth(): \DateTimeImmutable
     {
         return $this->DateBirth;
     }
@@ -347,9 +425,9 @@ class Horse
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getColorComplement(): string
+    public function getColorComplement():? string
     {
         return $this->ColorComplement;
     }
@@ -357,7 +435,7 @@ class Horse
     /**
      * @return bool
      */
-    public function isIsActive(): bool
+    public function isActive(): bool
     {
         return $this->IsActive;
     }
@@ -397,7 +475,7 @@ class Horse
     /**
      * @return bool
      */
-    public function isIsPony(): bool
+    public function isPony(): bool
     {
         return $this->IsPony;
     }
@@ -507,9 +585,9 @@ class Horse
     }
 
     /**
-     * @return \FEIWebServicesClient\Horse\Types\HorseTrainer
+     * @return HorseTrainer
      */
-    public function getTrainer(): \FEIWebServicesClient\Horse\Types\HorseTrainer
+    public function getTrainer(): HorseTrainer
     {
         return $this->Trainer;
     }

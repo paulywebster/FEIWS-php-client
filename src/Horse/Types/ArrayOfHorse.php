@@ -2,18 +2,41 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class ArrayOfHorse
+class ArrayOfHorse implements \Iterator, \Countable
 {
+    private $position = 0;
     /**
-     * @var \FEIWebServicesClient\Horse\Types\Horse
+     * @var array Horse
      */
     private $Horse;
 
-    /**
-     * @return \FEIWebServicesClient\Horse\Types\Horse
-     */
-    public function getHorse(): \FEIWebServicesClient\Horse\Types\Horse
+    public function count()
     {
-        return $this->Horse;
+        return count($this->Horse);
+    }
+
+    public function current(): Horse
+    {
+        return $this->Horse[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->Horse[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }

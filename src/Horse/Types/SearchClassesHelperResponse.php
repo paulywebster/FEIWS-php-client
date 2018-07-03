@@ -14,7 +14,7 @@ class SearchClassesHelperResponse implements ResultInterface
     /**
      * @return string
      */
-    public function getSearchClassesHelperResult(): string
+    public function result(): string
     {
         return $this->SearchClassesHelperResult;
     }

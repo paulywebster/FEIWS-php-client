@@ -2,18 +2,36 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-class ArrayOfMessage
+class ArrayOfMessage implements \Iterator
 {
+    private $position = 0;
     /**
-     * @var \FEIWebServicesClient\Horse\Types\Message
+     * @var Message
      */
     private $Message;
 
-    /**
-     * @return \FEIWebServicesClient\Horse\Types\Message
-     */
-    public function getMessage(): \FEIWebServicesClient\Horse\Types\Message
+    public function current(): Message
     {
-        return $this->Message;
+        return $this->Message[$this->position];
+    }
+
+    public function next(): void
+    {
+        ++$this->position;
+    }
+
+    public function key(): int
+    {
+        return $this->position;
+    }
+
+    public function valid(): bool
+    {
+        return isset($this->Message[$this->position]);
+    }
+
+    public function rewind(): void
+    {
+        $this->position = 0;
     }
 }
