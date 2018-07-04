@@ -231,9 +231,9 @@ class HorseClient extends \Phpro\SoapClient\Client
         return $this->call('getHorseRegistrationYearList', $getHorseRegistrationYearList);
     }
 
-    public function registerHorse(registerHorse $registerHorse): registerHorseResponse
+    public function registerHorse(string $HorseFEICode, int $Year, array $DisciplineCodes): registerHorseResponse
     {
-        return $this->call('registerHorse', $registerHorse);
+        return $this->call('registerHorse', new registerHorse(new HorseFEICode($HorseFEICode), $Year, $DisciplineCodes, new \DateTimeImmutable('2018-11-20')));
     }
 
     public function addTrainerToHorse(addTrainerToHorse $addTrainerToHorse): addTrainerToHorseResponse
