@@ -264,7 +264,7 @@ class Horse
         }
         $this->DateBirth = $dateBirth;
 
-        Assert::that($arrayHorse['CastratedId'])->inArray([1,2,3]);
+        Assert::that($arrayHorse['CastratedId'])->inArray([1, 2, 3]);
         $this->CastratedId = $arrayHorse['CastratedId'];
 
         Assert::that($arrayHorse['IsPony'])->boolean();
@@ -276,31 +276,31 @@ class Horse
         Assert::that($arrayHorse['IsActive'])->boolean();
         $this->IsActive = $arrayHorse['IsActive'];
 
-        Assert::that($arrayHorse['GenderCode'])->inArray(['M','F']);
-        if('M' !== $arrayHorse['GenderCode'] && \in_array($this->CastratedId, [1,3])){
+        Assert::that($arrayHorse['GenderCode'])->inArray(['M', 'F']);
+        if ('M' !== $arrayHorse['GenderCode'] && \in_array($this->CastratedId, [1, 3])) {
             throw new \InvalidArgumentException('The gender code expected with the CastratedId given must be M.');
         }
 
         $this->GenderCode = $arrayHorse['GenderCode'];
 
-        Assert::that($arrayHorse['ColorCode'])->inArray(['other','bay','black','chestnut','grey ']);
+        Assert::that($arrayHorse['ColorCode'])->inArray(['other', 'bay', 'black', 'chestnut', 'grey ']);
         $this->ColorCode = $arrayHorse['ColorCode'];
-        if('other' === $arrayHorse['ColorCode']){
+        if ('other' === $arrayHorse['ColorCode']) {
             Assert::that($arrayHorse)->keyExists('ColorComplement');
             Assert::that($arrayHorse['ColorComplement'])->maxLength(50);
             $this->ColorComplement = $arrayHorse['ColorComplement'];
         }
 
-        if(array_key_exists('FEICodeType', $arrayHorse)){
+        if (array_key_exists('FEICodeType', $arrayHorse)) {
             Assert::that($arrayHorse['FEICodeType'])->inArray(['R', 'C', 'P']);
             $FEICodeType = $arrayHorse['FEICodeType'];
         }
         $this->FEICodeType = $FEICodeType ?? 'R';
 
-        if('R' === $this->FEICodeType){
+        if ('R' === $this->FEICodeType) {
             Assert::that($arrayHorse)->keyExists('IssuingBodyCode');
         }
-        if(array_key_exists('IssuingBodyCode', $arrayHorse)){
+        if (array_key_exists('IssuingBodyCode', $arrayHorse)) {
             Assert::that($arrayHorse['IssuingBodyCode'])->notBlank();
             $this->IssuingBodyCode = (new IssuingBody($arrayHorse['IssuingBodyCode']))->code();
         }
@@ -427,7 +427,7 @@ class Horse
     /**
      * @return string|null
      */
-    public function getColorComplement():? string
+    public function getColorComplement(): ? string
     {
         return $this->ColorComplement;
     }

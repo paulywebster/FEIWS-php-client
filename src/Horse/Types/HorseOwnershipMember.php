@@ -51,7 +51,8 @@ class HorseOwnershipMember
      */
     private $OwnershipPercentage;
 
-    public function __construct(array $member) {
+    public function __construct(array $member)
+    {
         Assert::that($member)
             ->keyExists('FEIID')
             ->keyExists('Address')
@@ -60,7 +61,7 @@ class HorseOwnershipMember
 
         $FEIId = new FEIID($member['FEIID']);
         $this->FEIID = $FEIId->number();
-        if($FEIId->isPhysicalPerson()){
+        if ($FEIId->isPhysicalPerson()) {
             Assert::that($member)
                 ->keyExists('FamilyName')
                 ->keyExists('FirstName');

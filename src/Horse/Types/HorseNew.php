@@ -73,8 +73,7 @@ class HorseNew extends Horse
         $this->Ownership = new HorseOwnership($horse['Ownership'], $this->getDateBirth());
     }
 
-
-    public function data():array
+    public function data(): array
     {
         return [
             'BirthName' => $this->getBirthName(),
@@ -97,7 +96,6 @@ class HorseNew extends Horse
             'Ownership' => $this->Ownership->data(),
         ];
     }
-
 
     /**
      * @return string

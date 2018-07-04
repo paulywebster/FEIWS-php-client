@@ -42,7 +42,7 @@ class AddHorseResponse implements ResultInterface
     /**
      * @return HorseNew
      */
-    public function getHorse():? HorseNew
+    public function getHorse(): ? HorseNew
     {
         return $this->Horse;
     }

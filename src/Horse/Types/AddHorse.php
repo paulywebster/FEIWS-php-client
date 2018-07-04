@@ -16,7 +16,6 @@ class AddHorse implements RequestInterface
         $this->Horse = (new HorseNew($horse))->data();
     }
 
-
     /**
      * @return HorseNew
      */

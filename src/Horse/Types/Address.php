@@ -67,7 +67,8 @@ class Address
      */
     private $TCN;
 
-    public function __construct(array $address) {
+    public function __construct(array $address)
+    {
         Assert::that($address)
             ->keyExists('CountryCode')
             ->keyExists('Address1')
@@ -85,7 +86,6 @@ class Address
         $this->City = $address['City'];
         Assert::that($address['IsMailingAddress'])->boolean();
         $this->IsMailingAddress = $address['IsMailingAddress'];
-
 
         $this->AddressNameCode = $address['AddressNameCode'] ?? null;
         $this->Address2 = $address['Address2'] ?? null;
@@ -113,7 +113,6 @@ class Address
             'TCN' => $this->TCN,
         ];
     }
-
 
     /**
      * @return string

@@ -22,7 +22,7 @@ class SearchForHorseAltResponse implements ResultInterface
      */
     public function result(): ArrayOfHorse
     {
-        if(null !== $this->getMessages() && $this->getMessages()->valid() && 'ListTruncated' === $this->getMessages()->current()->getUID()){
+        if (null !== $this->getMessages() && $this->getMessages()->valid() && 'ListTruncated' === $this->getMessages()->current()->getUID()) {
             throw ListTruncatedException::raise();
         }
 
@@ -32,7 +32,7 @@ class SearchForHorseAltResponse implements ResultInterface
     /**
      * @return ArrayOfMessage
      */
-    public function getMessages():? ArrayOfMessage
+    public function getMessages(): ? ArrayOfMessage
     {
         return $this->Messages;
     }

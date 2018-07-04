@@ -4,7 +4,6 @@ namespace FEIWebServicesClient\Shared\Types;
 
 use Assert\Assert;
 use Symfony\Component\Intl\Intl;
-use Symfony\Component\Intl\Locale;
 
 class Country
 {
@@ -20,10 +19,10 @@ class Country
 
     public static function fromString(string $countryString): self
     {
-        if(\strlen($countryString) === 2){
+        if (2 === \strlen($countryString)) {
             return self::fromISO3166_1Alpha_2Format($countryString);
         }
-        if(\strlen($countryString) === 3){
+        if (3 === \strlen($countryString)) {
             return self::fromFEICode($countryString);
         }
 

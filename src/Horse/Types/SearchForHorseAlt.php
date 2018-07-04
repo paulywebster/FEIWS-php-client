@@ -13,11 +13,11 @@ class SearchForHorseAlt implements RequestInterface
 
     public function __construct(array $Conditions)
     {
-        foreach ($Conditions as $field => $value){
+        foreach ($Conditions as $field => $value) {
             $this->Conditions[] = new SearchCriteria($field, $value);
         }
 
-        if(!array_key_exists('Registration', $Conditions) && (bool)array_intersect(['RegYear','RegDiscipline','RegDateFrom','RegDateTo'], array_keys($Conditions))){
+        if (!array_key_exists('Registration', $Conditions) && (bool) array_intersect(['RegYear', 'RegDiscipline', 'RegDateFrom', 'RegDateTo'], array_keys($Conditions))) {
             throw new \InvalidArgumentException('You must specify if you search a registered or a non-registered horses with the "Registration" condition when you use the registrations conditions as "RegYear","RegDiscipline","RegDateFrom","RegDateTo"');
         }
     }

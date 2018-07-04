@@ -42,7 +42,7 @@ class SCBase
     {
         Assert::that($Field)->inArray(self::getFieldList());
 
-        if('SCHorseName' === $Field){
+        if ('SCHorseName' === $Field) {
             Assert::that($value)->string()->notBlank();
             $value = [
                 'Name' => $value,
@@ -50,78 +50,78 @@ class SCBase
             ];
         }
 
-        if('SCHorseAnyID' === $Field){
+        if ('SCHorseAnyID' === $Field) {
             Assert::that($value)->string()->notBlank();
             $value = [
                 'ID' => $value,
             ];
         }
 
-        if('SCHorseInclHistNames' === $Field){
+        if ('SCHorseInclHistNames' === $Field) {
             Assert::that($value)->boolean();
             $value = [
                 'Value' => $value,
             ];
         }
 
-        if('SCHorsePony' === $Field){
+        if ('SCHorsePony' === $Field) {
             Assert::that($value)->inArray(['Yes', 'No']);
             $value = [
                 'Value' => $value,
             ];
         }
 
-        if('SCHorseCurrentOwner' === $Field){
+        if ('SCHorseCurrentOwner' === $Field) {
             Assert::that($value)->string()->notBlank();
             $value = [
                 'Value' => $value,
             ];
         }
 
-        if('SCHorseHorseStatus' === $Field){
+        if ('SCHorseHorseStatus' === $Field) {
             Assert::that($value)->inArray(['Active', 'Inactive', 'Pending', 'Cancelled', 'Suspended']);
             $value = [
                 'Value' => $value,
             ];
         }
 
-        if('SCHorseAdminNF' === $Field){
+        if ('SCHorseAdminNF' === $Field) {
             $value = [
                 'Value' => new NationalFederation(Country::fromString($value)),
             ];
         }
 
-        if('SCHorsePendAdmNFReq' === $Field){
+        if ('SCHorsePendAdmNFReq' === $Field) {
             $value = [
                 'Value' => new NationalFederation(Country::fromString($value)),
             ];
         }
 
-        if('SCHorseRegistration' === $Field){
+        if ('SCHorseRegistration' === $Field) {
             Assert::that($value)->keyExists('Status')->keyExists('Year');
             Assert::that($value['Status'])->inArray(['Registered', 'NotRegistered']);
             Assert::that($value['Year'])->integer();
         }
 
-        if('SCHorseRegDiscipline' === $Field){
+        if ('SCHorseRegDiscipline' === $Field) {
             $value = [
                 'Value' => Discipline::fromString($value)->getCode(),
             ];
         }
 
-        if('SCHorseRegDateFrom' === $Field){
+        if ('SCHorseRegDateFrom' === $Field) {
             $value = [
                 'Value' => new \DateTimeImmutable($value),
             ];
         }
 
-        if('SCHorseRegDateTo' === $Field){
+        if ('SCHorseRegDateTo' === $Field) {
             $value = [
                 'Value' => new \DateTimeImmutable($value),
             ];
         }
 
-        if('SCHorseStudbook' === $Field){
+        if ('SCHorseStudbook' === $Field) {
             $value = [
                 'Value' => $value,
             ];

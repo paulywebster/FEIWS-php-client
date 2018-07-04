@@ -24,7 +24,6 @@ class NationalFederation
         return $this->country->FEIcode();
     }
 
-
     private function nationalFederationList(): array
     {
         return [

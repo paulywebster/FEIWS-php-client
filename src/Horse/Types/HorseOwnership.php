@@ -22,7 +22,8 @@ class HorseOwnership
      */
     private $Members;
 
-    public function __construct(array $ownership, \DateTimeImmutable $birthDate) {
+    public function __construct(array $ownership, \DateTimeImmutable $birthDate)
+    {
         Assert::that($ownership)
             ->keyExists('NationalityOfOwnership')
             ->keyExists('DateFrom')

@@ -26,11 +26,11 @@ class ConfirmAddHorseResponse implements ResultInterface
      */
     public function result(): bool
     {
-        if(!$this->confirmAddHorseResult && null !== $this->getMessages() && $this->getMessages()->valid()){
-            if('ChipIDUniquenessViolation' === $this->getMessages()->current()->getUID()){
+        if (!$this->confirmAddHorseResult && null !== $this->getMessages() && $this->getMessages()->valid()) {
+            if ('ChipIDUniquenessViolation' === $this->getMessages()->current()->getUID()) {
                 throw new \InvalidArgumentException('The Microchip number must be unique.');
             }
-            if('InvalidTicket' === $this->getMessages()->current()->getUID()){
+            if ('InvalidTicket' === $this->getMessages()->current()->getUID()) {
                 throw new \InvalidArgumentException('The ticket number given is invalid.');
             }
         }

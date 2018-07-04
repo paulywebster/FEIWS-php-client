@@ -15,9 +15,9 @@ class FEIID
     public function __construct(int $number)
     {
         Assertion::between($number, 10000000, 29999999);
-        if(substr($number, 0, 1) === '1'){
+        if ('1' === substr($number, 0, 1)) {
             $type = self::PHYSICAL_PERSON;
-        }else{
+        } else {
             $type = self::CORPORATION;
         }
         $this->type = $type;

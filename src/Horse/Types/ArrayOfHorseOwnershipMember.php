@@ -2,8 +2,6 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-use Assert\Assert;
-
 class ArrayOfHorseOwnershipMember implements \Iterator
 {
     private $position = 0;
@@ -15,13 +13,13 @@ class ArrayOfHorseOwnershipMember implements \Iterator
     public function __construct(array $members)
     {
         $totalPercentageOwnership = 0;
-        foreach ($members as $member){
+        foreach ($members as $member) {
             $HorseOwnershipMember = new HorseOwnershipMember($member);
             $this->HorseOwnershipMember[] = $HorseOwnershipMember;
             $totalPercentageOwnership += $HorseOwnershipMember->getOwnershipPercentage();
         }
 
-        if(100 != $totalPercentageOwnership){
+        if (100 != $totalPercentageOwnership) {
             throw new \LogicException(sprintf('The total percentage of ownership must be equals to 100. %s given.', $totalPercentageOwnership));
         }
     }
@@ -30,7 +28,6 @@ class ArrayOfHorseOwnershipMember implements \Iterator
     {
         return $this->HorseOwnershipMember;
     }
-
 
     public function current(): HorseOwnershipMember
     {

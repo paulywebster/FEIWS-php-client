@@ -46,10 +46,10 @@ class Discipline
         );
 
         $discipline = new self();
-        if (array_key_exists($string, self::$disciplineList)){
+        if (array_key_exists($string, self::$disciplineList)) {
             $discipline->Code = $string;
             $discipline->Label = self::$disciplineList[$string];
-        } elseif ($code = array_search($string, self::$disciplineList)){
+        } elseif ($code = array_search($string, self::$disciplineList)) {
             $discipline->Code = $code;
             $discipline->Label = $string;
         }

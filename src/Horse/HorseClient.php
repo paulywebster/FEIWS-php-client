@@ -89,6 +89,7 @@ class HorseClient extends \Phpro\SoapClient\Client
 
     /**
      * @return GetAdminChangeReasonListResponse
+     *
      * @throws \Phpro\SoapClient\Exception\SoapException
      */
     public function getAdminChangeReasonList(): getAdminChangeReasonListResponse
@@ -98,6 +99,7 @@ class HorseClient extends \Phpro\SoapClient\Client
 
     /**
      * @return GetAdminChangeStatusListResponse
+     *
      * @throws \Phpro\SoapClient\Exception\SoapException
      */
     public function getAdminChangeStatusList(): getAdminChangeStatusListResponse
@@ -107,6 +109,7 @@ class HorseClient extends \Phpro\SoapClient\Client
 
     /**
      * @return GetHorseColorListResponse
+     *
      * @throws \Phpro\SoapClient\Exception\SoapException
      */
     public function getHorseColorList(): getHorseColorListResponse
@@ -116,6 +119,7 @@ class HorseClient extends \Phpro\SoapClient\Client
 
     /**
      * @return GetStudBookListResponse
+     *
      * @throws \Phpro\SoapClient\Exception\SoapException
      */
     public function getStudBookList(): getStudBookListResponse
@@ -127,6 +131,7 @@ class HorseClient extends \Phpro\SoapClient\Client
      * @param string $HorseFEICode
      *
      * @return GetHorseResponse
+     *
      * @throws \InvalidArgumentException
      * @throws \Phpro\SoapClient\Exception\SoapException
      */
@@ -139,6 +144,7 @@ class HorseClient extends \Phpro\SoapClient\Client
      * @param array $getHorses
      *
      * @return GetHorsesResponse
+     *
      * @throws \InvalidArgumentException
      * @throws \Phpro\SoapClient\Exception\SoapException
      */
@@ -151,6 +157,7 @@ class HorseClient extends \Phpro\SoapClient\Client
      * @param array $searchForHorseAlt
      *
      * @return SearchForHorseAltResponse
+     *
      * @throws \InvalidArgumentException
      * @throws \Phpro\SoapClient\Exception\SoapException
      */
@@ -163,6 +170,7 @@ class HorseClient extends \Phpro\SoapClient\Client
      * @param array $searchForHorse
      *
      * @return SearchForHorseResponse
+     *
      * @throws \Phpro\SoapClient\Exception\SoapException
      */
     public function searchForHorse(array $searchForHorse): searchForHorseResponse
@@ -179,6 +187,7 @@ class HorseClient extends \Phpro\SoapClient\Client
      * @param array $addHorse
      *
      * @return AddHorseResponse
+     *
      * @throws \Phpro\SoapClient\Exception\SoapException
      */
     public function addHorse(array $addHorse): addHorseResponse
@@ -280,6 +289,7 @@ class HorseClient extends \Phpro\SoapClient\Client
      * @param string $ticketNumber
      *
      * @return ConfirmAddHorseResponse
+     *
      * @throws \Phpro\SoapClient\Exception\SoapException
      */
     public function confirmAddHorse(string $ticketNumber): confirmAddHorseResponse

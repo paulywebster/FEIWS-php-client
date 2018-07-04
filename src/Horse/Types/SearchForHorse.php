@@ -13,7 +13,7 @@ class SearchForHorse implements RequestInterface
 
     public function __construct(array $Conditions)
     {
-        foreach ($Conditions as $field => $value){
+        foreach ($Conditions as $field => $value) {
             $this->Conditions['SCBase'][] = (new SCBase($field, $value))->getSearchParameter();
         }
     }
