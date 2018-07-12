@@ -5,7 +5,7 @@ namespace FEIWebServicesClient\Horse\Types;
 use Assert\Assert;
 use Assert\Assertion;
 use FEIWebServicesClient\Common\Types\Discipline;
-use FEIWebServicesClient\Shared\Types\NationalFederation;
+use FEIWebServicesClient\Common\Types\NationalFederation;
 use FEIWebServicesClient\Common\Types\Country;
 
 class SearchCriteria

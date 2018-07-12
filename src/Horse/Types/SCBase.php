@@ -5,7 +5,7 @@ namespace FEIWebServicesClient\Horse\Types;
 use Assert\Assert;
 use FEIWebServicesClient\Common\Types\Discipline;
 use FEIWebServicesClient\Common\Types\Country;
-use FEIWebServicesClient\Shared\Types\NationalFederation;
+use FEIWebServicesClient\Common\Types\NationalFederation;
 
 class SCBase
 {
