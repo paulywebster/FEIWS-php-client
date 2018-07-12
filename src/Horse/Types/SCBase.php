@@ -4,7 +4,7 @@ namespace FEIWebServicesClient\Horse\Types;
 
 use Assert\Assert;
 use FEIWebServicesClient\Common\Types\Discipline;
-use FEIWebServicesClient\Shared\Types\Country;
+use FEIWebServicesClient\Common\Types\Country;
 use FEIWebServicesClient\Shared\Types\NationalFederation;
 
 class SCBase
@@ -87,13 +87,13 @@ class SCBase
 
         if ('SCHorseAdminNF' === $Field) {
             $value = [
-                'Value' => new NationalFederation(Country::fromString($value)),
+                'Value' => new NationalFederation(Country::create($value)),
             ];
         }
 
         if ('SCHorsePendAdmNFReq' === $Field) {
             $value = [
-                'Value' => new NationalFederation(Country::fromString($value)),
+                'Value' => new NationalFederation(Country::create($value)),
             ];
         }
 

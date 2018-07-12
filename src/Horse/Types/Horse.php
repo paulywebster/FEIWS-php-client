@@ -3,7 +3,7 @@
 namespace FEIWebServicesClient\Horse\Types;
 
 use Assert\Assert;
-use FEIWebServicesClient\Shared\Types\Country;
+use FEIWebServicesClient\Common\Types\Country;
 use FEIWebServicesClient\Shared\Types\NationalFederation;
 
 class Horse
@@ -309,7 +309,7 @@ class Horse
 
         $this->RecognitionCode = $arrayHorse['RecognitionCode'];
         $this->Microchip = (string) new Chip($arrayHorse['Microchip']);
-        $this->IssuingNFCode = (string) new NationalFederation(Country::fromString($arrayHorse['IssuingNFCode']));
+        $this->IssuingNFCode = (string) new NationalFederation(Country::create($arrayHorse['IssuingNFCode']));
     }
 
     /**

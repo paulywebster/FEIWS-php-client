@@ -2,7 +2,7 @@
 
 namespace FEIWebServicesClient\Horse\Types;
 
-use FEIWebServicesClient\Shared\Types\Country;
+use FEIWebServicesClient\Common\Types\Country;
 
 class IssuingBody
 {
@@ -38,7 +38,7 @@ class IssuingBody
 
         $this->code = end($foundCode)['Code'];
         $this->name = end($foundCode)['Name'];
-        $this->country = Country::fromFEICode(end($foundCode)['CountryCode']);
+        $this->country = Country::create(end($foundCode)['CountryCode']);
     }
 
     public function code(): string

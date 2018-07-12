@@ -3,6 +3,7 @@
 namespace FEIWebServicesClient\Shared\Types;
 
 use Assert\Assert;
+use FEIWebServicesClient\Common\Types\Country;
 
 class NationalFederation
 {

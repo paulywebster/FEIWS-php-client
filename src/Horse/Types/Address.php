@@ -3,7 +3,7 @@
 namespace FEIWebServicesClient\Horse\Types;
 
 use Assert\Assert;
-use FEIWebServicesClient\Shared\Types\Country;
+use FEIWebServicesClient\Common\Types\Country;
 
 class Address
 {
@@ -76,7 +76,7 @@ class Address
             ->keyExists('City')
             ->keyExists('IsMailingAddress')
         ;
-        $this->CountryCode = Country::fromString($address['CountryCode'])->FEIcode();
+        $this->CountryCode = Country::create($address['CountryCode'])->getCode();
 
         Assert::that($address['Address1'])->string()->notBlank();
         $this->Address1 = $address['Address1'];

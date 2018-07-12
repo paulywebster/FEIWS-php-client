@@ -3,7 +3,7 @@
 namespace FEIWebServicesClient\Horse\Types;
 
 use Assert\Assert;
-use FEIWebServicesClient\Shared\Types\Country;
+use FEIWebServicesClient\Common\Types\Country;
 
 class HorseOwnership
 {
@@ -36,7 +36,7 @@ class HorseOwnership
         if ($ownerDateFrom < $birthDate || $ownerDateFrom > new \DateTimeImmutable('now')) {
             throw new \LogicException('The ownership date from cannot be set before the birthdate or in the future.');
         }
-        $this->NationalityOfOwnership = Country::fromString($ownership['NationalityOfOwnership'])->FEIcode();
+        $this->NationalityOfOwnership = Country::create($ownership['NationalityOfOwnership'])->getCode();
         $this->DateFrom = new \DateTimeImmutable($ownership['DateFrom']);
         $this->Members = new ArrayOfHorseOwnershipMember($ownership['Members']);
     }

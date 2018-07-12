@@ -6,7 +6,7 @@ use Assert\Assert;
 use Assert\Assertion;
 use FEIWebServicesClient\Common\Types\Discipline;
 use FEIWebServicesClient\Shared\Types\NationalFederation;
-use FEIWebServicesClient\Shared\Types\Country;
+use FEIWebServicesClient\Common\Types\Country;
 
 class SearchCriteria
 {
@@ -60,11 +60,11 @@ class SearchCriteria
         }
 
         if ('AdminNF' === $Field) {
-            $Value = (string) new NationalFederation(Country::fromString($Value));
+            $Value = (string) new NationalFederation(Country::create($Value));
         }
 
         if ('PendAdmNFReq' === $Field) {
-            $Value = (string) new NationalFederation(Country::fromString($Value));
+            $Value = (string) new NationalFederation(Country::create($Value));
         }
 
         if ('Registration' === $Field) {
