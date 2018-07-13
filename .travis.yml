@@ -14,7 +14,7 @@ cache:
   - $HOME/.php-cs-fixer
 
 script:
-  - php -dzend_extension=xdebug.so ./vendor/bin/phpunit --coverage-text --coverage-clover ./build/logs/clover.xml
+  - ./vendor/bin/phpunit -c phpunit.xml.dist
   - ./vendor/bin/php-cs-fixer fix -v --diff --dry-run
 
 notifications:
@@ -22,4 +22,4 @@ notifications:
   on_failure: always
 
 after_success:
-  - coveralls
+  - travis_retry php vendor/bin/php-coveralls

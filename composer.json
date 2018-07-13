@@ -13,7 +13,8 @@
         "php": "^7.1",
         "phpro/soap-client": "^0.7.3",
         "beberlei/assert": "^2.9",
-        "symfony/intl": "^4.1"
+        "symfony/intl": "^4.1",
+        "php-coveralls/php-coveralls": "^2.1"
     },
     "require-dev": {
         "zendframework/zend-code": "^3.3",
