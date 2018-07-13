@@ -1,22 +1,24 @@
 {
-    "name": "paul/test_php_client_generator",
-    "require-dev": {
-        "zendframework/zend-code": "^3.3",
-        "phpro/grumphp": "^0.14.1",
-        "friendsofphp/php-cs-fixer": "^2.12",
-        "jakub-onderka/php-parallel-lint": "^1.0",
-        "phpunit/phpunit": "^7.2"
-    },
+    "name": "paulywebster/feiws_php_client",
+    "description": "PHP client for FEI webservices",
+    "license": "MIT",
+    "type": "library",
     "authors": [
         {
             "name": "Paul",
-            "email": "paul.dubois@equibel.be"
+            "email": "paul.dubois.85@gmail.be"
         }
     ],
     "require": {
+        "php": "^7.1",
         "phpro/soap-client": "^0.7.3",
         "beberlei/assert": "^2.9",
         "symfony/intl": "^4.1"
+    },
+    "require-dev": {
+        "zendframework/zend-code": "^3.3",
+        "friendsofphp/php-cs-fixer": "^2.12",
+        "phpunit/phpunit": "^7.2"
     },
     "autoload": {
         "psr-4": {"FEIWebServicesClient\\": "src/"}
