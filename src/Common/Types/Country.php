@@ -71,7 +71,7 @@ class Country
 
     private static function getCountryByType(string $countryString, string $type): array
     {
-        $countryList = require __DIR__.'/../Ressources/CountryList.php';
+        $countryList = require __DIR__.'/../Resources/CountryList.php';
 
         if (self::TYPE_ISO_NUMERIC === $type) {
             $countryString = (int) $countryString;
