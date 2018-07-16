@@ -118,3 +118,21 @@ $data .= '];'.PHP_EOL;
 if (!file_put_contents(__DIR__.'/../src/Common/Resources/DocIssuingBodyList.php', $data)) {
     throw new Exception('Error when generate doc issuing body list file');
 }
+
+$disciplineList = $factory->getDisciplineList()->result();
+
+$data = '<?php'.PHP_EOL.PHP_EOL.'return ['.PHP_EOL;
+
+foreach ($disciplineList as $discipline) {
+    $data .= $tabulation.'['.PHP_EOL;
+    $data .= $tabulation.$tabulation."'Code' => '".addslashes($discipline->getCode())."',".PHP_EOL;
+    $data .= $tabulation.$tabulation."'Label' => '".addslashes($discipline->getLabel())."',".PHP_EOL;
+    $IsParaEquestrian = $discipline->isParaEquestrian() ? 'true' : 'false';
+    $data .= $tabulation.$tabulation."'IsParaEquestrian' => ".$IsParaEquestrian.",".PHP_EOL;
+    $data .= $tabulation.'],'.PHP_EOL;
+}
+$data .= '];'.PHP_EOL;
+
+if (!file_put_contents(__DIR__.'/../src/Common/Resources/DisciplineList.php', $data)) {
+    throw new Exception('Error when generate discipline list file');
+}
