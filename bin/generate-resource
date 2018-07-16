@@ -1,0 +1,83 @@
+#!/usr/bin/env php
+<?php
+
+use FEIWebServicesClient\Common\CommonClientFactory;
+
+require __DIR__.'/../vendor/autoload.php';
+
+$factory = CommonClientFactory::factory('tester');
+$countryList = $factory->getCountryList()->result();
+
+$tabulation = '    ';
+$data = '<?php
+
+/**
+ * These country are not recognized by FEI.
+ *
+ * AX Åland Islands
+ * AI Anguilla
+ * AQ Antarctica
+ * AC Ascension Island
+ * IO British Indian Ocean Territory
+ * IC Canary Islands
+ * BQ Caribbean Netherlands
+ * EA Ceuta & Melilla
+ * CX Christmas Island
+ * CC Cocos (Keeling) Islands
+ * CW Curaçao
+ * DG Diego Garcia
+ * EZ Eurozone
+ * FK Falkland Islands
+ * FO Faroe Islands
+ * GF French Guiana
+ * PF French Polynesia
+ * TF French Southern Territories
+ * GI Gibraltar
+ * GL Greenland
+ * GP Guadeloupe
+ * GG Guernsey
+ * IM Isle of Man
+ * JE Jersey
+ * XK Kosovo
+ * MO Macau SAR China
+ * MQ Martinique
+ * YT Mayotte
+ * MS Montserrat
+ * NC New Caledonia
+ * NU Niue
+ * NF Norfolk Island
+ * MP Northern Mariana Islands
+ * PN Pitcairn Islands
+ * RE Réunion
+ * SX Sint Maarten
+ * GS South Georgia & South Sandwich Islands
+ * SS South Sudan
+ * BL St. Barthélemy
+ * SH St. Helena
+ * MF St. Martin
+ * PM St. Pierre & Miquelon
+ * SJ Svalbard & Jan Mayen
+ * TK Tokelau
+ * TA Tristan da Cunha
+ * TC Turks & Caicos Islands
+ * UM U.S. Outlying Islands
+ * UN United Nations
+ * VA Vatican City
+ * WF Wallis & Futuna
+ * EH Western Sahara
+ */
+return ['.PHP_EOL;
+
+foreach ($countryList as $country){
+    $data .= $tabulation.'['.PHP_EOL;
+    $data .= $tabulation.$tabulation."'ISONumeric' => ".$country->getISONumeric().','.PHP_EOL;
+    $data .= $tabulation.$tabulation."'ISOAlpha' => '".addslashes($country->getISOAlpha())."',".PHP_EOL;
+    $data .= $tabulation.$tabulation."'Code' => '".addslashes($country->getCode())."',".PHP_EOL;
+    $data .= $tabulation.$tabulation."'Label' => '".addslashes($country->getLabel())."',".PHP_EOL;
+    $data .= $tabulation.'],'.PHP_EOL;
+}
+$data .= '];'.PHP_EOL;
+
+if(!file_put_contents(__DIR__.'/../src/Common/Resources/CountryList.php', $data)){
+    throw new Exception('Error when generate country list file');
+}
