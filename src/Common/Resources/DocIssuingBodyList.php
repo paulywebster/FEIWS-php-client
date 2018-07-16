@@ -1818,12 +1818,17 @@ return [
     ],
     [
         'Code' => 'LAT-BLS',
-        'Name' => 'Biedriba “Latvijas Škirnes zirgu audzetaju asociacija” Society/“Latvian Horse Breeders Association”',
+        'Name' => 'Biedriba Latvijas Škirnes zirgu audzetaju asociacija Society/Latvian Horse Breeders Association',
         'CountryCode' => 'LAT',
     ],
     [
         'Code' => 'LAT-LZB',
         'Name' => 'Latvijas Zirgaudzetaju biedriba / Latvian Horse Breeder Society',
+        'CountryCode' => 'LAT',
+    ],
+    [
+        'Code' => 'LAT-VAL',
+        'Name' => 'Valsts Agentura, Lauksaimniecibas datu centrs/Latvian State Agency, Agricultural Data Centre',
         'CountryCode' => 'LAT',
     ],
     [
@@ -2483,7 +2488,7 @@ return [
     ],
     [
         'Code' => 'RUS-REFO',
-        'Name' => 'Russian Equestrian Federation (issued between 01/04/2015 - 16/06/2016)',
+        'Name' => 'Russian Equestrian Federation (issued between 14/08/2014 - 16/06/2016)',
         'CountryCode' => 'RUS',
     ],
     [
@@ -2745,6 +2750,11 @@ return [
         'Code' => 'THA-TEF',
         'Name' => 'T.E.F. Thailand Equestrian Federation',
         'CountryCode' => 'THA',
+    ],
+    [
+        'Code' => 'TPE-CTEA',
+        'Name' => 'Chinese Taipei Equestrian Association',
+        'CountryCode' => 'TPE',
     ],
     [
         'Code' => 'TUN-RTMA',
