@@ -1,0 +1,138 @@
+#!/usr/bin/env php
+<?php
+
+use FEIWebServicesClient\Common\CommonClientFactory;
+
+require __DIR__.'/../vendor/autoload.php';
+
+$factory = CommonClientFactory::factory('tester');
+$countryList = $factory->getCountryList()->result();
+
+$tabulation = '    ';
+$data = '<?php
+
+/**
+ * These country are not recognized by FEI.
+ *
+ * AX Åland Islands
+ * AI Anguilla
+ * AQ Antarctica
+ * AC Ascension Island
+ * IO British Indian Ocean Territory
+ * IC Canary Islands
+ * BQ Caribbean Netherlands
+ * EA Ceuta & Melilla
+ * CX Christmas Island
+ * CC Cocos (Keeling) Islands
+ * CW Curaçao
+ * DG Diego Garcia
+ * EZ Eurozone
+ * FK Falkland Islands
+ * FO Faroe Islands
+ * GF French Guiana
+ * PF French Polynesia
+ * TF French Southern Territories
+ * GI Gibraltar
+ * GL Greenland
+ * GP Guadeloupe
+ * GG Guernsey
+ * IM Isle of Man
+ * JE Jersey
+ * XK Kosovo
+ * MO Macau SAR China
+ * MQ Martinique
+ * YT Mayotte
+ * MS Montserrat
+ * NC New Caledonia
+ * NU Niue
+ * NF Norfolk Island
+ * MP Northern Mariana Islands
+ * PN Pitcairn Islands
+ * RE Réunion
+ * SX Sint Maarten
+ * GS South Georgia & South Sandwich Islands
+ * SS South Sudan
+ * BL St. Barthélemy
+ * SH St. Helena
+ * MF St. Martin
+ * PM St. Pierre & Miquelon
+ * SJ Svalbard & Jan Mayen
+ * TK Tokelau
+ * TA Tristan da Cunha
+ * TC Turks & Caicos Islands
+ * UM U.S. Outlying Islands
+ * UN United Nations
+ * VA Vatican City
+ * WF Wallis & Futuna
+ * EH Western Sahara
+ */
+return ['.PHP_EOL;
+
+foreach ($countryList as $country){
+    $data .= $tabulation.'['.PHP_EOL;
+    $data .= $tabulation.$tabulation."'ISONumeric' => ".$country->getISONumeric().','.PHP_EOL;
+    $data .= $tabulation.$tabulation."'ISOAlpha' => '".addslashes($country->getISOAlpha())."',".PHP_EOL;
+    $data .= $tabulation.$tabulation."'Code' => '".addslashes($country->getCode())."',".PHP_EOL;
+    $data .= $tabulation.$tabulation."'Label' => '".addslashes($country->getLabel())."',".PHP_EOL;
+    $data .= $tabulation.'],'.PHP_EOL;
+}
+$data .= '];'.PHP_EOL;
+
+if(!file_put_contents(__DIR__.'/../src/Common/Resources/CountryList.php', $data)){
+    throw new Exception('Error when generate country list file');
+}
+
+$nationalFederationList = $factory->getNationalFederationList()->result();
+
+$data = '<?php'.PHP_EOL.PHP_EOL.'return ['.PHP_EOL;
+
+foreach ($nationalFederationList as $nationalFederation){
+    $data .= $tabulation.'['.PHP_EOL;
+    $data .= $tabulation.$tabulation."'Name' => '".addslashes($nationalFederation->getName())."',".PHP_EOL;
+    $data .= $tabulation.$tabulation."'CountryCode' => '".$nationalFederation->getCountryCode()."',".PHP_EOL;
+    $IsHorseAdminChangeAutoAccepted = $nationalFederation->isHorseAdminChangeAutoAccepted() ? 'true' : 'false';
+    $data .= $tabulation.$tabulation."'IsHorseAdminChangeAutoAccepted' => ".$IsHorseAdminChangeAutoAccepted.','.PHP_EOL;
+    $IsRiderAdminChangeAutoAccepted = $nationalFederation->isRiderAdminChangeAutoAccepted() ? 'true' : 'false';
+    $data .= $tabulation.$tabulation."'IsRiderAdminChangeAutoAccepted' => ".$IsRiderAdminChangeAutoAccepted.','.PHP_EOL;
+    $data .= $tabulation.'],'.PHP_EOL;
+}
+$data .= '];'.PHP_EOL;
+
+if(!file_put_contents(__DIR__.'/../src/Common/Resources/NationalFederationList.php', $data)){
+    throw new Exception('Error when generate national federation list file');
+}
+
+$docIssuingBodyList = $factory->getDocIssuingBodyList()->result();
+
+$data = '<?php'.PHP_EOL.PHP_EOL.'return ['.PHP_EOL;
+
+foreach ($docIssuingBodyList as $docIssuingBody) {
+    $data .= $tabulation.'['.PHP_EOL;
+    $data .= $tabulation.$tabulation."'Code' => '".addslashes($docIssuingBody->getCode())."',".PHP_EOL;
+    $data .= $tabulation.$tabulation."'Name' => '".addslashes($docIssuingBody->getName())."',".PHP_EOL;
+    $data .= $tabulation.$tabulation."'CountryCode' => '".addslashes($docIssuingBody->getCountryCode())."',".PHP_EOL;
+    $data .= $tabulation.'],'.PHP_EOL;
+}
+$data .= '];'.PHP_EOL;
+
+if (!file_put_contents(__DIR__.'/../src/Common/Resources/DocIssuingBodyList.php', $data)) {
+    throw new Exception('Error when generate doc issuing body list file');
+}
+
+$disciplineList = $factory->getDisciplineList()->result();
+
+$data = '<?php'.PHP_EOL.PHP_EOL.'return ['.PHP_EOL;
+
+foreach ($disciplineList as $discipline) {
+    $data .= $tabulation.'['.PHP_EOL;
+    $data .= $tabulation.$tabulation."'Code' => '".addslashes($discipline->getCode())."',".PHP_EOL;
+    $data .= $tabulation.$tabulation."'Label' => '".addslashes($discipline->getLabel())."',".PHP_EOL;
+    $IsParaEquestrian = $discipline->isParaEquestrian() ? 'true' : 'false';
+    $data .= $tabulation.$tabulation."'IsParaEquestrian' => ".$IsParaEquestrian.",".PHP_EOL;
+    $data .= $tabulation.'],'.PHP_EOL;
+}
+$data .= '];'.PHP_EOL;
+
+if (!file_put_contents(__DIR__.'/../src/Common/Resources/DisciplineList.php', $data)) {
+    throw new Exception('Error when generate discipline list file');
+}
