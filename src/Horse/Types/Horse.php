@@ -4,6 +4,7 @@ namespace FEIWebServicesClient\Horse\Types;
 
 use Assert\Assert;
 use FEIWebServicesClient\Common\Types\Country;
+use FEIWebServicesClient\Common\Types\DocIssuingBody;
 use FEIWebServicesClient\Common\Types\NationalFederation;
 
 class Horse
@@ -302,7 +303,7 @@ class Horse
         }
         if (array_key_exists('IssuingBodyCode', $arrayHorse)) {
             Assert::that($arrayHorse['IssuingBodyCode'])->notBlank();
-            $this->IssuingBodyCode = (new IssuingBody($arrayHorse['IssuingBodyCode']))->code();
+            $this->IssuingBodyCode = (new DocIssuingBody($arrayHorse['IssuingBodyCode']))->getCode();
         }
 
         Assert::that($arrayHorse['RecognitionCode'])->notBlank()->maxLength(20);
