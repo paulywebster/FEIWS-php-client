@@ -81,3 +81,23 @@ $data .= '];'.PHP_EOL;
 if(!file_put_contents(__DIR__.'/../src/Common/Resources/CountryList.php', $data)){
     throw new Exception('Error when generate country list file');
 }
+
+$nationalFederationList = $factory->getNationalFederationList()->result();
+
+$data = '<?php'.PHP_EOL.PHP_EOL.'return ['.PHP_EOL;
+
+foreach ($nationalFederationList as $nationalFederation){
+    $data .= $tabulation.'['.PHP_EOL;
+    $data .= $tabulation.$tabulation."'Name' => '".addslashes($nationalFederation->getName())."',".PHP_EOL;
+    $data .= $tabulation.$tabulation."'CountryCode' => '".$nationalFederation->getCountryCode()."',".PHP_EOL;
+    $IsHorseAdminChangeAutoAccepted = $nationalFederation->isHorseAdminChangeAutoAccepted() ? 'true' : 'false';
+    $data .= $tabulation.$tabulation."'IsHorseAdminChangeAutoAccepted' => ".$IsHorseAdminChangeAutoAccepted.','.PHP_EOL;
+    $IsRiderAdminChangeAutoAccepted = $nationalFederation->isRiderAdminChangeAutoAccepted() ? 'true' : 'false';
+    $data .= $tabulation.$tabulation."'IsRiderAdminChangeAutoAccepted' => ".$IsRiderAdminChangeAutoAccepted.','.PHP_EOL;
+    $data .= $tabulation.'],'.PHP_EOL;
+}
+$data .= '];'.PHP_EOL;
+
+if(!file_put_contents(__DIR__.'/../src/Common/Resources/NationalFederationList.php', $data)){
+    throw new Exception('Error when generate national federation list file');
+}
