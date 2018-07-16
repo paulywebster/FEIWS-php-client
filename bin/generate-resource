@@ -101,3 +101,20 @@ $data .= '];'.PHP_EOL;
 if(!file_put_contents(__DIR__.'/../src/Common/Resources/NationalFederationList.php', $data)){
     throw new Exception('Error when generate national federation list file');
 }
+
+$docIssuingBodyList = $factory->getDocIssuingBodyList()->result();
+
+$data = '<?php'.PHP_EOL.PHP_EOL.'return ['.PHP_EOL;
+
+foreach ($docIssuingBodyList as $docIssuingBody) {
+    $data .= $tabulation.'['.PHP_EOL;
+    $data .= $tabulation.$tabulation."'Code' => '".addslashes($docIssuingBody->getCode())."',".PHP_EOL;
+    $data .= $tabulation.$tabulation."'Name' => '".addslashes($docIssuingBody->getName())."',".PHP_EOL;
+    $data .= $tabulation.$tabulation."'CountryCode' => '".addslashes($docIssuingBody->getCountryCode())."',".PHP_EOL;
+    $data .= $tabulation.'],'.PHP_EOL;
+}
+$data .= '];'.PHP_EOL;
+
+if (!file_put_contents(__DIR__.'/../src/Common/Resources/DocIssuingBodyList.php', $data)) {
+    throw new Exception('Error when generate doc issuing body list file');
+}
