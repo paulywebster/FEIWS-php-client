@@ -36,7 +36,7 @@ class NationalFederation
 
     private function getNationalFederationByCountryCode($countryCode): array
     {
-        $nationalFederationList = require __DIR__.'/../Ressources/NationalFederationList.php';
+        $nationalFederationList = require __DIR__.'/../Resources/NationalFederationList.php';
 
         foreach ($nationalFederationList as $nationalFederation) {
             if ($countryCode === $nationalFederation['CountryCode']) {
