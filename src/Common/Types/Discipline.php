@@ -21,42 +21,20 @@ class Discipline
      */
     private $IsParaEquestrian;
 
-    private static $disciplineList = [
-        'A' => 'Driving',
-        'C' => 'Eventing',
-        'D' => 'Dressage',
-        'E' => 'Endurance',
-        'PEA' => 'Para-Equestrian Driving',
-        'PED' => 'Para-Equestrian Dressage',
-        'R' => 'Reining',
-        'S' => 'Jumping',
-        'V' => 'Vaulting',
-    ];
-
-    private static $paraEquestrianDisciplineList = [
-        'PEA',
-        'PED',
-    ];
-
     public static function fromString(string $string): self
     {
-        Assertion::inArray(
-            $string,
-            array_merge(self::$disciplineList, array_keys(self::$disciplineList))
-        );
+        Assertion::inArray($string, array_merge(self::getLabelList(), self::getCodeList()));
 
-        $discipline = new self();
-        if (array_key_exists($string, self::$disciplineList)) {
-            $discipline->Code = $string;
-            $discipline->Label = self::$disciplineList[$string];
-        } elseif ($code = array_search($string, self::$disciplineList)) {
-            $discipline->Code = $code;
-            $discipline->Label = $string;
+        foreach (self::getList() as $disciplineItem) {
+            if ($string === $disciplineItem['Code'] || $string === $disciplineItem['Label']) {
+                $discipline = new self();
+                $discipline->Code = $disciplineItem['Code'];
+                $discipline->Label = $disciplineItem['Label'];
+                $discipline->IsParaEquestrian = $disciplineItem['IsParaEquestrian'];
+
+                return $discipline;
+            }
         }
-
-        $discipline->IsParaEquestrian = \in_array($discipline->Code, self::$paraEquestrianDisciplineList);
-
-        return $discipline;
     }
 
     /**
@@ -81,5 +59,32 @@ class Discipline
     public function isParaEquestrian(): bool
     {
         return $this->IsParaEquestrian;
+    }
+
+    public static function getCodeList(): array
+    {
+        $codeList = [];
+
+        foreach (self::getList() as $discipline) {
+            $codeList[] = $discipline['Code'];
+        }
+
+        return $codeList;
+    }
+
+    public static function getLabelList(): array
+    {
+        $labelList = [];
+
+        foreach (self::getList() as $discipline) {
+            $labelList[] = $discipline['Label'];
+        }
+
+        return $labelList;
+    }
+
+    public static function getList(): array
+    {
+        return require __DIR__.'/../Resources/DisciplineList.php';
     }
 }
