@@ -15,7 +15,7 @@ cache:
 
 script:
   - ./vendor/bin/phpunit -c phpunit.xml.dist
-  - ./vendor/bin/php-cs-fixer fix -v --diff --dry-run
+  - ./vendor/bin/php-cs-fixer fix
 
 notifications:
   on_success: never

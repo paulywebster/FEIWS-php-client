@@ -18,7 +18,29 @@
 
     <filter>
         <whitelist>
-            <directory>src/</directory>
+            <file>src/Environment.php</file>
+            <file>src/Service.php</file>
+            <file>src/Common/Types/Country.php</file>
+            <file>src/Common/Types/Discipline.php</file>
+            <file>src/Common/Types/DocIssuingBody.php</file>
+            <file>src/Common/Types/NationalFederation.php</file>
+            <file>src/Common/Types/GetLeagueList.php</file>
+            <file>src/Common/Types/GetSeasonList.php</file>
+            <file>src/Horse/Types/Address.php</file>
+            <file>src/Horse/Types/ArrayOfHorseOwnershipMember.php</file>
+            <file>src/Horse/Types/Chip.php</file>
+            <file>src/Horse/Types/FEIID.php</file>
+            <file>src/Horse/Types/Horse.php</file>
+            <file>src/Horse/Types/HorseFEICode.php</file>
+            <file>src/Horse/Types/HorseNameFactory.php</file>
+            <file>src/Horse/Types/HorseNew.php</file>
+            <file>src/Horse/Types/HorseOwnership.php</file>
+            <file>src/Horse/Types/HorseOwnershipMember.php</file>
+            <file>src/Horse/Types/RegisterHorse.php</file>
+            <file>src/Horse/Types/SCBase.php</file>
+            <file>src/Horse/Types/SearchCriteria.php</file>
+            <file>src/Horse/Types/SearchForHorseAlt.php</file>
+            <file>src/Horse/Types/UELN.php</file>
         </whitelist>
     </filter>
 

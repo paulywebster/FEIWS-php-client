@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Horse;
+namespace Test\Horse\Types;
 
 use FEIWebServicesClient\Horse\Types\HorseFEICode;
 use PHPUnit\Framework\TestCase;

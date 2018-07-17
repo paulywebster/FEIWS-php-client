@@ -78,6 +78,10 @@ class HorseOwnershipMember
             ;
             Assert::that($member['CorporationName'])->string()->notBlank();
             $this->CorporationName = $member['CorporationName'];
+            /*
+             * a test on the type of the FEIID should be made to only have physical person as corporationContact
+             * but the FEI webservice does not make this check so it's possible to add a corporation as contact of corporation
+             */
             $this->CorporationContactFEIID = (new FEIID($member['CorporationContactFEIID']))->number();
             Assert::that($member['CorporationContactFamilyName'])->string()->notBlank();
             $this->CorporationContactFamilyName = $member['CorporationContactFamilyName'];
@@ -86,6 +90,7 @@ class HorseOwnershipMember
         }
 
         $this->Address = new Address($member['Address']);
+        Assert::that($member['OwnershipPercentage'])->notEmpty()->numeric();
         $this->OwnershipPercentage = $member['OwnershipPercentage'];
     }
 
